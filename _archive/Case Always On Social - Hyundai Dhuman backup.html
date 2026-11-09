@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Always-on social management — June</title>
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/styles.css">
+<link rel="stylesheet" href="case.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="case-kit.jsx"></script>
+<script type="text/babel">
+const lw = { color: 'var(--color-paper-light)' };
+const accounts = [
+  ['01', 'Hyundai Motor · content operations', 'Learned to hold quality steady at high volume: four content types running at once, HQ revisions landing daily, DEI review on every asset.'],
+  ['02', 'Dhuman · project manager', 'Learned that trust is content: I found real customers, wrote and produced their interviews, and let their stories carry the brand.'],
+  ['03', 'Goobne Chicken · project manager', "Learned to run an account as a loop, not a launch: monthly analysis into next month's plan, plus styling the food and presenting on camera myself."],
+];
+const hero = {
+  eyebrow: 'Hyundai Motor · Dhuman · Goobne Chicken',
+  title: 'Always-on social management',
+  desc: 'Three owned-channel accounts, three different lessons in what "always-on" actually asks of a marketer.',
+  extra: <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)', paddingTop: 'var(--space-4)', borderTop: '1px solid rgba(255,253,248,.4)' }}>
+    {accounts.map(([n, t, d]) => <div key={n} style={{ display: 'grid', gridTemplateColumns: '32px minmax(0,1fr)', gap: 'var(--space-3)' }}>
+      <span style={{ font: 'italic 400 24px/1 var(--font-display)', ...lw }}>{n}</span>
+      <div><div style={{ font: '700 20px/1.35 var(--font-body)', ...lw }}>{t}</div><p className="cs-sm" style={{ ...lw, marginTop: 4 }}>{d}</p></div>
+    </div>)}
+  </div>,
+  media: <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 'var(--space-4)' }}>
+    {[['aos-h1', 'pdfimg/p19-9.png', 'Hyundai Motor', -2], ['aos-h2', 'pdfimg/p20-11.png', 'Dhuman', 1.5], ['aos-h3', 'pdfimg/p21-13.png', 'Goobne Chicken', -1]].map(([id, src, l, t], i) => <div key={id} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)', marginTop: i === 1 ? 'var(--space-6)' : 0 }}>
+      <Photo id={id} src={src} ratio="1/1" fit="contain" tilt={t} tape={i} onRed placeholder={l + ' key visual'} />
+      <span className="cs-label" style={lw}>{l}</span>
+    </div>)}
+  </div>,
+};
+const Aside = ({ date, sub, id, src }) => <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)', marginTop: 'var(--space-3)' }}>
+  <Label>{date}</Label><Sm>{sub}</Sm>
+  <div style={{ maxWidth: 200, marginTop: 'var(--space-4)' }}><Photo id={id} src={src} ratio="9/19.5" tilt={-2} tape={1} placeholder="Feed screenshot" /></div>
+</div>;
+const Strategy = ({ items }) => <Group label="Strategy">{items.map(([b, t]) => <Sm key={b}><strong style={{ color: 'var(--color-ink)' }}>{b}</strong> {t}</Sm>)}</Group>;
+const Outcome = ({ items }) => <Group label="Outcome">{items.map(([v, t]) => <div key={v} className="cs-item" style={{ flexDirection: 'row', alignItems: 'baseline', gap: 'var(--space-3)' }}><span className="cs-stat" style={{ fontSize: 40, flex: 'none' }}>{v}</span><Sm>{t}</Sm></div>)}</Group>;
+function App() {
+  return <CasePage nav="Core project 03" hero={hero}>
+    <CaseSection num="01" title="Hyundai Motor Company" id="hyundai" aside={<Aside date="Dec 2021 – Apr 2022" sub="Content operations · Instagram, Twitter, YouTube" id="aos-mock-hy" src="pdfimg/p19-0.png" />}>
+      <P lead>Feed rebranding for a global brand: high-volume content planning, ideation and production direction, delivered under frequent revisions from HQ. Final delivery: 30 images and 10 videos.</P>
+      <div className="cs-split">
+        <Strategy items={[['Production calendar.', 'Four content types (choice-based, test-drive events, informational, seasonal) scheduled to run simultaneously without quality slipping under volume.'], ['Iterative design partnership.', 'Fast-changing HQ feedback translated into revised direction quickly and accurately.'], ['Global-brand rigour.', 'DEI compliance review across every published asset.']]} />
+        <Outcome items={[['+24%', 'followers, ~236K → 293K'], ['711', 'actions on choice-based content vs. 384 on informational, the read that reset content priorities']]} />
+      </div>
+      <Group label="Execution · four content types"><Cols n={4}>
+        {[['aos-hy-1', 'pdfimg/p19-5.png', 'Choice-based'], ['aos-hy-2', 'pdfimg/p19-9.png', 'Test-drive events'], ['aos-hy-3', 'pdfimg/p19-11.png', 'Informational'], ['aos-hy-4', 'pdfimg/p19-7.png', 'Seasonal']].map(([id, src, l], i) => <div key={id} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
+          <Photo id={id} src={src} ratio="1/1" fit="contain" tilt={[-1.5, 1, -0.5, 1.5][i]} tape={false} placeholder={l} /><Sm>{l}</Sm>
+        </div>)}
+      </Cols></Group>
+    </CaseSection>
+    <Band>
+    <CaseSection num="02" title="Dhuman" id="dhuman" aside={<Aside date="Oct 2020 – Aug 2021" sub="Project manager · pet food brand" id="aos-mock-dh" src="pdfimg/p20-0.png" />}>
+      <P lead>Full ownership of content planning, client communication and production direction, building a trust-driven strategy around real customer stories rather than product features.</P>
+      <div className="cs-split">
+        <Strategy items={[['Pets are family.', 'Owners are already motivated to share that relationship, so the content had to be genuine personal storytelling, not spec sheets.'], ['Interview series as flagship.', "A consumer interview video format made authenticity the brand's main asset."], ['Feed kept warm.', 'Re-gramming tagged posts, event and informational content between releases.']]} />
+        <Outcome items={[['500K', 'average views per interview video'], ['0', 'paid promotion; reach and trust grew organically through sharing']]} />
+      </div>
+      <Group label="Execution · consumer interview series">
+        <P>I found customers who had posted real reviews, reached out personally, then ran the whole production: planning, scripting, filming and edit supervision.</P>
+        <div style={{ marginTop: 'var(--space-3)' }}><Frames n={3} fit="contain" items={[['aos-dh-1', 'pdfimg/p20-13.png'], ['aos-dh-2', 'pdfimg/p20-17.png'], ['aos-dh-3', 'pdfimg/p20-15.png']]} /></div>
+      </Group>
+    </CaseSection>
+    <MyRole paras={["Across three owned-channel accounts I sat between client and production: planning content, directing shoots and reporting on performance. At Hyundai Motor that meant holding quality steady across four content types under daily HQ revisions.","At Dhuman I found real customers and produced their interviews end to end; at Goobne Chicken I styled the food, presented on camera and turned monthly analysis into the next month’s plan."]} />
+    </Band>
+    <CaseSection num="03" title="Goobne Chicken" id="goobne" aside={<Aside date="Apr 2021 – Dec 2021" sub="Project manager · Facebook page, 9 months" id="aos-mock-gb" src="pdfimg/p22-0.png" />}>
+      <P lead>End-to-end content planning and performance reporting for a chicken franchise, with hands-on food styling and on-camera presenting alongside continuous data analysis.</P>
+      <div className="cs-split">
+        <Strategy items={[['An engagement, not a campaign.', "Weekly, monthly and quarterly performance analysis fed the next month's content direction and ad spend."], ['Pairing and seasonality.', 'Storylines built around food pairing and seasonal moments to hold a teen-skewing audience.']]} />
+        <Outcome items={[['+8.3%', 'page followers, ~378K → 410K in 9 months'], ['185K', 'organic reach by Jan 2022, up from 146,869 in Mar 2021']]} />
+      </div>
+      <Group label="Execution · styled and presented myself">
+        <P>I styled the food for every shoot (plating and art-directing chicken, pizza and dessert) and appeared on camera presenting pairing ideas, including creating and naming the <strong>"Chi-Pi-D"</strong> combo. Shooting plans for the regular sizzle content were developed directly with the in-house video team.</P>
+        <div style={{ marginTop: 'var(--space-3)' }}><Frames n={3} ratio="1/1" items={[['aos-gb-1', 'pdfimg/p21-11.png'], ['aos-gb-2', 'pdfimg/p21-12.png'], ['aos-gb-3', 'pdfimg/p21-13.png']]} /></div>
+      </Group>
+    </CaseSection>
+  </CasePage>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
