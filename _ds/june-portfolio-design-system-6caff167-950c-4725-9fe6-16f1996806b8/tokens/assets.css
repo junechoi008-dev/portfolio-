@@ -1,0 +1,6 @@
+/* Brand bitmap assets, referenced by class so URLs resolve relative to this stylesheet. */
+.tape-img{display:block;background-size:100% 100%;background-repeat:no-repeat;pointer-events:none}
+.tape-img--red{background-image:url("../assets/tape/tape_red.png");aspect-ratio:320/74}
+.tape-img--beige{background-image:url("../assets/tape/tape_beige.png");aspect-ratio:360/78}
+.tape-img--paper{background-image:url("../assets/tape/tape_paper.png");aspect-ratio:300/72}
+.qr-img--drawin-june{background-image:url("../assets/social/qr_drawin_june.png");background-size:contain;background-repeat:no-repeat;background-position:center}

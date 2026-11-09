@@ -1,0 +1,7 @@
+:root{
+--space-1:4px;--space-2:8px;--space-3:16px;--space-4:24px;
+--space-5:32px;--space-6:48px;--space-7:80px;--space-8:120px;
+--container:1200px;/* @kind other */--col-head:280px;/* @kind other */--col-gap:80px;/* @kind other */--col-body:840px;/* @kind other */
+--cover-height:75vh;/* @kind other */--cover-min:560px;/* @kind other */
+--bp-tablet:768px;/* @kind other */--bp-desktop:1024px;/* @kind other */
+}

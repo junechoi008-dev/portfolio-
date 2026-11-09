@@ -1,0 +1,394 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/buttons/**",
+              "components/cards/**",
+              "components/cover/**",
+              "components/doodles/**",
+              "components/icons/**",
+              "components/paper/**",
+              "components/sheets/**",
+              "components/tags/**",
+              "components/tape/**",
+              "ui_kits/portfolio/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:DM Serif Display|Archivo|Mrs Saint Delafield))/i]",
+        "message": "Font not provided by the design system. Available: DM Serif Display, Archivo, Mrs Saint Delafield."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|href|onRed|target|rel|type|onClick|style|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: children, href, onRed, target, rel, type, onClick, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit)$/]",
+        "message": "<Button> type must be one of 'button' | 'submit'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Cover'] > JSXAttribute > JSXIdentifier[name!=/^(?:eyebrow|title|script|tear|torn|height|minHeight|children|slant|style|key|ref|className|style|children)$/]",
+        "message": "<Cover> doesn't accept that prop. Declared props: eyebrow, title, script, tear, torn, height, minHeight, children, slant, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Doodle'] > JSXAttribute > JSXIdentifier[name!=/^(?:kind|size|width|height|color|angle|style|key|ref|className|style|children)$/]",
+        "message": "<Doodle> doesn't accept that prop. Declared props: kind, size, width, height, color, angle, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Doodle'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:ellipse|crayon-star|star|arrow|accents)$/]",
+        "message": "<Doodle> kind must be one of 'ellipse' | 'crayon-star' | 'star' | 'arrow' | 'accents'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='GridPaper'] > JSXAttribute > JSXIdentifier[name!=/^(?:as|tilt|shadow|style|children|key|ref|className|style|children)$/]",
+        "message": "<GridPaper> doesn't accept that prop. Declared props: as, tilt, shadow, style, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|color|label|style|key|ref|className|style|children)$/]",
+        "message": "<Icon> doesn't accept that prop. Declared props: name, size, color, label, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute[name.name='name'] > Literal[value!=/^(?:magnifier|bar-chart|light-bulb|pencil|checklist|medal|puzzle)$/]",
+        "message": "<Icon> name must be one of 'magnifier' | 'bar-chart' | 'light-bulb' | 'pencil' | 'checklist' | 'medal' | 'puzzle'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PaperCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:number|label|title|description|tags|image|imageAlt|imageRatio|linkText|tape|padding|href|onClick|style|children|key|ref|className|style|children)$/]",
+        "message": "<PaperCard> doesn't accept that prop. Declared props: number, label, title, description, tags, image, imageAlt, imageRatio, linkText, tape, padding, href, onClick, style, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PaperTexture'] > JSXAttribute > JSXIdentifier[name!=/^(?:ground|as|className|style|children|key|ref|className|style|children)$/]",
+        "message": "<PaperTexture> doesn't accept that prop. Declared props: ground, as, className, style, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PaperTexture'] > JSXAttribute[name.name='ground'] > Literal[value!=/^(?:light|paper|deep|red)$/]",
+        "message": "<PaperTexture> ground must be one of 'light' | 'paper' | 'deep' | 'red'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='QrCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:src|size|alt|tape|style|key|ref|className|style|children)$/]",
+        "message": "<QrCard> doesn't accept that prop. Declared props: src, size, alt, tape, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SpeechBubble'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|angle|style|key|ref|className|style|children)$/]",
+        "message": "<SpeechBubble> doesn't accept that prop. Declared props: children, angle, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|onRed|angle|style|key|ref|className|style|children)$/]",
+        "message": "<Tag> doesn't accept that prop. Declared props: children, variant, onRed, angle, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:outline|torn)$/]",
+        "message": "<Tag> variant must be one of 'outline' | 'torn'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tape'] > JSXAttribute > JSXIdentifier[name!=/^(?:color|width|angle|position|style|key|ref|className|style|children)$/]",
+        "message": "<Tape> doesn't accept that prop. Declared props: color, width, angle, position, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tape'] > JSXAttribute[name.name='color'] > Literal[value!=/^(?:red|beige|paper)$/]",
+        "message": "<Tape> color must be one of 'red' | 'beige' | 'paper'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tape'] > JSXAttribute[name.name='position'] > Literal[value!=/^(?:tl|tr|tc|bl|br)$/]",
+        "message": "<Tape> position must be one of 'tl' | 'tr' | 'tc' | 'bl' | 'br'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextLink'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|href|onRed|target|rel|weight|style|key|ref|className|style|children)$/]",
+        "message": "<TextLink> doesn't accept that prop. Declared props: children, href, onRed, target, rel, weight, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TornEdge'] > JSXAttribute > JSXIdentifier[name!=/^(?:tear|from|to|depth|style|key|ref|className|style|children)$/]",
+        "message": "<TornEdge> doesn't accept that prop. Declared props: tear, from, to, depth, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TornEdge'] > JSXAttribute[name.name='from'] > Literal[value!=/^(?:red|light|paper|deep)$/]",
+        "message": "<TornEdge> from must be one of 'red' | 'light' | 'paper' | 'deep'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TornEdge'] > JSXAttribute[name.name='to'] > Literal[value!=/^(?:red|light|paper|deep)$/]",
+        "message": "<TornEdge> to must be one of 'red' | 'light' | 'paper' | 'deep'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TornSheet'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tilt|padding|offset|backing|shape|paper|fiber|decorations|style|innerStyle|key|ref|className|style|children)$/]",
+        "message": "<TornSheet> doesn't accept that prop. Declared props: children, tilt, padding, offset, backing, shape, paper, fiber, decorations, style, innerStyle."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TornSheet'] > JSXAttribute[name.name='shape'] > Literal[value!=/^(?:sheet|label|band|bubble)$/]",
+        "message": "<TornSheet> shape must be one of 'sheet' | 'label' | 'band' | 'bubble'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TornSheet'] > JSXAttribute[name.name='paper'] > Literal[value!=/^(?:light|red)$/]",
+        "message": "<TornSheet> paper must be one of 'light' | 'red'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Button": {
+        "replaces": []
+      },
+      "Cover": {
+        "replaces": []
+      },
+      "Doodle": {
+        "replaces": []
+      },
+      "GridPaper": {
+        "replaces": []
+      },
+      "Icon": {
+        "replaces": []
+      },
+      "PaperCard": {
+        "replaces": []
+      },
+      "PaperTexture": {
+        "replaces": []
+      },
+      "QrCard": {
+        "replaces": []
+      },
+      "SpeechBubble": {
+        "replaces": []
+      },
+      "Tag": {
+        "replaces": []
+      },
+      "Tape": {
+        "replaces": []
+      },
+      "TextLink": {
+        "replaces": []
+      },
+      "TornEdge": {
+        "replaces": []
+      },
+      "TornSheet": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--border-on-red",
+      "--border-tag",
+      "--bp-desktop",
+      "--bp-tablet",
+      "--col-body",
+      "--col-gap",
+      "--col-head",
+      "--color-charcoal",
+      "--color-ink",
+      "--color-line",
+      "--color-paper",
+      "--color-paper-deep",
+      "--color-paper-light",
+      "--color-primary",
+      "--color-primary-hover",
+      "--container",
+      "--cover-height",
+      "--cover-min",
+      "--focus-ring",
+      "--focus-ring-on-red",
+      "--font-body",
+      "--font-display",
+      "--font-script",
+      "--fs-body",
+      "--fs-bubble",
+      "--fs-button",
+      "--fs-card-number",
+      "--fs-cover-script",
+      "--fs-cover-title",
+      "--fs-h1",
+      "--fs-h3",
+      "--fs-label",
+      "--fs-nav",
+      "--fs-number",
+      "--fs-page-title",
+      "--fs-section-title",
+      "--fs-small",
+      "--fs-stat",
+      "--fs-tag",
+      "--lh-body",
+      "--lh-bubble",
+      "--lh-button",
+      "--lh-card-number",
+      "--lh-cover-script",
+      "--lh-cover-title",
+      "--lh-h1",
+      "--lh-h3",
+      "--lh-label",
+      "--lh-number",
+      "--lh-page-title",
+      "--lh-section-title",
+      "--lh-small",
+      "--lh-stat",
+      "--lh-tag",
+      "--link",
+      "--link-hover",
+      "--ls-label",
+      "--measure",
+      "--radius",
+      "--radius-none",
+      "--rule",
+      "--shadow-paper",
+      "--space-1",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--surface-accent",
+      "--surface-card",
+      "--surface-drawing",
+      "--surface-page",
+      "--surface-red",
+      "--text-accent",
+      "--text-body",
+      "--text-muted",
+      "--text-on-red",
+      "--tilt-hero-image",
+      "--tilt-index-card",
+      "--tilt-note",
+      "--tilt-qr",
+      "--tilt-sheet",
+      "--tilt-tools-band",
+      "--torn-band",
+      "--torn-bubble",
+      "--torn-label",
+      "--torn-sheet"
+    ],
+    "tokenKinds": {
+      "--color-primary": "color",
+      "--color-primary-hover": "color",
+      "--color-ink": "color",
+      "--color-charcoal": "color",
+      "--color-paper": "color",
+      "--color-paper-light": "color",
+      "--color-paper-deep": "color",
+      "--color-line": "color",
+      "--surface-page": "color",
+      "--surface-accent": "color",
+      "--surface-card": "color",
+      "--surface-red": "color",
+      "--surface-drawing": "color",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--text-accent": "font",
+      "--text-on-red": "font",
+      "--border-tag": "color",
+      "--border-on-red": "color",
+      "--rule": "color",
+      "--link": "color",
+      "--link-hover": "color",
+      "--focus-ring": "color",
+      "--focus-ring-on-red": "color",
+      "--font-display": "font",
+      "--font-script": "font",
+      "--font-body": "font",
+      "--fs-cover-title": "spacing",
+      "--lh-cover-title": "other",
+      "--fs-cover-script": "spacing",
+      "--lh-cover-script": "other",
+      "--fs-h1": "spacing",
+      "--lh-h1": "other",
+      "--fs-page-title": "spacing",
+      "--lh-page-title": "other",
+      "--fs-stat": "spacing",
+      "--lh-stat": "other",
+      "--fs-card-number": "spacing",
+      "--lh-card-number": "other",
+      "--fs-section-title": "spacing",
+      "--lh-section-title": "other",
+      "--fs-h3": "spacing",
+      "--lh-h3": "other",
+      "--fs-number": "spacing",
+      "--lh-number": "other",
+      "--fs-bubble": "spacing",
+      "--lh-bubble": "other",
+      "--fs-body": "spacing",
+      "--lh-body": "other",
+      "--fs-button": "spacing",
+      "--lh-button": "other",
+      "--fs-small": "spacing",
+      "--lh-small": "other",
+      "--fs-tag": "spacing",
+      "--lh-tag": "other",
+      "--fs-nav": "spacing",
+      "--fs-label": "spacing",
+      "--lh-label": "other",
+      "--ls-label": "other",
+      "--measure": "other",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--container": "other",
+      "--col-head": "other",
+      "--col-gap": "other",
+      "--col-body": "other",
+      "--cover-height": "other",
+      "--cover-min": "other",
+      "--bp-tablet": "other",
+      "--bp-desktop": "other",
+      "--radius": "radius",
+      "--radius-none": "radius",
+      "--shadow-paper": "shadow",
+      "--tilt-sheet": "other",
+      "--tilt-index-card": "other",
+      "--tilt-note": "other",
+      "--tilt-tools-band": "other",
+      "--tilt-hero-image": "other",
+      "--tilt-qr": "other",
+      "--torn-sheet": "other",
+      "--torn-bubble": "other",
+      "--torn-label": "other",
+      "--torn-band": "other"
+    },
+    "fontFamilies": [
+      "Archivo",
+      "DM Serif Display",
+      "Mrs Saint Delafield"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+/* Eight colours only. No pure white; lightest is paper-light. On red, all text is paper-light. */
+:root{
+--color-primary:#BE2E22;
+--color-primary-hover:#9E2419;
+--color-ink:#1A1A1A;
+--color-charcoal:#3D3B38;
+--color-paper:#F9F5EC;
+--color-paper-light:#FFFDF8;
+--color-paper-deep:#F1EADC;
+--color-line:#EAE3D6;
+/* semantic aliases */
+--surface-page:var(--color-paper-light);
+--surface-accent:var(--color-paper);
+--surface-card:var(--color-paper-light);
+--surface-red:var(--color-primary);
+--surface-drawing:var(--color-paper-deep);
+--text-body:var(--color-ink);
+--text-muted:var(--color-charcoal);
+--text-accent:var(--color-primary);
+--text-on-red:var(--color-paper-light);
+--border-tag:var(--color-charcoal);
+--border-on-red:var(--color-paper-light);
+--rule:var(--color-line);
+--link:var(--color-primary);
+--link-hover:var(--color-primary-hover);
+--focus-ring:var(--color-ink);
+--focus-ring-on-red:var(--color-paper-light);
+}
