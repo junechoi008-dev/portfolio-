@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D8 Crate — June</title>
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/styles.css">
+<link rel="stylesheet" href="case.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>#solution,#website{margin-bottom:var(--space-6)}@media (max-width:768px){.d8-reach{grid-template-columns:1fr!important}}</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="case-kit.jsx"></script>
+<script type="text/babel">
+const { Button, TextLink, Tag } = window.JunePortfolioDesignSystem_6caff1;
+const PERSONAS = [
+  { t: 'The Budget Date Seeker', q: '"I want to plan something special but I don\'t know how"', img: 'uploads/d8-persona-sq-1.png', tags: ['18–29 yrs', 'Low-moderate income'], j: '', d: "Students and early-career couples who want to plan something special. They need a date that feels memorable without stretching a tight budget." },
+  { t: 'The Relationship Rebuilder', q: '"We don\'t prioritise us anymore. We need something special"', img: 'uploads/d8-persona-sq-2.png', tags: ['29–45 yrs', 'Moderate-high income'], j: '', d: "Busy couples with careers and possibly kids who feel they don't prioritise each other anymore. They want to reconnect without the stress of planning a date." },
+  { t: 'The Meaningful Gifter', q: '"I want to get them something memorable"', img: 'uploads/d8-persona-sq-3.png', tags: ['Any age', 'Any income level'], j: '', d: <>Anyone looking for a gift that stands out from yet another generic present.<br />They want to give a couple a special night that they'll actually talk about afterwards.</> },
+];
+const hero = {
+  decor: <img src="assets/doodle-d8-curated.png" alt="" aria-hidden="true" style={{ position: 'absolute', left: 43, top: 105, marginTop: 4, width: 190, height: 'auto', pointerEvents: 'none' }} />,
+  eyebrow: 'Digital retailing project',
+  title: <span style={{ position: 'relative', display: 'inline-block' }}>D8CRATE<img src="assets/doodle-d8-date.png" alt="" aria-hidden="true" style={{ position: 'absolute', left: '100%', top: -24, marginLeft: 8, width: 237, height: 61, pointerEvents: 'none' }} /></span>,
+  desc: 'D8 Crate began as the final group project for the Digital Retailing module at UCD Smurfit: take a fictitious pre-launch product or service to market in a real-life campaign. The goal was to bring visitors to a "coming soon" website we built ourselves, using SEO and our choice of channels.',
+  ownedNote: "I mainly owned D8 Crate's visuals: the mock-up images and the presentation. I used Photoshop, Canva and ChatGPT to create the images. For two months I ran the brand's social channels, planning the content calendar, designing the content and publishing to schedule.",
+  flip: true,
+  extra: null,
+  media: <div><Photo id="d8-hero" crop={7} src="uploads/Couple_final2-left.png" ratio="1365/1024" fit="contain" tilt={-1.5} tape={1} onRed placeholder="Drop the brand key visual" /></div>,
+};
+const Night = ({ k, t, items }) => <Item kicker={k} title={t}>{items.map((x) => <Sm key={x}>{x}</Sm>)}</Item>;
+function App() {
+  return <CasePage nav="Personal project 02" hero={hero}>
+    <Band first>
+    <CaseSection num="01" title="The Challenge">
+      <P lead>The brief left the topic open, so we chose one close to home: the cost of living in Ireland, and what it does to dating. Ireland has become the <strong>second most expensive country in Europe</strong>, and a mid-range dinner for two now averages <strong>€90</strong>, which quietly prices the ordinary date night out of reach. The gap isn't desire; couples still want the evening. What they've lost is an affordable way to have it, so the brief was to rebuild the restaurant experience at home for a fraction of the bill, then prove people would actually sign up for it.</P>
+    </CaseSection>
+    </Band>
+    <CaseSection num="02" id="solution" title="Solution">
+      <Group label="Create your date, D8 Crate">
+        <P>Design and launch an <strong>affordable, culturally themed date-night box</strong> that recreates a restaurant experience at home, then <strong>validate demand and drive sign-ups</strong> through owned and paid social, with the site instrumented well enough to tell us which theme people actually wanted. Each box is a <strong>culturally themed date night</strong> (Italian, Korean or Japanese) holding eight curated moments rather than a hamper of food: <strong>Dine, Drink, Indulge, Set the mood, Discover, Connect, Play, Remember</strong>. Everything arrives ready, so there is nothing to plan.</P>
+        <div style={{ marginTop: 'var(--space-3)', display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.5fr) minmax(0,.85fr)', gap: 'var(--space-5)', alignItems: 'end' }}>
+          <Photo id="d8-sol-box" src="uploads/1.png" ratio="1/1" tilt={-1} tape={0} placeholder="Italian box" />
+          <Photo id="d8-sol-top" src="uploads/top_final2-ea15adca.jpg" ratio="1536/1024" fit="contain" tilt={0.8} tape={1} placeholder="Box contents" />
+          <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 'var(--space-2)', alignSelf: 'end' }}>
+            {[['01', 'Italian box', '', 'Margherita pizza, tiramisu and a bottle of red'], ['02', 'Korean box', '', 'A Seoul-style night in, with K-pop games'], ['03', 'Japanese box', '', 'Sushi and rolls, made together at home']].map(([n, t, b, d]) => <li key={n} style={{ display: 'flex', gap: 'var(--space-3)', alignItems: 'baseline', paddingBottom: 'var(--space-2)', borderBottom: '1px solid var(--color-line)' }}>
+              <span style={{ font: 'italic 400 21px/1 var(--font-display)', color: 'var(--color-primary)' }}>{n}</span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}><h4 className="cs-h4" style={{ fontSize: 16 }}>{t}</h4><Sm>{d}</Sm></div>
+            </li>)}
+          </ol>
+        </div>
+      </Group>
+      <Group label="Pricing &amp; revenue model">
+        <P>Pricing was <strong>cost-plus, built on COGS</strong>: we costed every component of each crate first, then added a set margin on top, so every box is profitable and the model scales. A conjoint analysis survey then tested how our target valued each feature and what they were willing to pay. Price drove <strong>36.6%</strong> of preference, ahead of crate theme at 23.1%. That set <strong>Basic at €50 and Premium at €80–85</strong>. With an average COGS of €39.80, each Basic box contributes €10.20, so against €890 of monthly fixed costs and no Phase 1 ad spend, break-even is <strong>88 boxes, or €4,400 a month</strong>.</P>
+        <img src="uploads/d8-pricing-diagram-v2.png" alt="Conjoint analysis: ideal product, volume share and revenue at each price, relative feature importance" style={{ display: 'block', width: '100%', marginTop: 'var(--space-4)' }} />
+      </Group>
+    </CaseSection>
+    <Band>
+    <CaseSection num="03" title="Go-to-market">
+      <Group label="Target persona"><Cols n={3}>
+        {PERSONAS.map((p, i) => <div key={p.t} className="cs-item" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
+          <h4 className="cs-h4">{p.t}</h4>
+          <div style={{ maxWidth: '86%' }}><P>{p.d}</P></div>
+          <div style={{ position: 'relative', marginTop: 'var(--space-3)', width: '80%' }}>
+            <Photo id={'d8-persona-sq-' + i} src={p.img} ratio="1/1" tilt={[-1.5, 1, -1][i]} tape={i} placeholder="Persona photo" />
+            <div style={{ position: 'absolute', right: -8, bottom: 'var(--space-4)', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 'var(--space-2)' }}>{p.tags.map((t, k) => <Tag key={t} variant="torn" angle={[-2, 1.5][k]}>{t}</Tag>)}</div>
+          </div>
+        </div>)}
+      </Cols></Group>
+      <div style={{ marginTop: 'var(--space-5)' }}><Group label="Social media strategy">
+        <div className="d8-reach" style={{ display: 'grid', gridTemplateColumns: 'minmax(0,270px) minmax(0,1fr)', gap: 'var(--space-6)', alignItems: 'stretch' }}>
+          <img src="uploads/d8-phone-grid-notime.png" alt="D8 Crate Instagram grid on a phone" style={{ display: 'block', width: '100%', maxWidth: 270, justifySelf: 'start', filter: 'drop-shadow(var(--shadow-paper))' }} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+        <Item kicker="Owned media · Instagram (main), TikTok">
+          <p className="cs-sm" style={{ fontSize: 16 }}>Romantic date-night content in the brand's visual identity, with Reels built on relatable dating moments. Boosted top-performing organic posts instead of making new creative, targeting young couples and people interested in dating and lifestyle content. <TextLink href="https://www.instagram.com/d8crate/" target="_blank" weight={500}>@d8crate on Instagram →</TextLink></p>
+        </Item>
+        <div style={{ flex: '1 1 0', minHeight: 0, display: 'flex', gap: 'var(--space-4)' }}>
+            {[4, 1, 3].map((n) => <div key={n} style={{ position: 'relative', height: '100%', flex: '0 1 auto', minWidth: 0, maxWidth: 'calc((100% - 2 * var(--space-4)) / 3)' }}>
+              <img src={'uploads/d8-post-' + n + '.png'} alt="D8 Crate Instagram screenshot" style={{ display: 'block', height: '100%', width: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'bottom', filter: 'drop-shadow(var(--shadow-paper))' }} />
+              {n === 4 && <img src="uploads/pasted-1792105592384-0.png" alt="Comment thread close-up" style={{ position: 'absolute', left: '6%', width: '110%', top: '18%', display: 'block', filter: 'drop-shadow(0 4px 10px rgba(26,26,26,.22))', zIndex: 2 }} />}
+            </div>)}
+          </div>
+          </div>
+        </div>
+      </Group></div>
+      <div style={{ marginTop: 'var(--space-5)' }}><Group label="Social media management">
+        <Note tilt={-0.6} tape={2}>
+          <P>I set the visual direction from the start. I searched for references that matched the brand's tone, message and mood: elegant, moody, sensual and red. I built a moodboard from them and sourced matching images from Pinterest. I then planned the main content by month and by week, scheduled posts, and published them in sequence so the launch built up week by week.</P>
+          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)', gap: 'var(--space-4)', alignItems: 'start', marginTop: 'var(--space-3)' }}>
+            <div className="cs-item" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}><div className="cs-label red">Reference</div><img src="uploads/pasted-1792152881821-0.png" alt="Instagram feed references" style={{ display: 'block', width: '100%' }} /><img src="uploads/d8-ref-2.png" alt="Instagram feed references" style={{ display: 'block', width: '100%' }} /></div>
+            <div className="cs-item" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}><div className="cs-label red">Feed moodboard</div><img src="uploads/pasted-1792152234042-0.png" alt="Feed image moodboard" style={{ display: 'block', width: '100%' }} /><img src="uploads/pasted-1792153038806-0.png" alt="Typeface references" style={{ display: 'block', width: '100%' }} /></div>
+            <div className="cs-item" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}><div className="cs-label red">Weekly &amp; monthly plan</div>
+              <div style={{ position: 'relative', paddingBottom: '22%' }}>
+                <img src="uploads/pasted-1792151920465-0.png" alt="Weekly content plan" style={{ display: 'block', width: '78%', filter: 'drop-shadow(var(--shadow-paper))' }} />
+                <img src="uploads/pasted-1792151927704-0.png" alt="Monthly content calendar" style={{ position: 'absolute', right: 0, top: '30%', display: 'block', width: '72%', filter: 'drop-shadow(var(--shadow-paper))' }} />
+              </div>
+            </div>
+          </div>
+        </Note>
+      </Group></div>
+    </CaseSection>
+    </Band>
+    <CaseSection num="04" id="website" title="Website &amp; measurement">
+      <P lead>Over eight weeks (15 February to 11 April 2026) the site drew <strong>419 users and 54 sign-ups</strong>, a <strong>12.9% conversion rate</strong>. We tracked it with <strong>GA4, Google Search Console, Google Tag Manager and Microsoft Clarity</strong>, firing events on the offer button, the sign-up form and scroll depth so every step from landing to lead was measured. Organic social brought in the most sessions and almost 80% of visitors came on mobile. Users spiked with each push: the QR posters (22 on 30 March), the April Fools' Day message (61 on 1 April) and the paid Reel (107 on 7 April). That Reel, aimed at 18- to 45-year-olds in Dublin, reached <strong>5,333 views and 300 clicks for €15.87</strong>, a 5.6% CTR at €0.03 per click.</P>
+      <Cols n={2}>
+        <Item kicker="A/B test · 4 landing pages" title="Which crate theme people actually wanted"><Sm>Running the four pages against each other identified the top-performing theme and let ad budget move behind it instead of being split evenly on a guess.</Sm></Item>
+        <Item kicker="Clarity · sessions &amp; heatmaps" title="Diagnosing the drop-offs"><Sm>Session recordings and heatmaps showed where visitors stalled, which drove fixes to both the mobile and desktop experience.</Sm></Item>
+      </Cols>
+      <Group>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: 'var(--space-3)' }}>
+          <Label>Site &amp; analytics</Label>
+          <TextLink href="https://d8crate.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" weight={500}>Visit d8crate.com →</TextLink>
+        </div>
+        <Cols n={2} style={{ marginTop: 'var(--space-4)' }}>
+          <Photo id="d8-web-overview" src="uploads/pasted-1792163002779-0.png" ratio="1065/598" tilt={-1} tape={0} placeholder="Website overview" />
+          <Photo id="d8-web-paid" src="uploads/pasted-1792162996760-0.png" ratio="1097/618" tilt={0.8} tape={1} placeholder="Instagram reel ad" />
+        </Cols>
+      </Group>
+    </CaseSection>
+  </CasePage>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

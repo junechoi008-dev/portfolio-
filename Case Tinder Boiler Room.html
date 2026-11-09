@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tinder × Boiler Room — June</title>
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/styles.css">
+<link rel="stylesheet" href="case.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="case-kit.jsx"></script>
+<script type="text/babel">
+const hero = {
+  eyebrow: 'TINDER PARTNERSHIP PROPOSAL',
+  title: <span style={{ fontSize: 60 }}>Tinder × Boiler Room</span>,
+  desc: "Tinder needed Gen Z women in EMEA to come back. We found they weren't tired of meeting people, they were tired of performing. Our answer: a Boiler Room DJ tour where the dance floor does the talking.",
+  ownedNote: 'I led creative direction across this project, shaping the campaign concept, the presentation narrative and the visual mock-ups. I used film stills to bring the venue to life and edited them with ChatGPT to add detail that followed the narrative.',
+  flip: true,
+  extra: <window.JunePortfolioDesignSystem_6caff1.TextLink href="#creative" weight={500}>See the creatives →</window.JunePortfolioDesignSystem_6caff1.TextLink>,
+  media: <Photo id="tin-hero-c1" crop={7} src="uploads/1791580266234-7268e8e8-bfab-4903-abf0-407ac494910a_22.jpg" ratio="16/9" tilt={-1.5} tape={1} onRed placeholder="Drop the campaign key visual" />,
+};
+const v1 = ['2', '3', '4', '5', '6', '7'].map((n) => n === '3' ? ['tin-v1-3b', 'uploads/pasted-1792074817839-0.png'] : ['tin-v1-' + n, 'tinder/v1-' + n + '.png']).concat([['tin-v1-31', 'uploads/1791580266234-7268e8e8-bfab-4903-abf0-407ac494910a_31.jpg'], ['tin-v1-32', 'uploads/1791580266234-7268e8e8-bfab-4903-abf0-407ac494910a_32.jpg']]);
+const v2 = [['tin-v2a-2', 'tinder/v2a-2.png'], ['tin-v2a-3', 'tinder/v2a-3.png'], ['tin-v2a-4', 'tinder/v2a-4.png'], ['tin-v2a-5', 'tinder/v2a-5.png'], ['tin-v2b-1', 'tinder/v2b-1.png'], ['tin-v2b-2', 'tinder/v2b-2.png'], ['tin-v2-42', 'uploads/1791580266234-7268e8e8-bfab-4903-abf0-407ac494910a_42.jpg'], ['tin-v2-41', 'uploads/1791580266234-7268e8e8-bfab-4903-abf0-407ac494910a_41.jpg']];
+const tinH = { margin: 0, font: 'italic 400 clamp(26px,3.2vw,38px)/1.15 var(--font-display)' };
+function App() {
+  return <CasePage nav="Personal project 01" hero={hero}>
+    <Band first>
+    <CaseSection num="01" title="The Brief">
+      <P lead>Tinder briefed UCD Smurfit MSc students on a live EMEA challenge across the UK, Germany, France and Spain: find a partner and a strategy that makes Gen Z women see Tinder as <b>"the most fun way to spark something new with someone new."</b> The partnership had to drive consideration or reconsideration of the app, feel culturally relevant to Gen Z, and tie back to one business metric: monthly active users.</P>
+      <Cols n={3}>
+        <Item kicker="Goal" title="+1% EMEA MAU"><Sm>Grow monthly active users through brand partnerships, against roughly 50M MAU globally</Sm></Item>
+        <Item kicker="Audience" title="Gen Z women 18–24"><Sm>Who value authenticity, sustainability, mental well-being and meaningful social interaction</Sm></Item>
+        <Item kicker="Budget" title="$100K + $350K ad barter"><Sm>Production spend across three months, plus Tinder platform ads to barter with a partner</Sm></Item>
+      </Cols>
+    </CaseSection>
+    </Band>
+    <CaseSection num="02" title="Research &amp; Insight">
+      <P lead>We framed the research around three questions: what Gen Z is doing, why they behave that way, and how Tinder could play a role. We combined desk research (industry reports, Tinder’s own material and culture scans) with a cross-market competitor positioning audit, reading the UK, France, Germany and Spain as the wider EMEA picture. We then clustered what we found from observed trends into repeated signals and emotional mechanisms, asking why at each step until we reached the root.</P>
+      <Group label="What they feel, think &amp; want">
+        <P><strong>They’re just exhausted.</strong> They feel worn down: <strong>73%</strong> report digital exhaustion, and pressure comes from every side, from cost of living to burnout. They think dating has become one more performance. What they want is the opposite: calm, genuine interaction, affordable experiences and a space of their own.</P>
+      </Group>
+      <Group label="Why">
+        <P><strong>The root is escapism.</strong> Not a trend but a coping mechanism: a way to regain control, comfort and safety. It shows up as the hyper-curated self, the little treat economy and parallel private identities, and it’s everywhere, from 90s revival to cottagecore.</P>
+        <Cols n={2} style={{ marginTop: 'var(--space-3)' }}>
+          <Photo id="tin-why-1b" src="uploads/pasted-1792430359289-0.png" ratio="1138/640" fit="contain" tilt={-1} tape={0} placeholder="Escapism slide" />
+          <Photo id="tin-why-2" src="uploads/pasted-1792430271471-0.png" ratio="1136/639" fit="contain" tilt={1} tape={1} placeholder="Mapping escapism" />
+        </Cols>
+      </Group>
+      <Group label="The insight">
+        <h3 style={{ ...tinH, color: 'var(--color-primary)' }}>They can curate an identity, but they can’t curate connection.</h3>
+        <P>Dating has moved to side-by-side moments, but the habit of micro-control still blocks authentic connection.</P>
+      </Group>
+    </CaseSection>
+    <Band>
+    <CaseSection num="03" title="Strategy">
+      <Group label="Direction">
+        <h4 className="cs-h4">Don’t ask her to perform. Give her a room she already feels in control of, and let Tinder bring the person.</h4>
+        <P>Gen Z has already done everything they can do alone; the next frontier is another person. Tinder is strongest when it doesn’t over-serious-ify dating. So rather than removing control, we gave it a setting: a partner brand creates the environment, and Tinder brings the connection.</P>
+      </Group>
+      <Group label="Why Boiler Room">
+        <Cols n={3}>
+          <Item><div className="cs-stat" style={tinH}>18–34</div><Sm>core audience</Sm></Item>
+          <Item><div className="cs-stat" style={tinH}>45%</div><Sm>LGBTQIA+</Sm></Item>
+          <Item><div className="cs-stat" style={tinH}>283M</div><Sm>monthly impressions</Sm></Item>
+        </Cols>
+        <P>Every partner had to pass three tests: shift the focus from each other to the experience, give them an anchor to talk about, and keep the stakes low. Boiler Room passed all three. Music is the shared anchor (<strong>85%</strong> of Gen Z say it defines who they are, <strong>80%</strong> say concerts bring people closer), the dance floor puts the focus on the set rather than on each other, and a live show is low-pressure by default. It also brings 500K+ tour attendees and cultural credibility that Tinder can’t buy.</P>
+      </Group>
+      <Group label="The big idea">
+        <h3 style={{ ...tinH, color: 'var(--color-primary)' }}>“Step Into the Circle”</h3>
+        <P>We all have a boundary, a “circle”. Imagine two people meeting and growing closer on the dance floor. We connected the dots: connecting with someone means letting them into your circle, and stepping into a circle of common ground. The crowd around a DJ booth is the most literal version of it.</P>
+      </Group>
+    </CaseSection>
+    </Band>
+    <CaseSection num="04" title="Execution">
+      <Group label="Activation · a four-city tour that scales">
+        <P>A DJ-set tour built as a proof-of-concept-to-arena curve, growing from an 800-capacity room to 16,000 across four cities. It opens in <strong>Berlin</strong> with 800 attendees as the proof of concept, scales up through <strong>Bilbao</strong> and <strong>Bristol</strong> as the second and third markets, and ends in <strong>Lyon</strong> with a 16,000-attendee arena finale. Every guest gets a goody bag with a disposable film camera, playing to the nostalgia trend, and a wristband that shows their dating preference at a glance. A neon photo zone turns the Circle into a physical space, so stepping into it becomes the moment people capture and share.</P>
+        <div style={{ marginTop: 'var(--space-3)', display: 'grid', gridTemplateColumns: 'minmax(0,1.778fr) minmax(0,0.87fr) minmax(0,1.505fr)', gap: 'var(--space-5)', alignItems: 'start' }}>
+          <Photo id="tin-concept-2c" src="uploads/1791580266234-7268e8e8-bfab-4903-abf0-407ac494910a_23.jpg" ratio="16/9" tilt={-1} tape={1} placeholder="Activation slide" />
+          <Photo id="tin-concept-goods" src="uploads/pasted-1792425087713-0.png" ratio="388/446" tilt={2} tape={2} placeholder="Goody bag items" />
+          <Photo id="tin-concept-zone" src="uploads/pasted-1792425093826-0.png" ratio="867/576" tilt={-2} tape={3} placeholder="Photo zone" />
+        </div>
+      </Group>
+      <Group label="Campaign phases">
+        <Cols n={3}>
+          <Item kicker="Phase 1 · Tease"><Sm>Boiler Room tag in Tinder's Explore section, influencer seeding</Sm><div style={{ marginTop: 'var(--space-3)' }}><Photo id="tin-phase-44" src="uploads/1791580266234-7268e8e8-bfab-4903-abf0-407ac494910a_44.jpg" ratio="16/9" tape={false} placeholder="Campaign slide" /></div></Item>
+          <Item kicker="Phase 2 · Ticket"><Sm>Free early-bird ballot and DJ-profile matching, only via the app</Sm><div style={{ marginTop: 'var(--space-3)' }}><Photo id="tin-phase-45" src="uploads/1791580266234-7268e8e8-bfab-4903-abf0-407ac494910a_45.jpg" ratio="16/9" tape={false} placeholder="Campaign slide" /></div></Item>
+          <Item kicker="Phase 3 · Event"><Sm>Branded photo zone, goody bag with disposable camera and a QR code back to Tinder Gold</Sm><div style={{ marginTop: 'var(--space-3)' }}><Photo id="tin-phase-46" src="uploads/1791580266234-7268e8e8-bfab-4903-abf0-407ac494910a_46.jpg" ratio="16/9" tape={false} placeholder="Campaign slide" /></div></Item>
+        </Cols>
+        <Sm>Backed by nano, micro and macro influencer tiering and a full budget and P&amp;L model.</Sm>
+      </Group>
+    </CaseSection>
+    <Band>
+    <CaseSection num="05" id="creative" title="Creative video">
+      <P lead>Two film routes were storyboarded to carry "Step Into the Circle":<br />one following a match from the app into the room, the other opening on the room itself and designed with LGBTQ+ audiences in mind.</P>
+      <Group>
+        <Label red>Version 1</Label>
+        <h3 style={{ margin: 0, font: 'italic 400 24px/1.25 var(--font-display)' }}>From Tinder to Real Life</h3>
+        <P>Two people match in the app through the "Boiler Room" chat room in the Explore section. They find each other at the venue and end up inside the circle around the booth. We used a pinpoint spotlight as the circle.</P>
+        <Frames items={v1} n={4} tight />
+      </Group>
+      <Group>
+        <Label red>Version 2</Label>
+        <h3 style={{ margin: 0, font: 'italic 400 24px/1.25 var(--font-display)' }}>Connect with Someone New</h3>
+        <P>We built this route around the disposable camera from the goody bag. It shows a woman using it at the venue as she develops a crush on someone. The connection happens on the floor: they find each other, close enough to let each other into their circle.</P>
+        <Frames items={v2} n={4} tight />
+      </Group>
+    </CaseSection>
+    </Band>
+    <CaseSection num="06" title="Projected impact">
+      <Group label="Consumer impact">
+        <P lead>The campaign was built to move her from stuck to curious. Today she thinks dating is performative, feels burnt out and escapes into control. After stepping into the circle, she sees low-pressure connection as possible, feels relaxed enough to open up, and comes back to Tinder to explore it.</P>
+      <Cols n={2}>
+        <Photo id="tin-concl-1" src="uploads/1791580266234-7268e8e8-bfab-4903-abf0-407ac494910a_7.jpg" ratio="16/9" tilt={-1} tape={0} placeholder="Understanding Gen Z" />
+        <Photo id="tin-concl-2" src="uploads/1791580266234-7268e8e8-bfab-4903-abf0-407ac494910a_14.jpg" ratio="16/9" tilt={1} tape={1} placeholder="Think Feel Do" />
+      </Cols>
+      </Group>
+      <Group label="Business impact">
+        <P>Tinder puts $100K of production spend into the three-month tour and barters $350K of platform ads to Boiler Room. In return, the tour and its content are projected to reach 150M impressions and convert that attention into new downloads, delivering the +1% EMEA MAU goal. Boiler Room nets +$707K, which is why the deal works for both sides.</P>
+        <Cols n={3}>
+          <Stat value="150M">impressions →</Stat>
+          <Stat value="4.5M">App Store visits →</Stat>
+          <Stat value="137K">downloads (+1% EMEA MAU in 3 months)</Stat>
+        </Cols>
+      </Group>
+    </CaseSection>
+  </CasePage>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

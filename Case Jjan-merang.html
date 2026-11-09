@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jjan-merang Video Campaign — June</title>
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/styles.css">
+<link rel="stylesheet" href="case.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="case-kit.jsx"></script>
+<script type="text/babel">
+const hero = {
+  eyebrow: 'Yonsei Milk · Flavoured Milk',
+  title: 'Cheers Campaign',
+  desc: 'An awareness campaign targeting teenagers for a flavoured milk product, reimagining the adult "cheers" ritual as a fun, lighthearted bonding moment for teens. I led an Instagram-based UGC campaign using the Boomerang feature, overseeing planning, production, media strategy and execution.',
+  ownedNote: 'I shaped the concept and planned the shoot, from the storyboard to locations and set-up. My team and I appeared on camera and worked closely with the internal production team. I also ran the Instagram Reels ads and micro-influencer marketing to drive event participation.',
+  ownedPaper: true,
+  compact: true,
+  center: true,
+  space: [10, 0],
+  overview: [['Period', 'Apr 2023'], ['Role', 'Senior Account Executive'], ['Channels', 'YouTube Shorts · Instagram Reels'], ['Discipline', 'IMC · UGC campaign']],
+  media: <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 'var(--space-3)', alignItems: 'center', transform: 'translateX(38px)', position: 'relative' }}>
+    <Photo id="jjan-hero" src="uploads/그림7.png" ratio="9/16" tilt={2} tape={1} onRed placeholder="Drop a vertical film still" />
+    <Photo id="jjan-hero-2" src="uploads/그림12.png" ratio="9/16" tilt={-1.5} tape={2} onRed placeholder="Drop a second vertical still" style={{ marginTop: 'var(--space-6)' }} />
+    <Photo id="jjan-hero-3" src="uploads/그림9.png" ratio="9/16" tilt={1.5} tape={0} onRed placeholder="Drop a third vertical still" />
+    <img src="assets/doodle-jm.png" alt="" aria-hidden="true" style={{ position: 'absolute', left: '68px', top: '-53px', width: '611px', height: '401px', pointerEvents: 'none', zIndex: 4 }} />
+  </div>,
+};
+const CK2 = window.JunePortfolioDesignSystem_6caff1;
+const JjNote = ({ label, quote, children, tilt, back, tape }) => <div style={{ position: 'relative', padding: '0 var(--space-2) var(--space-2) 0', marginTop: 'var(--space-3)' }}>
+  <div className="paper" style={{ position: 'absolute', inset: '0 var(--space-2) var(--space-2) 0', transform: 'rotate(' + back + 'deg) translate(6px,6px)', filter: 'drop-shadow(var(--shadow-paper))' }}></div>
+  <CK2.GridPaper tilt={tilt} style={{ padding: 'var(--space-4)', color: 'var(--color-ink)' }}>
+    <div className="cs-group" style={{ gap: 'var(--space-2)' }}><Label red>{label}</Label><span style={{ font: 'italic 400 24px/1.2 var(--font-display)' }}>{quote}</span><Sm>{children}</Sm></div>
+  </CK2.GridPaper>
+  <CK2.Tape color="beige" width={96} angle={tape} position="tc" />
+</div>;
+const films = [['jjan-film-5', 'uploads/그림5.png'], ['jjan-film-3', 'uploads/그림13.png'], ['jjan-film-6', 'uploads/그림7-249cd97d.png'], ['jjan-film-1', 'uploads/그림9.png'], ['jjan-film-2', 'uploads/그림11.png'], ['jjan-film-4', 'uploads/그림2-5a1450fe.png']];
+function App() {
+  return <CasePage nav="Core project 02" hero={hero}>
+    <CaseSection num="01" title="Brief">
+      <div style={{ display: 'grid', gridTemplateColumns: '180px minmax(0,1fr)', gap: 'var(--space-5)', alignItems: 'center' }}>
+        <Photo id="jjan-product" src="uploads/pasted-1788257310374-0.png" ratio="4/3" tilt={-3} tape={1} placeholder="Drop the product shot" />
+      <Group>
+        <P>The brief was simple: build a brand awareness campaign for a flavoured milk whose one distinguishing feature is its handle and the jug shape. The campaign had to <strong>position the product as a sweet, relaxing daily treat for teens</strong> and <strong>lift brand recognition and positive perception</strong>.</P>
+      </Group>
+      </div>
+    </CaseSection>
+    <Band>
+    <CaseSection num="02" id="strategy" title="Strategy">
+      <span style={{ font: 'italic 400 24px/1.2 var(--font-display)' }}>Cheers with milk, not beer!</span>
+      <P lead>The idea came from the shape of the bottle. It is the only multi-flavoured milk sold in a <strong>mini jug bottle</strong>. The jug shape reminded me of people clinking beer glasses and posting the moment on Instagram with its Boomerang feature. In Korean, "cheers" is "짠" (Jjan), so we named the campaign <strong>Jjan-merang</strong>.<br /><br />To get more customers engaged, we didn't limit how people could take part. They could clink a bottle they had bought, a drawing of one, or even an image of the bottle on their phone, then upload the video or image content to their feed. The more friends they tagged, the higher their chance of winning a prize. We ran the video ads on Instagram Reels and YouTube Shorts.</P>
+      <Group label="Main video ad">
+        <div style={{ marginTop: 'var(--space-3)' }}><Frames items={films} n={6} ratio="9/16" flat /></div>
+      </Group>
+      <Group label="Media execution"><Cols n={3} cls="cs-jm">
+        <Item title="Video &amp; image ad"><Sm>One video and four image ads drove the audience to the campaign landing page</Sm><div className="cs-jm-ads">{['01-8163490e','02-b5a43938','03-9e819929','04-257d5413'].map(k=><img key={k} src={`uploads/연세우유_짠메랑이벤트_이미지광고소재_${k}.png`} alt="Image ad" />)}</div></Item>
+        <Item title="Influencer seeding"><Sm>Target-relevant influencers demonstrated the toast first, so the format already felt populated</Sm><div className="cs-jm-imgs"><img src="uploads/pasted-1792317037031-0.png" alt="Influencer seeding posts" /></div></Item>
+        <Item title="Microsite"><Sm>Every ad landed on one page with the event details, participation guide and prizes</Sm><div className="cs-jm-imgs"><img src="uploads/pasted-1792317072153-0.png" alt="Microsite top" /><img src="uploads/pasted-1792317079341-0.png" alt="Microsite participation guide" /></div></Item>
+      </Cols></Group>
+      <Group label="Process"><Cols n={4}>
+        <Item kicker="01"><P>Watch the campaign ad on Instagram or influencer content<br /><br /></P></Item>
+        <Item kicker="02"><P>Film a "cheers" moment using the product</P></Item>
+        <Item kicker="03"><P>Upload the content to Instagram,<br />with the event hashtag</P></Item>
+        <Item kicker="04"><P>Top 10 participants won prizes (₩1M in total)</P></Item>
+      </Cols></Group>
+    </CaseSection>
+    </Band>
+    <CaseSection num="03" title="Outcome">
+      <P lead>With the video and image ads, we targeted three audiences: (1) men and women aged 13–17, (2) men and women aged 18–29, and (3) a retargeting group of users who had engaged with Yonsei Milk's official Instagram ads, visited its profile or followed the account. We optimised delivery across all three on a budget of ₩33,000,000 (approx. €23,000) for 10 days. The video ad performed far better than the image ads, finishing at 224% of the impression target and 769% of the click target, with a 0.1% CTR against a 0.09% average across all ads.</P>
+      <div className="cs-jm-out">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
+          <Stat value="125" titleSize={16} title="Users took part in the campaign">Taking part in different ways: with the product, drawings or mobile images</Stat>
+          <Cols n={2} cls="cs-outcome">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+              <Stat value="224%" titleSize={16} title="Impression rate highlights strong reach">The campaign reached 17.2M impressions, more than double the KPI</Stat>
+              <ChartCard label="Impressions · KPI vs. actual"><Bars barW="50%" height={140} data={[['KPI', 7.7, false, '7.7M'], ['Achieved', 17.2, true, '17.2M']]} /></ChartCard>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+              <Stat value="769%" titleSize={16} title="Click performance far exceeded expectations">With 17,691 clicks, the campaign exceeded the KPI by over 7 times</Stat>
+              <ChartCard label="Clicks · KPI vs. actual"><Bars barW="50%" height={140} data={[['KPI', 2300, false, '2,300'], ['Achieved', 17691, true, '17,691']]} /></ChartCard>
+            </div>
+          </Cols>
+        </div>
+        <div className="cs-jm-entries">{[1, 2, 3, 4, 5, 6].map((n, i) => <Photo key={n} id={'jm-entry-' + n} src={'uploads/20261018_110243_' + n + '.jpg'} ratio="3/2" fit="contain" tape={i} tilt={[-1.5, 1, 0.5, -1, 1.5, -0.5][i]} />)}</div>
+      </div>
+    </CaseSection>
+  </CasePage>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

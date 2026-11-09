@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Archivo:ital,wght@0,400;0,500;0,600;1,400&amp;family=Caveat:wght@500;600&amp;family=Abril+Fatface&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#D62B1F;
+  --accent-deep:#A81E14;
+  --paper:#F3EDE0;
+  --paper-2:#FAF6EC;
+  --ink:#1B1917;
+  --ink-soft:#514C46;
+  --grain:url('paper-grain.svg');
+}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+p{margin:0;text-wrap:pretty;}
+h1,h2,h3{margin:0;font-family:'Abril Fatface','Archivo Black',serif;font-weight:400;}
+h4,h5{margin:0;font-family:'Archivo Black',Impact,sans-serif;font-weight:400;}
+ul{margin:0;padding:0;list-style:none;}
+a{color:var(--accent);text-underline-offset:3px;}
+a:hover{color:var(--accent-deep);}
+::selection{background:rgba(214,43,31,.2);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:hidden">
+
+<div style="position:sticky;top:0;z-index:20;background:rgba(243,237,224,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(27,25,23,.14)">
+  <div style="max-width:1680px;margin:0 auto;padding:16px clamp(24px,3.5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <a href="Portfolio2.html" style="display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none" style-hover="color:var(--accent)"><span style="font-size:16px;line-height:1">&#8592;</span> Back to portfolio</a>
+    <span style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Personal project 02</span>
+  </div>
+</div>
+
+<section data-screen-label="Hero" style="position:relative;background:var(--accent);padding:clamp(56px,7vw,92px) 0 0;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.2;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 3px),repeating-linear-gradient(0deg,rgba(0,0,0,.055) 0 1px,transparent 1px 3px);pointer-events:none"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 90px rgba(0,0,0,.24);pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);color:#FCF7EC;display:flex;flex-direction:column;gap:26px">
+    <span style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85">D8 Crate &nbsp;·&nbsp; Digital retailing project</span>
+    <h1 style="font-size:clamp(38px,6vw,84px);line-height:1.02;color:#FBF3E2;text-shadow:0.045em 0.045em 0 var(--accent-deep);max-width:20ch">At-Home Date Night Box</h1>
+    <div style="display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,4vw,64px);align-items:start;margin-top:6px">
+      <p style="font-size:clamp(18px,1.9vw,23px);line-height:1.6;color:#FFF9EE">A digital retailing project in which I helped build D8 Crate — a fictional at-home date night subscription box — from concept through to a live website with tracked performance analytics. I led social media for two months, planning content calendars, producing posts and generating AI product imagery, while contributing to the website build and using GA4 to measure and optimise performance.</p>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,249,238,.75)">What I owned</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Social media management</span>
+          <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Content planning</span>
+          <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">AI product imagery</span>
+          <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">GA4 tracking</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:22px;padding:26px 0 34px;border-top:1px solid rgba(252,247,236,.35);margin-top:8px">
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Type</span>
+        <span style="font-family:'Archivo Black',sans-serif;font-size:17px">Fictional product · school project</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Role</span>
+        <span style="font-family:'Archivo Black',sans-serif;font-size:17px">Social media lead</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Duration</span>
+        <span style="font-family:'Archivo Black',sans-serif;font-size:17px">2 months of owned social</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Market</span>
+        <span style="font-family:'Archivo Black',sans-serif;font-size:17px">Ireland</span>
+      </div>
+    </div>
+  </div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px)">
+    <div style="position:relative;width:100%;aspect-ratio:32/9;background:#fff;border:1px solid rgba(0,0,0,.2);box-shadow:0 22px 50px rgba(0,0,0,.24);transform:translateY(clamp(28px,4vw,52px))">
+      <image-slot id="d8-hero" shape="rect" src="uploads/Couple_final2.png" fit="cover" placeholder="Drop the brand key visual" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+    </div>
+  </div>
+  <div style="height:clamp(28px,4vw,52px);background:var(--paper)"></div>
+</section>
+
+<section data-screen-label="Challenge" style="position:relative;background:var(--paper);padding:clamp(36px,3.5vw,58px) 0">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">01</span>
+      <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">The Challenge</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(26px,2.6vw,38px)">
+
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.32fr);gap:clamp(24px,3vw,44px);align-items:start">
+        <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75">Ireland has become the <strong>second most expensive country in Europe</strong>, and a mid-range dinner for two now averages <strong>€90</strong> — which quietly prices the ordinary date night out of reach. The gap isn't desire; couples still want the evening. What they've lost is an affordable way to have it, so the brief was to rebuild the restaurant experience at home for a fraction of the bill, then prove people would actually sign up for it.</p>
+        <div style="position:relative;width:100%;aspect-ratio:4/3;background:#fff;border:1px solid rgba(27,25,23,.14)">
+          <image-slot id="d8-product" shape="rect" placeholder="Drop a crate product shot" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Target audience</h5>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,22px)">
+          <div style="display:flex;flex-direction:column;gap:12px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-left:3px solid var(--accent);border-radius:2px;padding:24px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">18–29 · low-moderate income</span>
+            <h4 style="font-size:18px;line-height:1.25">The Budget Date Seeker</h4>
+            <p style="font-size:15px;line-height:1.65;color:var(--ink-soft)">Wants a romantic date but doesn't know how to plan one — and can't afford to get it wrong.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-left:3px solid rgba(27,25,23,.5);border-radius:2px;padding:24px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">29–45 · career, maybe kids</span>
+            <h4 style="font-size:18px;line-height:1.25">The Relationship Rebuilder</h4>
+            <p style="font-size:15px;line-height:1.65;color:var(--ink-soft)">Needs to reconnect without the planning stress — the evening has to arrive ready.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-left:3px solid rgba(27,25,23,.5);border-radius:2px;padding:24px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Any age</span>
+            <h4 style="font-size:18px;line-height:1.25">The Meaningful Gifter</h4>
+            <p style="font-size:15px;line-height:1.65;color:var(--ink-soft)">Wants to give a couple a memorable night rather than another generic present.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:74ch">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Objective</h5>
+        <p style="font-size:16.5px;line-height:1.8;color:var(--ink-soft)">Design and launch an <strong style="color:var(--ink)">affordable, culturally-themed date night box</strong> that recreates a restaurant experience at home — then <strong style="color:var(--ink)">validate demand and drive sign-ups</strong> through owned and paid social, with the site instrumented well enough to tell us which theme people actually wanted.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Solution" style="position:relative;background:var(--paper);padding:clamp(36px,3.5vw,58px) 0">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">02</span>
+      <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">Solution</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+
+      <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75;max-width:74ch">D8 Crate is an affordable alternative to an expensive dinner out that still feels like an occasion. Each box is a <strong>culturally-themed date night</strong> — Italian, Korean or Japanese — holding eight curated moments rather than a hamper of food: <strong>Dine, Drink, Indulge, Set the mood, Discover, Connect, Play, Remember</strong>. Everything arrives ready, so there is nothing to plan. Two tiers, <strong>Basic at €50 and Premium at €69–85</strong>, were priced on a cost-plus model and validated with conjoint analysis, putting a full evening at roughly half the €90 restaurant bill.</p>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Eight moments in every crate</h5>
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.4vw,16px)">
+          <div style="padding-top:14px;border-top:2px solid var(--accent)"><span style="font-family:'Archivo Black',sans-serif;font-size:16px">Dine</span></div>
+          <div style="padding-top:14px;border-top:2px solid var(--accent)"><span style="font-family:'Archivo Black',sans-serif;font-size:16px">Drink</span></div>
+          <div style="padding-top:14px;border-top:2px solid var(--accent)"><span style="font-family:'Archivo Black',sans-serif;font-size:16px">Indulge</span></div>
+          <div style="padding-top:14px;border-top:2px solid var(--accent)"><span style="font-family:'Archivo Black',sans-serif;font-size:16px">Set the mood</span></div>
+          <div style="padding-top:14px;border-top:2px solid rgba(27,25,23,.35)"><span style="font-family:'Archivo Black',sans-serif;font-size:16px">Discover</span></div>
+          <div style="padding-top:14px;border-top:2px solid rgba(27,25,23,.35)"><span style="font-family:'Archivo Black',sans-serif;font-size:16px">Connect</span></div>
+          <div style="padding-top:14px;border-top:2px solid rgba(27,25,23,.35)"><span style="font-family:'Archivo Black',sans-serif;font-size:16px">Play</span></div>
+          <div style="padding-top:14px;border-top:2px solid rgba(27,25,23,.35)"><span style="font-family:'Archivo Black',sans-serif;font-size:16px">Remember</span></div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Three nights to choose from</h5>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,22px)">
+          <div style="display:flex;flex-direction:column;gap:11px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-left:3px solid var(--accent);border-radius:2px;padding:24px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">Option 01 · Italian night</span>
+            <h4 style="font-size:19px;line-height:1.25">La Notte Italiana</h4>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.55;color:var(--ink-soft)">
+              <li>Make your own pizza</li>
+              <li>Wine pairing included</li>
+              <li>Sweet tiramisu finale</li>
+            </ul>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:11px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-left:3px solid rgba(27,25,23,.5);border-radius:2px;padding:24px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Option 02 · Korean night</span>
+            <h4 style="font-size:19px;line-height:1.25">Seoul-Mate Night</h4>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.55;color:var(--ink-soft)">
+              <li>Build your own Korean BBQ</li>
+              <li>Authentic sides and desserts</li>
+              <li>Flirty games &amp; shared moments</li>
+            </ul>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:11px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-left:3px solid rgba(27,25,23,.5);border-radius:2px;padding:24px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Option 03 · Japanese night</span>
+            <h4 style="font-size:19px;line-height:1.25">Sushi No Yoru</h4>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.55;color:var(--ink-soft)">
+              <li>DIY sushi experience</li>
+              <li>Japanese sweets &amp; green tea</li>
+              <li>Interactive games and prompts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Product &amp; site</h5>
+        <div style="display:flex;flex-direction:column;gap:clamp(12px,1.5vw,20px)">
+          <div style="position:relative;aspect-ratio:16/9;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="d8-sol-1" shape="rect" src="uploads/pasted-1788272875112-0.png" fit="cover" placeholder="Solution slide" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+          <div style="position:relative;aspect-ratio:16/9;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="d8-sol-2" shape="rect" src="uploads/pasted-1788272878988-0.png" fit="cover" placeholder="Cultural experience slide" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+          <div style="position:relative;aspect-ratio:16/9;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="d8-sol-3" shape="rect" src="uploads/pasted-1788272883583-0.png" fit="cover" placeholder="What&#39;s in the box slide" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Strategy" style="position:relative;background:var(--paper);padding:clamp(36px,3.5vw,58px) 0">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">03</span>
+      <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">Strategy</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+
+      <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75;max-width:74ch">Social was my core focus. The content calendar ran on the three cuisine themes, alternating product-introduction posts with playful engagement formats — cultural quizzes, "which K-pop do you like" prompts — and countdown or invitation-style creative as launch approached. With no physical product to shoot, <strong>AI-generated imagery produced consistent, on-brand visuals across all three crates</strong>. Instagram led with TikTok in support; Reels carried relatable, real-life dating situations in a playful tone, and paid amplified whichever organic pieces performed.</p>
+
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,2.4vw,28px)">
+        <div style="background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-radius:2px;padding:26px 24px;display:flex;flex-direction:column;gap:14px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">Owned media · Instagram (main), TikTok</span>
+          <ul style="display:flex;flex-direction:column;gap:11px;font-size:15px;line-height:1.6;color:var(--ink-soft)">
+            <li>The target audience is already highly active on the platform.</li>
+            <li>Content built on romantic, date-night scenarios aligned with the brand's visual identity.</li>
+            <li style="color:var(--ink)">Reels reflected relatable, real-life dating situations rather than product beauty shots.</li>
+          </ul>
+          <div style="margin-top:4px"><a href="https://www.instagram.com/d8crate/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;font-family:'Archivo Black',sans-serif;font-size:14px;letter-spacing:.03em;color:var(--ink);background:transparent;border:1px solid rgba(27,25,23,.4);padding:13px 20px;border-radius:2px;text-decoration:none" style-hover="background:var(--accent);border-color:var(--accent);color:#FCF7EC">@d8crate on Instagram <span style="font-size:15px;line-height:1">&#8599;</span></a></div>
+        </div>
+        <div style="background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-radius:2px;padding:26px 24px;display:flex;flex-direction:column;gap:14px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">Paid media · Reels ads</span>
+          <ul style="display:flex;flex-direction:column;gap:11px;font-size:15px;line-height:1.6;color:var(--ink-soft)">
+            <li>Amplified top-performing organic content instead of running separate creative.</li>
+            <li>Built to convert engagement into sign-ups.</li>
+            <li style="color:var(--ink)">Targeted at young couples and individuals interested in dating and lifestyle content.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Action plan</h5>
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,18px)">
+          <div style="display:flex;flex-direction:column;gap:11px;padding-top:14px;border-top:3px solid var(--accent)">
+            <h4 style="font-size:16px;line-height:1.3">April Fool's message</h4>
+            <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">A fake message sent to followers on April 1 to spark organic sign-ups.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:11px;padding-top:14px;border-top:3px solid var(--accent)">
+            <h4 style="font-size:16px;line-height:1.3">Street Reels</h4>
+            <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">Interview-style content with target audiences, filmed on campus and in the city.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:11px;padding-top:14px;border-top:3px solid var(--accent)">
+            <h4 style="font-size:16px;line-height:1.3">QR posters</h4>
+            <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">Outdoor posters with QR codes — first 50 scans got 10% off a first purchase.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:11px;padding-top:14px;border-top:3px solid var(--accent)">
+            <h4 style="font-size:16px;line-height:1.3">Lettus Plan partnership</h4>
+            <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">Co-marketing with a meal-planning app: from daily meals to date night.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Media &amp; campaign creative</h5>
+        <div style="display:flex;flex-direction:column;gap:clamp(12px,1.5vw,20px)">
+          <div style="position:relative;aspect-ratio:16/9;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="d8-media-1" shape="rect" src="uploads/pasted-1788272968924-0.png" fit="cover" placeholder="Media strategy slide" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+          <div style="position:relative;aspect-ratio:16/9;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="d8-media-2" shape="rect" src="uploads/pasted-1788273006169-0.png" fit="cover" placeholder="Action plan slide" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Measurement" style="position:relative;background:var(--paper-2);border-top:1px solid rgba(27,25,23,.14);padding:clamp(44px,4.5vw,72px) 0 clamp(48px,5vw,80px)">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.11;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">04</span>
+      <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">Website &amp; measurement</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(26px,2.6vw,38px)">
+
+      <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75;max-width:74ch">I supported the build of the D8 Crate site and its Italian, Japanese and Korean crate landing pages, then instrumented them properly — <strong>GA4, Google Search Console, Google Tag Manager and Microsoft Clarity</strong> — so acquisition, conversion funnels and on-site behaviour were all observable rather than assumed.</p>
+
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,2.4vw,28px)">
+        <div style="background:var(--paper);border:1px solid rgba(27,25,23,.14);border-radius:2px;padding:26px 24px;display:flex;flex-direction:column;gap:13px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">A/B test · 4 landing pages</span>
+          <h4 style="font-size:18px;line-height:1.3">Which crate theme people actually wanted</h4>
+          <p style="font-size:15.5px;line-height:1.7;color:var(--ink-soft)">Running the four pages against each other identified the top-performing theme and let ad budget move behind it instead of being split evenly on a guess.</p>
+        </div>
+        <div style="background:var(--paper);border:1px solid rgba(27,25,23,.14);border-radius:2px;padding:26px 24px;display:flex;flex-direction:column;gap:13px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">Clarity · sessions &amp; heatmaps</span>
+          <h4 style="font-size:18px;line-height:1.3">Diagnosing the drop-offs</h4>
+          <p style="font-size:15.5px;line-height:1.7;color:var(--ink-soft)">Session recordings and heatmaps showed where visitors stalled, which drove fixes to both the mobile and desktop experience.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+          <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Site &amp; analytics</h5>
+          <a href="https://d8crate.com/?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;font-family:'Archivo Black',sans-serif;font-size:14px;letter-spacing:.03em;color:#FCF7EC;background:var(--accent);border:1px solid var(--accent);padding:13px 20px;border-radius:2px;text-decoration:none" style-hover="background:var(--accent-deep);border-color:var(--accent-deep);color:#fff">Visit d8crate.com <span style="font-size:15px;line-height:1">&#8599;</span></a>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.5vw,20px)">
+          <div style="position:relative;aspect-ratio:16/10;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="d8-site-1" shape="rect" fit="cover" placeholder="Drop a landing page screenshot" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+          <div style="position:relative;aspect-ratio:16/10;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="d8-site-2" shape="rect" fit="cover" placeholder="Drop a GA4 dashboard" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+          <div style="position:relative;aspect-ratio:16/10;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="d8-site-3" shape="rect" fit="cover" placeholder="Drop a Clarity heatmap" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Next" style="position:relative;background:var(--accent);padding:clamp(48px,6vw,80px) 0;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.2;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 90px rgba(0,0,0,.24);pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);color:#FCF7EC;display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:11px;letter-spacing:.28em;text-transform:uppercase;opacity:.85">More work</span>
+      <h3 style="font-size:clamp(26px,3.4vw,44px);line-height:1.05;color:#FBF3E2;text-shadow:0.04em 0.04em 0 var(--accent-deep)">Back to the portfolio</h3>
+    </div>
+    <a href="Portfolio2.html" style="font-family:'Archivo Black',sans-serif;font-size:16px;letter-spacing:.04em;color:var(--accent);background:#FCF7EC;padding:16px 28px;border-radius:2px;text-decoration:none" style-hover="background:#fff">View all projects &#8594;</a>
+  </div>
+</section>
+
+</div>
+</x-dc>
+</body>
+</html>

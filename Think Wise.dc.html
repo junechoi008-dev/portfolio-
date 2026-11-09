@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Archivo:ital,wght@0,400;0,500;0,600;1,400&amp;family=Caveat:wght@500;600&amp;family=Abril+Fatface&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#D62B1F;
+  --accent-deep:#A81E14;
+  --paper:#F3EDE0;
+  --paper-2:#FAF6EC;
+  --ink:#1B1917;
+  --ink-soft:#514C46;
+  --grain:url('paper-grain.svg');
+}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+p{margin:0;text-wrap:pretty;}
+h1,h2,h3{margin:0;font-family:'Abril Fatface','Archivo Black',serif;font-weight:400;}
+h4,h5{margin:0;font-family:'Archivo Black',Impact,sans-serif;font-weight:400;}
+ul{margin:0;padding:0;list-style:none;}
+a{color:var(--accent);text-underline-offset:3px;}
+a:hover{color:var(--accent-deep);}
+::selection{background:rgba(214,43,31,.2);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:hidden">
+
+<div style="position:sticky;top:0;z-index:20;background:rgba(243,237,224,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(27,25,23,.14)">
+  <div style="max-width:1680px;margin:0 auto;padding:16px clamp(24px,3.5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <a href="Portfolio2.html" style="display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none" style-hover="color:var(--accent)"><span style="font-size:16px;line-height:1">&#8592;</span> Back to portfolio</a>
+    <span style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Personal project 03</span>
+  </div>
+</div>
+
+<section data-screen-label="Hero" style="position:relative;background:var(--accent);padding:clamp(56px,7vw,92px) 0 0;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.2;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 3px),repeating-linear-gradient(0deg,rgba(0,0,0,.055) 0 1px,transparent 1px 3px);pointer-events:none"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 90px rgba(0,0,0,.24);pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);color:#FCF7EC;display:flex;flex-direction:column;gap:26px">
+    <span style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85">UCD Smurfit &nbsp;·&nbsp; Student Advert Competition 2026</span>
+    <h1 style="font-size:clamp(38px,6vw,84px);line-height:1.02;color:#FBF3E2;text-shadow:0.045em 0.045em 0 var(--accent-deep);max-width:20ch">think ( ) wise</h1>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(30px,4vw,60px);align-items:center;margin-top:6px">
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <p style="font-size:clamp(18px,1.9vw,23px);line-height:1.6;color:#FFF9EE">An institutional brand campaign video for UCD Smurfit, built on the concept "think ( ) wise" to communicate the school's value proposition to prospective students. As team lead I directed it end to end — concept and storytelling through filming to the final edit.</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,249,238,.75)">What I owned</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Team lead</span>
+            <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Concept development</span>
+            <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Storytelling</span>
+            <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Direction &amp; edit</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px;padding:26px 0 0;border-top:1px solid rgba(252,247,236,.35);margin-top:4px">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Project</span>
+            <span style="font-family:'Archivo Black',sans-serif;font-size:17px">Student Advert Competition</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Theme</span>
+            <span style="font-family:'Archivo Black',sans-serif;font-size:17px">"Think Otherwise"</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Role</span>
+            <span style="font-family:'Archivo Black',sans-serif;font-size:17px">Team lead · director</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Format</span>
+            <span style="font-family:'Archivo Black',sans-serif;font-size:17px">Film · max 2 minutes</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(14px,1.6vw,22px)">
+        <div style="position:relative;width:100%;aspect-ratio:9/16;background:#fff;border:1px solid rgba(0,0,0,.2);box-shadow:0 18px 40px rgba(0,0,0,.28)">
+          <image-slot id="tw-hero-1" shape="rect" src="uploads/pasted-1788208602840-0.png" fit="cover" placeholder="Drop a vertical film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+        </div>
+        <div style="position:relative;width:100%;aspect-ratio:9/16;background:#fff;border:1px solid rgba(0,0,0,.2);box-shadow:0 18px 40px rgba(0,0,0,.28);margin-top:clamp(20px,3vw,44px)">
+          <image-slot id="tw-hero-2" shape="rect" src="uploads/pasted-1788209067470-0.png" fit="cover" placeholder="Drop a second vertical still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height:clamp(34px,4vw,56px)"></div>
+</section>
+
+<section data-screen-label="Challenge" style="position:relative;background:var(--paper);padding:clamp(36px,3.5vw,58px) 0">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">01</span>
+      <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">The Challenge</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(26px,2.6vw,38px)">
+
+      <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75;max-width:74ch">The brief asked for a piece of marketing communication that would persuade overseas students that UCD Smurfit offers not only a leading-edge business education but a genuine expansion of their creative potential — that studying there would let them <strong>"Think Otherwise"</strong>. The real difficulty was the abstraction. The theme descends from George Berkeley's "We Irish think otherwise" and Apple's "Think Different", both philosophical rather than practical, and it had to become a concrete, authentic story an international student could recognise — without turning into a generic school-promotion video.</p>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Constraints</h5>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,22px)">
+          <div style="display:flex;flex-direction:column;gap:10px;padding-top:14px;border-top:2px solid var(--accent)">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:16px">Under 2 minutes</span>
+            <p style="font-size:15px;line-height:1.6;color:var(--ink-soft)">With under 30 seconds encouraged for channels like TikTok.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;padding-top:14px;border-top:2px solid var(--accent)">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:16px">No generative AI</span>
+            <p style="font-size:15px;line-height:1.6;color:var(--ink-soft)">Every frame had to be shot and edited by the team, per competition rules.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;padding-top:14px;border-top:2px solid var(--accent)">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:16px">School, not scenery</span>
+            <p style="font-size:15px;line-height:1.6;color:var(--ink-soft)">Focus on the School and student experience — not a tourism ad for Ireland.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Evaluation criteria</h5>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,22px)">
+          <div style="display:flex;flex-direction:column;gap:10px;padding-top:18px;border-top:2px solid var(--ink)">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,3.2vw,44px);line-height:1;color:var(--accent)">40%</span>
+            <p style="font-size:15px;line-height:1.6;color:var(--ink-soft)">Creativity &amp; originality</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;padding-top:18px;border-top:2px solid var(--ink)">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,3.2vw,44px);line-height:1;color:var(--accent)">40%</span>
+            <p style="font-size:15px;line-height:1.6;color:var(--ink-soft)">Effective communication</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;padding-top:18px;border-top:2px solid var(--ink)">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,3.2vw,44px);line-height:1;color:var(--accent)">20%</span>
+            <p style="font-size:15px;line-height:1.6;color:var(--ink-soft)">Production quality</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Concept" style="position:relative;background:var(--paper);padding:clamp(36px,3.5vw,58px) 0">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">02</span>
+      <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">Concept</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+
+      <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75;max-width:74ch">The idea came from one small piece of everyday English: the suffix <strong>-wise</strong>, which we use to reframe how something is being looked at — <em>perspective-wise, career-wise</em>. Put a blank in front of it and the competition theme fits inside your own sentence: <strong>think ( ) wise</strong>. It ties the wordplay straight back to "Think Otherwise" and gives the film an ownable structural device instead of a slogan pasted over campus footage.</p>
+
+      <div style="background:var(--accent);color:#FCF7EC;border-radius:2px;padding:clamp(30px,3.6vw,50px);display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.8">The device</span>
+        <h2 style="font-size:clamp(34px,5vw,68px);line-height:1.05;text-shadow:0.04em 0.04em 0 var(--accent-deep)">think ( ) wise</h2>
+        <p style="font-size:clamp(16px,1.7vw,20px);line-height:1.65;max-width:60ch;opacity:.95">Fill the brackets and you get the chapter. Perspective. Approach. Career. Each one a way the school changes how a student thinks.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Creative device · the opening hook</h5>
+        <p style="font-size:16.5px;line-height:1.8;color:var(--ink-soft);max-width:74ch">The film opens on a text-message exchange with a friend — <strong style="color:var(--ink)">"Hey, you won't believe it, I've become a different person"</strong> — so the first voice you meet is personal rather than institutional. It buys attention in two seconds and hands the story to a student before any of the "-wise" chapters begin.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:clamp(24px,3.4vw,52px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Narrative structure</h5>
+          <p style="font-size:16.5px;line-height:1.8;color:var(--ink-soft)">Three "-wise" chapters, each cut as a before-and-after — a "Used to be…" moment against a "Become…" transformation — so the change is shown rather than claimed.</p>
+          <div style="display:flex;flex-direction:column;gap:clamp(12px,1.4vw,18px)">
+            <div style="display:flex;flex-direction:column;gap:10px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-left:3px solid var(--accent);border-radius:2px;padding:20px 22px">
+              <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">Chapter 01</span>
+              <h4 style="font-size:17px;line-height:1.25">Perspective-wise</h4>
+              <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)"><strong style="color:var(--ink)">Used to be</strong> seeing things one way, studying alone.</p>
+              <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)"><strong style="color:var(--ink)">Become</strong> seeing through others’ eyes — group debate and collaboration.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-left:3px solid var(--accent);border-radius:2px;padding:20px 22px">
+              <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">Chapter 02</span>
+              <h4 style="font-size:17px;line-height:1.25">Approach-wise</h4>
+              <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)"><strong style="color:var(--ink)">Used to be</strong> linear, narrow thinking.</p>
+              <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)"><strong style="color:var(--ink)">Become</strong> layered and reframed — mind maps, sticky notes, library resources.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-left:3px solid var(--accent);border-radius:2px;padding:20px 22px">
+              <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">Chapter 03</span>
+              <h4 style="font-size:17px;line-height:1.25">Career-wise</h4>
+              <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)"><strong style="color:var(--ink)">Used to be</strong> feeling lost, passively scrolling job sites.</p>
+              <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)"><strong style="color:var(--ink)">Become</strong> actively engaging — career services, GradIreland, job fairs.</p>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;position:sticky;top:96px">
+          <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Watch the film</h5>
+          <div style="position:relative;width:100%;aspect-ratio:9/16;background:#111;border:1px solid rgba(27,25,23,.2);box-shadow:0 16px 36px rgba(27,25,23,.16);overflow:hidden">
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:rgba(252,247,236,.6);text-align:center;padding:20px">
+              <span style="font-size:11px;letter-spacing:.24em;text-transform:uppercase">Vertical cut</span>
+              <span style="font-family:'Caveat',cursive;font-size:22px">drop thinkwise.mp4 here</span>
+            </div>
+            <video controls playsinline preload="metadata" src="uploads/thinkwise.mp4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:transparent"></video>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--ink);color:var(--paper-2);border-radius:2px;padding:clamp(24px,2.8vw,36px);display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.7">The close</span>
+        <h2 style="font-size:clamp(20px,2.4vw,32px);line-height:1.2">"Through the experience in Smurfit school, I think Otherwise."</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="font-size:12.5px;padding:8px 13px;border:1px solid rgba(250,246,236,.4);border-radius:2px">deeper</span>
+            <span style="font-size:12.5px;padding:8px 13px;border:1px solid rgba(250,246,236,.4);border-radius:2px">wider</span>
+            <span style="font-size:12.5px;padding:8px 13px;border:1px solid rgba(250,246,236,.4);border-radius:2px">differently</span>
+            <span style="font-size:12.5px;padding:8px 13px;border:1px solid rgba(250,246,236,.4);border-radius:2px">creatively</span>
+            <span style="font-size:12.5px;padding:8px 13px;border:1px solid rgba(250,246,236,.4);border-radius:2px">critically</span>
+            <span style="font-size:12.5px;padding:8px 13px;border:1px solid rgba(250,246,236,.4);border-radius:2px">strategically</span>
+            <span style="font-size:12.5px;padding:8px 13px;border:1px solid rgba(250,246,236,.4);border-radius:2px">holistically</span>
+            <span style="font-size:12.5px;padding:8px 13px;border:1px solid rgba(250,246,236,.4);border-radius:2px">together</span>
+            <span style="font-size:12.5px;padding:8px 13px;border:1px solid rgba(250,246,236,.4);border-radius:2px">freely</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Production" style="position:relative;background:var(--paper);padding:clamp(36px,3.5vw,58px) 0 clamp(44px,4.5vw,68px)">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">03</span>
+      <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">Production</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(26px,2.8vw,40px)">
+
+      <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75;max-width:74ch">As team lead I directed the shot list and storyboard, mapping each "-wise" segment to specific on-campus footage — library, classroom debates, the career centre, campus walks — then coordinated filming logistics and led the edit, assembling the segmented structure into a single coherent cut inside the two-minute limit, entirely without generative AI tools.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,22px)">
+        <div style="display:flex;flex-direction:column;gap:11px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-top:3px solid var(--accent);border-radius:2px;padding:22px 20px">
+          <h4 style="font-size:16px;line-height:1.3">Shot list &amp; storyboard</h4>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">Every chapter tied to named locations before anyone picked up a camera.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:11px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-top:3px solid var(--accent);border-radius:2px;padding:22px 20px">
+          <h4 style="font-size:16px;line-height:1.3">Filming logistics</h4>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">Scheduling cast, crew and campus access around a live teaching term.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:11px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-top:3px solid var(--accent);border-radius:2px;padding:22px 20px">
+          <h4 style="font-size:16px;line-height:1.3">Edit</h4>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">Cutting the before-and-after pairs so the structure reads without narration.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Next" style="position:relative;background:var(--accent);padding:clamp(48px,6vw,80px) 0;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.2;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 90px rgba(0,0,0,.24);pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);color:#FCF7EC;display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:11px;letter-spacing:.28em;text-transform:uppercase;opacity:.85">More work</span>
+      <h3 style="font-size:clamp(26px,3.4vw,44px);line-height:1.05;color:#FBF3E2;text-shadow:0.04em 0.04em 0 var(--accent-deep)">Back to the portfolio</h3>
+    </div>
+    <a href="Portfolio2.html" style="font-family:'Archivo Black',sans-serif;font-size:16px;letter-spacing:.04em;color:var(--accent);background:#FCF7EC;padding:16px 28px;border-radius:2px;text-decoration:none" style-hover="background:#fff">View all projects &#8594;</a>
+  </div>
+</section>
+
+</div>
+</x-dc>
+</body>
+</html>

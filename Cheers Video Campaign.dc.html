@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Archivo:ital,wght@0,400;0,500;0,600;1,400&amp;family=Caveat:wght@500;600&amp;family=Abril+Fatface&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#D62B1F;
+  --accent-deep:#A81E14;
+  --paper:#F3EDE0;
+  --paper-2:#FAF6EC;
+  --ink:#1B1917;
+  --ink-soft:#514C46;
+  --grain:url('paper-grain.svg');
+}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+p{margin:0;text-wrap:pretty;}
+h1,h2,h3{margin:0;font-family:'Abril Fatface','Archivo Black',serif;font-weight:400;}
+h4,h5{margin:0;font-family:'Archivo Black',Impact,sans-serif;font-weight:400;}
+ul{margin:0;padding:0;list-style:none;}
+a{color:var(--accent);text-underline-offset:3px;}
+a:hover{color:var(--accent-deep);}
+::selection{background:rgba(214,43,31,.2);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:hidden">
+
+<div style="position:sticky;top:0;z-index:20;background:rgba(243,237,224,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(27,25,23,.14)">
+  <div style="max-width:1680px;margin:0 auto;padding:16px clamp(24px,3.5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <a href="Portfolio2.html" style="display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none" style-hover="color:var(--accent)"><span style="font-size:16px;line-height:1">←</span> Back to portfolio</a>
+    <span style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Core project 02</span>
+  </div>
+</div>
+
+<section data-screen-label="Hero" style="position:relative;background:var(--accent);padding:clamp(56px,7vw,92px) 0 0;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.2;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 3px),repeating-linear-gradient(0deg,rgba(0,0,0,.055) 0 1px,transparent 1px 3px);pointer-events:none"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 90px rgba(0,0,0,.24);pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);color:#FCF7EC;display:flex;flex-direction:column;gap:26px">
+    <span style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85">Yonsei Milk &nbsp;·&nbsp; Flavored Milk</span>
+    <h1 style="font-size:clamp(38px,6vw,84px);line-height:1.02;color:#FBF3E2;text-shadow:0.045em 0.045em 0 var(--accent-deep);max-width:20ch">Jjan-merang Video Campaign</h1>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(30px,4vw,60px);align-items:center;margin-top:6px">
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <p style="font-size:clamp(18px,1.9vw,23px);line-height:1.6;color:#FFF9EE">An awareness campaign targeting teenagers for a flavored milk product, reimagining the adult "cheers" ritual as a fun, lighthearted bonding moment for teens. I led an Instagram-based UGC campaign using the Boomerang feature, overseeing planning, production, media strategy and execution.</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,249,238,.75)">What I owned</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Campaign concept</span>
+            <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Shoot planning</span>
+            <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Media strategy</span>
+            <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">UGC event execution</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px;padding:26px 0 0;border-top:1px solid rgba(252,247,236,.35);margin-top:4px">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Period</span>
+            <span style="font-family:'Archivo Black',sans-serif;font-size:17px">Apr 2023</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Role</span>
+            <span style="font-family:'Archivo Black',sans-serif;font-size:17px">Project Manager</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            
+            
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Discipline</span><div style="display:flex;flex-direction:column;gap:7px">
+            
+            <span style="font-family:'Archivo Black',sans-serif;font-size:17px">IMC · UGC campaign</span>
+          </div></div>
+          
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(14px,1.6vw,22px)">
+        <div style="position:relative;width:100%;aspect-ratio:9/16;background:#fff;border:1px solid rgba(0,0,0,.2);box-shadow:0 18px 40px rgba(0,0,0,.28)">
+          <image-slot id="jjan-hero" shape="rect" src="uploads/그림7.png" fit="cover" placeholder="Drop a vertical film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+        </div>
+        <div style="position:relative;width:100%;aspect-ratio:9/16;background:#fff;border:1px solid rgba(0,0,0,.2);box-shadow:0 18px 40px rgba(0,0,0,.28);margin-top:clamp(20px,3vw,44px)">
+          <image-slot id="jjan-hero-2" shape="rect" src="uploads/그림12.png" fit="cover" placeholder="Drop a second vertical still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+        </div>
+      </div>
+      </div>
+      
+    
+    
+  </div>
+  <div style="height:clamp(34px,4vw,56px)"></div>
+</section>
+
+<section data-screen-label="Challenge" style="position:relative;background:var(--paper);padding:clamp(36px,3.5vw,58px) 0">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">01</span>
+      <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">The Challenge</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(26px,2.6vw,38px)">
+
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.32fr);gap:clamp(24px,3vw,44px);align-items:start">
+        <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75">The brief was a brand awareness campaign for a flavored milk whose one distinguishing feature is its handle — a bottle you grip rather than sip from. The obstacle was cultural: <strong>"cheers" in Korea belongs to adults and alcohol</strong>, so borrowing the ritual for teenagers risked reading as forced or, worse, inappropriate. The concept had to reframe the toast so naturally that teens would perform it themselves — on camera, in public.</p>
+        <div style="position:relative;width:100%;aspect-ratio:4/3;background:#fff;border:1px solid rgba(27,25,23,.14)">
+          <image-slot id="jjan-product" shape="rect" src="uploads/pasted-1788257310374-0.png" fit="cover" placeholder="Drop the product shot" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:74ch">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Objectives</h5>
+        <p style="font-size:16.5px;line-height:1.8;color:var(--ink-soft)">The campaign had to <strong style="color:var(--ink)">position the product as a sweet, relaxing daily treat for teens</strong> and <strong style="color:var(--ink)">lift brand recognition and positive perception</strong> — but awareness alone wasn't the bar. Success meant teens taking part themselves rather than only watching, so participation was treated as the real measure from the start.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Strategy" style="position:relative;background:var(--paper);padding:clamp(36px,3.5vw,58px) 0">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">02</span>
+      <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">Strategy</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+
+      <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75;max-width:74ch">The reframe came from wordplay teens already use: <strong>"JJAN" (cheers) → "JJIN" (thick, rich)</strong> — you don't toast with alcohol, you toast with milk thick enough to deserve it. On top of that sat a behaviour that already existed on their feeds: filming the clink of two drinks with Instagram's Boomerang. We named it <strong>"Jjan-merang"</strong>, so the campaign wasn't asking teens to learn anything — only to point the trend at our bottle.</p>
+
+      <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75;max-width:74ch">Media was built to feed participation rather than just reach. <strong>Six short-form videos, including a 6-second bumper</strong>, ran as vertical ads on YouTube Shorts and Instagram Reels; <strong>target-relevant influencers</strong> demonstrated the toast first so the format felt already-populated; and every ad landed on a <strong>microsite</strong> carrying the event details, the participation guide and the prizes — a single destination that turned a view into an entry.</p>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Core idea</h5>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,2.4vw,28px)">
+          <div style="background:var(--accent);color:#FCF7EC;border-radius:2px;padding:30px 26px;display:flex;flex-direction:column;gap:14px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.8">The wordplay</span>
+            <h2 style="font-size:clamp(22px,2.5vw,31px);line-height:1.15;text-shadow:0.04em 0.04em 0 var(--accent-deep)">"JJAN? JJIN!"<br>Beer? Milk!</h2>
+            <p style="font-size:15px;line-height:1.6;opacity:.92">The adult toast, handed to teenagers — with rich flavored milk in place of alcohol.</p>
+          </div>
+          <div style="background:var(--ink);color:var(--paper-2);border-radius:2px;padding:30px 26px;display:flex;flex-direction:column;gap:14px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.7">The motif</span>
+            <h2 style="font-size:clamp(22px,2.5vw,31px);line-height:1.15">"Jjan-merang"</h2>
+            <p style="font-size:15px;line-height:1.6;opacity:.85">Borrowed from an existing trend — filming the clink of drinks with Instagram's Boomerang feature.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">How to join</h5>
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,18px)">
+          <div style="display:flex;flex-direction:column;gap:11px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-top:3px solid var(--accent);border-radius:2px;padding:22px 20px">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:14px;color:var(--accent)">01</span>
+            <p style="font-size:15px;line-height:1.6">Film a "cheers" moment using the product</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:11px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-top:3px solid var(--accent);border-radius:2px;padding:22px 20px">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:14px;color:var(--accent)">02</span>
+            <p style="font-size:15px;line-height:1.6">Upload the Boomerang to Instagram</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:11px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-top:3px solid var(--accent);border-radius:2px;padding:22px 20px">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:14px;color:var(--accent)">03</span>
+            <p style="font-size:15px;line-height:1.6">Tag Yonsei Milk's official account with the campaign hashtag</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:11px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-top:3px solid var(--accent);border-radius:2px;padding:22px 20px">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:14px;color:var(--accent)">04</span>
+            <p style="font-size:15px;line-height:1.6">Top participants selected for prizes</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Six short-forms, one toast</h5>
+        <p style="font-size:16.5px;line-height:1.8;color:var(--ink-soft);max-width:74ch">Six vertical films — including a 6-second bumper — each staged a different teen "cheers" occasion and ended on the handle-clink, the exact gesture we wanted copied. Two of the cuts answered the obvious objection ("what if I can't buy the product?") by showing entries made with a drawing or a phone screen, which is where a good share of the participation came from.</p>
+        <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(8px,1vw,14px)">
+          <div style="position:relative;aspect-ratio:9/16;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="jjan-film-1" shape="rect" src="uploads/그림9.png" fit="cover" placeholder="Drop a vertical film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+          <div style="position:relative;aspect-ratio:9/16;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="jjan-film-2" shape="rect" src="uploads/그림11.png" fit="cover" placeholder="Drop a vertical film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+          <div style="position:relative;aspect-ratio:9/16;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="jjan-film-3" shape="rect" src="uploads/그림13.png" fit="cover" placeholder="Drop a vertical film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+          <div style="position:relative;aspect-ratio:9/16;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="jjan-film-4" shape="rect" src="uploads/그림2-5a1450fe.png" fit="cover" placeholder="Drop a vertical film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+          <div style="position:relative;aspect-ratio:9/16;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="jjan-film-5" shape="rect" src="uploads/그림5.png" fit="cover" placeholder="Drop a vertical film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+          <div style="position:relative;aspect-ratio:9/16;background:#fff;border:1px solid rgba(27,25,23,.14);overflow:hidden">
+            <image-slot id="jjan-film-6" shape="rect" src="uploads/그림7-249cd97d.png" fit="cover" placeholder="Drop a vertical film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div></section>
+
+<section data-screen-label="Outcome" style="position:relative;background:var(--paper-2);border-top:1px solid rgba(27,25,23,.14);padding:clamp(44px,4.5vw,72px) 0 clamp(48px,5vw,80px)">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.11;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+
+    <div style="display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:end">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">03</span>
+        <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">Outcome</h3>
+      </div>
+      <p style="font-size:16.5px;line-height:1.7;color:var(--ink-soft);max-width:56ch">Measured against the media plan's own estimates for the April 2023 campaign period, across YouTube Shorts and Instagram Reels.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.6vw,32px);align-items:start">
+
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:12px;padding-top:20px;border-top:2px solid var(--ink)">
+          <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(40px,4.6vw,66px);line-height:.95;color:var(--accent);letter-spacing:-.02em">224%</span>
+          <h4 style="font-size:17px;line-height:1.25">Of the impression target</h4>
+          <p style="font-size:15px;line-height:1.65;color:var(--ink-soft)">17.2M impressions delivered against an estimated 7.7M.</p>
+        </div>
+        <div style="background:var(--paper);border:1px solid rgba(27,25,23,.14);border-radius:2px;padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:16px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Impressions · plan vs. actual</span>
+          <div style="display:flex;align-items:flex-end;gap:clamp(14px,2vw,26px);height:150px;border-bottom:1px solid rgba(27,25,23,.25)">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;height:100%;justify-content:flex-end">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:13px;color:var(--ink-soft)">7.7M</span>
+              <div style="width:100%;height:44.8%;background:rgba(27,25,23,.22);border:1px solid rgba(27,25,23,.3)"></div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;height:100%;justify-content:flex-end">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:15px;color:var(--accent)">17.2M</span>
+              <div style="width:100%;height:100%;background:var(--accent);border:1px solid var(--accent-deep)"></div>
+            </div>
+          </div>
+          <div style="display:flex;gap:clamp(14px,2vw,26px)">
+            <span style="flex:1;text-align:center;font-size:11.5px;line-height:1.35;color:var(--ink-soft)">Estimated</span>
+            <span style="flex:1;text-align:center;font-size:11.5px;line-height:1.35;font-family:'Archivo Black',sans-serif;color:var(--accent)">Achieved</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:12px;padding-top:20px;border-top:2px solid var(--ink)">
+          <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(40px,4.6vw,66px);line-height:.95;color:var(--accent);letter-spacing:-.02em">769%</span>
+          <h4 style="font-size:17px;line-height:1.25">Of the click target</h4>
+          <p style="font-size:15px;line-height:1.65;color:var(--ink-soft)">17,691 clicks to the microsite against an estimated 2,300.</p>
+        </div>
+        <div style="background:var(--paper);border:1px solid rgba(27,25,23,.14);border-radius:2px;padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:16px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Clicks · plan vs. actual</span>
+          <div style="display:flex;align-items:flex-end;gap:clamp(14px,2vw,26px);height:150px;border-bottom:1px solid rgba(27,25,23,.25)">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;height:100%;justify-content:flex-end">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:13px;color:var(--ink-soft)">2,300</span>
+              <div style="width:100%;height:13%;background:rgba(27,25,23,.22);border:1px solid rgba(27,25,23,.3)"></div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;height:100%;justify-content:flex-end">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:15px;color:var(--accent)">17,691</span>
+              <div style="width:100%;height:100%;background:var(--accent);border:1px solid var(--accent-deep)"></div>
+            </div>
+          </div>
+          <div style="display:flex;gap:clamp(14px,2vw,26px)">
+            <span style="flex:1;text-align:center;font-size:11.5px;line-height:1.35;color:var(--ink-soft)">Estimated</span>
+            <span style="flex:1;text-align:center;font-size:11.5px;line-height:1.35;font-family:'Archivo Black',sans-serif;color:var(--accent)">Achieved</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:12px;padding-top:20px;border-top:2px solid var(--ink)">
+          <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(40px,4.6vw,66px);line-height:.95;color:var(--accent);letter-spacing:-.02em">219</span>
+          <h4 style="font-size:17px;line-height:1.25">Participants engaged</h4>
+          <p style="font-size:15px;line-height:1.65;color:var(--ink-soft)">Teens entered in their own formats — not only with the product, but with illustrations and mobile-made content.</p>
+        </div>
+        <div style="background:var(--paper);border:1px solid rgba(27,25,23,.14);border-radius:2px;padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:16px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Entry formats</span>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;flex-direction:column;gap:9px;padding-bottom:14px;border-bottom:1px solid rgba(27,25,23,.14)">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:15px">Product usage</span>
+              <p style="font-size:14px;line-height:1.55;color:var(--ink-soft)">Boomerang toasts filmed with the bottle in hand — the format the campaign asked for.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:9px;padding-bottom:14px;border-bottom:1px solid rgba(27,25,23,.14)">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:15px">Illustrations</span>
+              <p style="font-size:14px;line-height:1.55;color:var(--ink-soft)">Hand-drawn takes on the toast, submitted unprompted.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:15px">Mobile content</span>
+              <p style="font-size:14px;line-height:1.55;color:var(--ink-soft)">Edits, stickers and screen-made pieces built entirely on a phone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Next" style="position:relative;background:var(--accent);padding:clamp(48px,6vw,80px) 0;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.2;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 90px rgba(0,0,0,.24);pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);color:#FCF7EC;display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:11px;letter-spacing:.28em;text-transform:uppercase;opacity:.85">More work</span>
+      <h3 style="font-size:clamp(26px,3.4vw,44px);line-height:1.05;color:#FBF3E2;text-shadow:0.04em 0.04em 0 var(--accent-deep)">Back to the portfolio</h3>
+    </div>
+    <a href="Portfolio2.html" style="font-family:'Archivo Black',sans-serif;font-size:16px;letter-spacing:.04em;color:var(--accent);background:#FCF7EC;padding:16px 28px;border-radius:2px;text-decoration:none" style-hover="background:#fff">View all projects →</a>
+  </div>
+</section>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Archivo:ital,wght@0,400;0,500;0,600;1,400&amp;family=Caveat:wght@500;600&amp;family=Abril+Fatface&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#D62B1F;
+  --accent-deep:#A81E14;
+  --paper:#F3EDE0;
+  --paper-2:#FAF6EC;
+  --ink:#1B1917;
+  --ink-soft:#514C46;
+  --grain:url('paper-grain.svg');
+}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+p{margin:0;text-wrap:pretty;}
+h1,h2,h3{margin:0;font-family:'Abril Fatface','Archivo Black',serif;font-weight:400;}
+h4,h5{margin:0;font-family:'Archivo Black',Impact,sans-serif;font-weight:400;}
+ul{margin:0;padding:0;list-style:none;}
+a{color:var(--accent);text-underline-offset:3px;}
+a:hover{color:var(--accent-deep);}
+::selection{background:rgba(214,43,31,.2);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:hidden">
+
+<div style="position:sticky;top:0;z-index:20;background:rgba(243,237,224,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(27,25,23,.14)">
+  <div style="max-width:1680px;margin:0 auto;padding:16px clamp(24px,3.5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <a href="Portfolio2.html" style="display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none" style-hover="color:var(--accent)"><span style="font-size:16px;line-height:1">&#8592;</span> Back to portfolio</a>
+    <div style="display:flex;gap:22px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)">
+      <a href="#hyundai" style="color:var(--ink-soft);text-decoration:none" style-hover="color:var(--accent)">01 Hyundai</a>
+      <a href="#dhuman" style="color:var(--ink-soft);text-decoration:none" style-hover="color:var(--accent)">02 Dhuman</a>
+      <a href="#goobne" style="color:var(--ink-soft);text-decoration:none" style-hover="color:var(--accent)">03 Goobne</a>
+    </div>
+  </div>
+</div>
+
+<section data-screen-label="Hero" style="position:relative;background:var(--accent);padding:clamp(56px,7vw,92px) 0 0;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.2;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 3px),repeating-linear-gradient(0deg,rgba(0,0,0,.055) 0 1px,transparent 1px 3px);pointer-events:none"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 90px rgba(0,0,0,.24);pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);color:#FCF7EC;display:flex;flex-direction:column;gap:26px">
+    <span style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85">Hyundai Motor &nbsp;·&nbsp; Dhuman &nbsp;·&nbsp; Goobne Chicken</span>
+    <h1 style="font-size:clamp(38px,6vw,84px);line-height:1.02;color:#FBF3E2;text-shadow:0.045em 0.045em 0 var(--accent-deep);max-width:22ch">Always-on social management</h1>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.92fr);gap:clamp(30px,4vw,64px);align-items:start;margin-top:6px">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <p style="font-size:clamp(18px,1.9vw,23px);line-height:1.6;color:#FFF9EE;max-width:52ch">Three owned-channel accounts, three different lessons in what "always-on" actually asks of a marketer.</p>
+        <div style="display:flex;flex-direction:column;gap:20px;padding-top:22px;border-top:1px solid rgba(252,247,236,.35)">
+          <div style="display:flex;gap:18px;align-items:baseline">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:15px;opacity:.6;min-width:26px">01</span>
+            <div style="display:flex;flex-direction:column;gap:7px">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:18px">Hyundai Motor — content operations</span>
+              <p style="font-size:15.5px;line-height:1.62;color:rgba(255,249,238,.86)">Learned to hold quality steady at high volume: four content types running at once, HQ revisions landing daily, DEI review on every asset.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:18px;align-items:baseline">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:15px;opacity:.6;min-width:26px">02</span>
+            <div style="display:flex;flex-direction:column;gap:7px">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:18px">Dhuman — project manager</span>
+              <p style="font-size:15.5px;line-height:1.62;color:rgba(255,249,238,.86)">Learned that trust is content: I found real customers, wrote and produced their interviews, and let their stories carry the brand.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:18px;align-items:baseline">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:15px;opacity:.6;min-width:26px">03</span>
+            <div style="display:flex;flex-direction:column;gap:7px">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:18px">Goobne Chicken — project manager</span>
+              <p style="font-size:15.5px;line-height:1.62;color:rgba(255,249,238,.86)">Learned to run an account as a loop, not a launch: monthly analysis into next month's plan — plus styling the food and presenting on camera myself.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.4vw,18px)">
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="position:relative;aspect-ratio:1/1;background:var(--paper-2);border:1px solid rgba(0,0,0,.2);box-shadow:0 14px 30px rgba(0,0,0,.24)"><image-slot id="aos-h1" shape="rect" src="pdfimg/p19-9.png" fit="contain" placeholder="Hyundai key visual" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,249,238,.8)">Hyundai Motor</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="position:relative;aspect-ratio:1/1;background:var(--paper-2);border:1px solid rgba(0,0,0,.2);box-shadow:0 14px 30px rgba(0,0,0,.24)"><image-slot id="aos-h2" shape="rect" src="pdfimg/p20-11.png" fit="contain" placeholder="Dhuman key visual" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,249,238,.8)">Dhuman</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="position:relative;aspect-ratio:1/1;background:var(--paper-2);border:1px solid rgba(0,0,0,.2);box-shadow:0 14px 30px rgba(0,0,0,.24)"><image-slot id="aos-h3" shape="rect" src="pdfimg/p21-13.png" fit="contain" placeholder="Goobne key visual" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,249,238,.8)">Goobne Chicken</span>
+        </div>
+      </div>
+    </div>
+    <div style="height:clamp(30px,4vw,54px)"></div>
+  </div>
+</section>
+
+<section id="hyundai" data-screen-label="Hyundai" style="position:relative;background:var(--paper);padding:clamp(40px,4vw,64px) 0">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(200px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">01</span>
+      <h3 style="font-size:clamp(26px,3vw,40px);color:var(--accent);line-height:1.05">Hyundai Motor Company</h3>
+      <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)">Dec 2021 – Apr 2022</span>
+      <span style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">Content operations · Instagram, Twitter, YouTube</span>
+      <div style="position:relative;width:100%;max-width:216px;aspect-ratio:9/19.5;margin-top:12px;background:#14110f;border-radius:30px;padding:8px;box-shadow:0 18px 38px rgba(27,25,23,.24),inset 0 0 0 1.5px rgba(255,255,255,.14)">
+        <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);width:34%;height:15px;background:#14110f;border-radius:0 0 12px 12px;z-index:2"></div>
+        <div style="position:relative;width:100%;height:100%;border-radius:23px;overflow:hidden;background:#fff">
+          <image-slot id="aos-mock-hy" shape="rect" src="pdfimg/p19-0.png" fit="cover" placeholder="Feed screenshot" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(22px,2.4vw,32px)">
+      <p style="font-size:clamp(16.5px,1.7vw,20px);line-height:1.7;max-width:76ch">Feed rebranding for a global brand: high-volume content planning, ideation and production direction, delivered under frequent revisions from HQ. Final delivery — 30 images and 10 videos.</p>
+
+      <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(22px,3vw,40px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <h5 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase">Strategy</h5>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <p style="font-size:15.5px;line-height:1.65;color:var(--ink-soft)"><strong style="color:var(--ink)">Production calendar.</strong> Four content types — choice-based, test-drive events, informational, seasonal — scheduled to run simultaneously without quality slipping under volume.</p>
+            <p style="font-size:15.5px;line-height:1.65;color:var(--ink-soft)"><strong style="color:var(--ink)">Iterative design partnership.</strong> Fast-changing HQ feedback translated into revised direction quickly and accurately.</p>
+            <p style="font-size:15.5px;line-height:1.65;color:var(--ink-soft)"><strong style="color:var(--ink)">Global-brand rigour.</strong> DEI compliance review across every published asset.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <h5 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase">Outcome</h5>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:baseline;gap:14px;padding-top:12px;border-top:2px solid var(--accent)">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(26px,3vw,38px);line-height:1;color:var(--accent)">+24%</span>
+              <p style="font-size:14.5px;line-height:1.55;color:var(--ink-soft)">followers, ~236K → 293K</p>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:14px;padding-top:12px;border-top:2px solid var(--ink)">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(26px,3vw,38px);line-height:1;color:var(--accent)">711</span>
+              <p style="font-size:14.5px;line-height:1.55;color:var(--ink-soft)">actions on choice-based content vs. 384 on informational — the read that reset content priorities</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <h5 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase">Execution · four content types</h5>
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.2vw,16px)">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="position:relative;aspect-ratio:1/1;background:var(--paper-2);border:1px solid rgba(27,25,23,.14)"><image-slot id="aos-hy-1" shape="rect" src="pdfimg/p19-5.png" fit="contain" placeholder="Choice-based" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+            <span style="font-size:12.5px;color:var(--ink-soft)">Choice-based</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="position:relative;aspect-ratio:1/1;background:var(--paper-2);border:1px solid rgba(27,25,23,.14)"><image-slot id="aos-hy-2" shape="rect" src="pdfimg/p19-9.png" fit="contain" placeholder="Test drive" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+            <span style="font-size:12.5px;color:var(--ink-soft)">Test-drive events</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="position:relative;aspect-ratio:1/1;background:var(--paper-2);border:1px solid rgba(27,25,23,.14)"><image-slot id="aos-hy-3" shape="rect" src="pdfimg/p19-11.png" fit="contain" placeholder="Informational" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+            <span style="font-size:12.5px;color:var(--ink-soft)">Informational</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="position:relative;aspect-ratio:1/1;background:var(--paper-2);border:1px solid rgba(27,25,23,.14)"><image-slot id="aos-hy-4" shape="rect" src="pdfimg/p19-7.png" fit="contain" placeholder="Seasonal" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+            <span style="font-size:12.5px;color:var(--ink-soft)">Seasonal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dhuman" data-screen-label="Dhuman" style="position:relative;background:var(--paper-2);padding:clamp(40px,4vw,64px) 0">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(200px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">02</span>
+      <h3 style="font-size:clamp(26px,3vw,40px);color:var(--accent);line-height:1.05">Dhuman</h3>
+      <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)">Oct 2020 – Aug 2021</span>
+      <span style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">Project manager · pet food brand</span>
+      <div style="position:relative;width:100%;max-width:216px;aspect-ratio:9/19.5;margin-top:12px;background:#14110f;border-radius:30px;padding:8px;box-shadow:0 18px 38px rgba(27,25,23,.24),inset 0 0 0 1.5px rgba(255,255,255,.14)">
+        <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);width:34%;height:15px;background:#14110f;border-radius:0 0 12px 12px;z-index:2"></div>
+        <div style="position:relative;width:100%;height:100%;border-radius:23px;overflow:hidden;background:#fff">
+          <image-slot id="aos-mock-dh" shape="rect" src="pdfimg/p20-0.png" fit="cover" placeholder="Feed screenshot" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(22px,2.4vw,32px)">
+      <p style="font-size:clamp(16.5px,1.7vw,20px);line-height:1.7;max-width:76ch">Full ownership of content planning, client communication and production direction — building a trust-driven strategy around real customer stories rather than product features.</p>
+
+      <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(22px,3vw,40px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <h5 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase">Strategy</h5>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <p style="font-size:15.5px;line-height:1.65;color:var(--ink-soft)"><strong style="color:var(--ink)">Pets are family.</strong> Owners are already motivated to share that relationship — so the content had to be genuine personal storytelling, not spec sheets.</p>
+            <p style="font-size:15.5px;line-height:1.65;color:var(--ink-soft)"><strong style="color:var(--ink)">Interview series as flagship.</strong> A consumer interview video format made authenticity the brand's main asset.</p>
+            <p style="font-size:15.5px;line-height:1.65;color:var(--ink-soft)"><strong style="color:var(--ink)">Feed kept warm.</strong> Re-gramming tagged posts, event and informational content between releases.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <h5 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase">Outcome</h5>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:baseline;gap:14px;padding-top:12px;border-top:2px solid var(--accent)">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(26px,3vw,38px);line-height:1;color:var(--accent)">500K</span>
+              <p style="font-size:14.5px;line-height:1.55;color:var(--ink-soft)">average views per interview video</p>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:14px;padding-top:12px;border-top:2px solid var(--ink)">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(26px,3vw,38px);line-height:1;color:var(--accent)">0</span>
+              <p style="font-size:14.5px;line-height:1.55;color:var(--ink-soft)">paid promotion — reach and trust grew organically through sharing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <h5 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase">Execution · consumer interview series</h5>
+        <p style="font-size:15.5px;line-height:1.7;color:var(--ink-soft);max-width:76ch">I found customers who had posted real reviews, reached out personally, then ran the whole production — planning, scripting, filming and edit supervision.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.2vw,16px)">
+          <div style="position:relative;aspect-ratio:16/9;background:var(--paper-2);border:1px solid rgba(27,25,23,.14)"><image-slot id="aos-dh-1" shape="rect" src="pdfimg/p20-13.png" fit="contain" placeholder="Interview still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+          <div style="position:relative;aspect-ratio:16/9;background:var(--paper-2);border:1px solid rgba(27,25,23,.14)"><image-slot id="aos-dh-2" shape="rect" src="pdfimg/p20-17.png" fit="contain" placeholder="Interview still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+          <div style="position:relative;aspect-ratio:16/9;background:var(--paper-2);border:1px solid rgba(27,25,23,.14)"><image-slot id="aos-dh-3" shape="rect" src="pdfimg/p20-15.png" fit="contain" placeholder="Interview still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="goobne" data-screen-label="Goobne" style="position:relative;background:var(--paper);padding:clamp(40px,4vw,64px) 0 clamp(48px,5vw,72px)">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(200px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">03</span>
+      <h3 style="font-size:clamp(26px,3vw,40px);color:var(--accent);line-height:1.05">Goobne Chicken</h3>
+      <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)">Apr 2021 – Dec 2021</span>
+      <span style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">Project manager · Facebook page, 9 months</span>
+      <div style="position:relative;width:100%;max-width:216px;aspect-ratio:9/19.5;margin-top:12px;background:#14110f;border-radius:30px;padding:8px;box-shadow:0 18px 38px rgba(27,25,23,.24),inset 0 0 0 1.5px rgba(255,255,255,.14)">
+        <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);width:34%;height:15px;background:#14110f;border-radius:0 0 12px 12px;z-index:2"></div>
+        <div style="position:relative;width:100%;height:100%;border-radius:23px;overflow:hidden;background:#fff">
+          <image-slot id="aos-mock-gb" shape="rect" src="pdfimg/p22-0.png" fit="cover" placeholder="Feed screenshot" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(22px,2.4vw,32px)">
+      <p style="font-size:clamp(16.5px,1.7vw,20px);line-height:1.7;max-width:76ch">End-to-end content planning and performance reporting for a chicken franchise — hands-on food styling and on-camera presenting alongside continuous data analysis.</p>
+
+      <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(22px,3vw,40px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <h5 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase">Strategy</h5>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <p style="font-size:15.5px;line-height:1.65;color:var(--ink-soft)"><strong style="color:var(--ink)">An engagement, not a campaign.</strong> Weekly, monthly and quarterly performance analysis fed the next month's content direction and ad spend.</p>
+            <p style="font-size:15.5px;line-height:1.65;color:var(--ink-soft)"><strong style="color:var(--ink)">Pairing and seasonality.</strong> Storylines built around food pairing and seasonal moments to hold a teen-skewing audience.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <h5 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase">Outcome</h5>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:baseline;gap:14px;padding-top:12px;border-top:2px solid var(--accent)">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(26px,3vw,38px);line-height:1;color:var(--accent)">+8.3%</span>
+              <p style="font-size:14.5px;line-height:1.55;color:var(--ink-soft)">page followers, ~378K → 410K in 9 months</p>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:14px;padding-top:12px;border-top:2px solid var(--ink)">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(26px,3vw,38px);line-height:1;color:var(--accent)">185K</span>
+              <p style="font-size:14.5px;line-height:1.55;color:var(--ink-soft)">organic reach by Jan 2022, up from 146,869 in Mar 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <h5 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase">Execution · styled and presented myself</h5>
+        <p style="font-size:15.5px;line-height:1.7;color:var(--ink-soft);max-width:76ch">I styled the food for every shoot — plating and art-directing chicken, pizza and dessert — and appeared on camera presenting pairing ideas, including creating and naming the <strong style="color:var(--ink)">"Chi-Pi-D"</strong> combo. Shooting plans for the regular sizzle content were developed directly with the in-house video team.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.2vw,16px)">
+          <div style="position:relative;aspect-ratio:1/1;background:var(--paper-2);border:1px solid rgba(27,25,23,.14)"><image-slot id="aos-gb-1" shape="rect" src="pdfimg/p21-11.png" fit="cover" placeholder="Styled sizzle content" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+          <div style="position:relative;aspect-ratio:1/1;background:var(--paper-2);border:1px solid rgba(27,25,23,.14)"><image-slot id="aos-gb-2" shape="rect" src="pdfimg/p21-12.png" fit="cover" placeholder="On-camera still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+          <div style="position:relative;aspect-ratio:1/1;background:var(--paper-2);border:1px solid rgba(27,25,23,.14)"><image-slot id="aos-gb-3" shape="rect" src="pdfimg/p21-13.png" fit="cover" placeholder="Chi-Pi-D combo" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Next" style="position:relative;background:var(--accent);padding:clamp(48px,6vw,80px) 0;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.2;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 90px rgba(0,0,0,.24);pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);color:#FCF7EC;display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:11px;letter-spacing:.28em;text-transform:uppercase;opacity:.85">More work</span>
+      <h3 style="font-size:clamp(26px,3.4vw,44px);line-height:1.05;color:#FBF3E2;text-shadow:0.04em 0.04em 0 var(--accent-deep)">Back to the portfolio</h3>
+    </div>
+    <a href="Portfolio2.html" style="font-family:'Archivo Black',sans-serif;font-size:16px;letter-spacing:.04em;color:var(--accent);background:#FCF7EC;padding:16px 28px;border-radius:2px;text-decoration:none" style-hover="background:#fff">View all projects &#8594;</a>
+  </div>
+</section>
+
+</div>
+</x-dc>
+</body>
+</html>

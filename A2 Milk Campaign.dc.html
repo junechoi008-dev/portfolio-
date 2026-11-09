@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Archivo:ital,wght@0,400;0,500;0,600;1,400&amp;family=Caveat:wght@500;600&amp;family=Abril+Fatface&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#D62B1F;
+  --accent-deep:#A81E14;
+  --paper:#F3EDE0;
+  --paper-2:#FAF6EC;
+  --ink:#1B1917;
+  --ink-soft:#514C46;
+  --grain:url('paper-grain.svg');
+}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+p{margin:0;text-wrap:pretty;}
+h1,h2,h3{margin:0;font-family:'Abril Fatface','Archivo Black',serif;font-weight:400;}
+h4,h5{margin:0;font-family:'Archivo Black',Impact,sans-serif;font-weight:400;}
+ul{margin:0;padding:0;list-style:none;}
+a{color:var(--accent);text-underline-offset:3px;}
+a:hover{color:var(--accent-deep);}
+::selection{background:rgba(214,43,31,.2);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:hidden">
+
+<div style="position:sticky;top:0;z-index:20;background:rgba(243,237,224,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(27,25,23,.14)">
+  <div style="max-width:1680px;margin:0 auto;padding:16px clamp(24px,3.5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <a href="Portfolio2.html" style="display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none" style-hover="color:var(--accent)"><span style="font-size:16px;line-height:1">←</span> Back to portfolio</a>
+    <span style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Core project 01</span>
+  </div>
+</div>
+
+<section data-screen-label="Hero" style="position:relative;background:var(--accent);padding:clamp(56px,7vw,92px) 0 0;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.2;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 3px),repeating-linear-gradient(0deg,rgba(0,0,0,.055) 0 1px,transparent 1px 3px);pointer-events:none"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 90px rgba(0,0,0,.24);pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);color:#FCF7EC;display:flex;flex-direction:column;gap:26px">
+    <span style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85">Yonsei Milk &nbsp;·&nbsp; A2 Protein Milk</span>
+    <h1 style="font-size:clamp(38px,6vw,84px);line-height:1.02;color:#FBF3E2;text-shadow:0.045em 0.045em 0 var(--accent-deep);max-width:20ch">A2 Milk Launch Campaign</h1>
+    <div style="display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,4vw,64px);align-items:start;margin-top:6px">
+      <p style="font-size:clamp(18px,1.9vw,23px);line-height:1.6;color:#FFF9EE">As Korean consumers showed growing interest in premium milk, Yonsei Milk launched its own A2 protein milk. I led an integrated digital campaign built around a tailored digital funnel, owning the full process from awareness-building to purchase conversion for the new product.</p>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,249,238,.75)">What I owned</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Digital funnel design</span>
+          <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Media planning</span>
+          <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Client pitch</span>
+          <span style="font-size:12px;letter-spacing:.05em;padding:8px 13px;border:1px solid rgba(255,249,238,.5);border-radius:2px;color:#FFF9EE">Digital film production</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:22px;padding:26px 0 34px;border-top:1px solid rgba(252,247,236,.35);margin-top:8px">
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Period</span>
+        <span style="font-family:'Archivo Black',sans-serif;font-size:17px">Feb 2024 – Jun 2024</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Role</span>
+        <span style="font-family:'Archivo Black',sans-serif;font-size:17px">Project Manager</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Contribution</span>
+        <span style="font-family:'Archivo Black',sans-serif;font-size:17px">70% of the project</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.75">Discipline</span>
+        <span style="font-family:'Archivo Black',sans-serif;font-size:17px">IMC · Full funnel</span>
+      </div>
+    </div>
+  </div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px)">
+    <div style="position:relative;width:100%;aspect-ratio:32/9;background:#fff;border:1px solid rgba(0,0,0,.2);box-shadow:0 22px 50px rgba(0,0,0,.24);transform:translateY(clamp(28px,4vw,52px))">
+      <image-slot id="a2-hero" shape="rect" src="uploads/pasted-1788208183406-0.png" fit="cover" placeholder="Drop the campaign key visual" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+    </div>
+  </div>
+  <div style="height:clamp(28px,4vw,52px);background:var(--paper)"></div>
+</section>
+
+<section data-screen-label="Challenge" style="position:relative;background:var(--paper);padding:clamp(36px,3.5vw,58px) 0">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  
+<div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">01</span>
+      <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">The Challenge</h3>
+    </div><div style="display:flex;flex-direction:column;gap:clamp(26px,2.6vw,38px)">
+
+      <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75;max-width:74ch">At launch, the domestic A2 milk market had a single player — <strong>New Origin</strong>, an imported brand — so there was an open field but no established category language. The pressure came from the other direction: <strong>Seoul Milk, Korea's No.1 dairy brand, was expected to launch its own A2 milk within five months</strong>, which turned the brief into a race for first-mover advantage. Everything had to be built to win awareness and conversion before that entry.</p>
+
+      <div style="display:grid;grid-template-columns:minmax(0,.34fr) minmax(0,1fr);gap:clamp(22px,3vw,40px);align-items:start">
+        <div style="position: relative; width: 156px; aspect-ratio: 4/5; background: #fff; border: 1px solid rgba(27,25,23,.14); height: 156px">
+          <image-slot id="a2-product" shape="rect" src="uploads/efa6d500-eed9-4d9e-a03d-13e80cdf6560.jpg" fit="cover" placeholder="Drop the product shot" style="position: absolute; inset: 0; width: 159px; height: 163px"></image-slot>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Product truths to build on</h5>
+        <p style="font-size: 16.5px; line-height: 1.8; color: var(--ink-soft); width: 763px; height: 200px">Three product facts carried the whole strategy. <strong style="color:var(--ink)">No A1 protein</strong> — easier to digest for anyone who feels discomfort after milk. <strong style="color:var(--ink)">The only domestic A2 milk</strong> — manufactured in Korea, so quality and freshness were provable rather than claimed. And <strong style="color:var(--ink)">a composition close to breast milk</strong> — A2 beta-casein closely resembles the protein found in breast milk, making it a naturally suitable source of nutrition for a child.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Objectives</h5>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,22px)">
+          <div style="display:flex;flex-direction:column;gap:10px;padding-top:14px;border-top:2px solid var(--accent)">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:14px;color:var(--accent)">01</span>
+            <p style="font-size:15.5px;line-height:1.6">Convert New Origin's customers to Yonsei Milk</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;padding-top:14px;border-top:2px solid var(--accent)">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:14px;color:var(--accent)">02</span>
+            <p style="font-size:15.5px;line-height:1.6">Secure top-of-mind awareness before Seoul Milk's entry</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;padding-top:14px;border-top:2px solid var(--accent)">
+            <span style="font-family:'Archivo Black',sans-serif;font-size:14px;color:var(--accent)">03</span>
+            <p style="font-size:15.5px;line-height:1.6">Establish early dominance in the A2 milk market</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  </div></section>
+
+<section data-screen-label="Strategy" style="position:relative;background:var(--paper);padding:clamp(36px,3.5vw,58px) 0">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.13;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">02</span>
+      <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">Strategy</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+
+      <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75;max-width:74ch">In Korea, A2 milk was strongly perceived as <em>milk for children</em>. To pull New Origin's customers across, we shifted the frame from the product to the job it does — <strong>milk → jobs to be done → not milk, but a mother's choice</strong> — and made post-weaning mothers the main target. A second group was being missed entirely: people who avoided milk because it upset their stomach, without ever recognising why. They became the sub target, and each group got its own message, its own film and its own media route.</p>
+
+      <p style="font-size:clamp(17px,1.8vw,21px);line-height:1.75;max-width:74ch">The media plan ran as one full funnel: <strong>search → sponsored content → landing → promotion</strong>, closed by a retargeting loop. Paid media on Netflix, YouTube, Naver and Instagram carried reach and the two films; credibility was built underneath with SEO-driven Naver blog content, YouTube branded content and native-style review posts on Naver and Instagram, so anyone searching "A2 milk" met the brand three times over. The online store converted with discount promotions and review events, and visitor retargeting returned non-converters to the top of the funnel — with real customer reviews feeding straight back into sponsored content.</p>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Target audience</h5>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,2.4vw,28px)">
+          <div style="display:flex;flex-direction:column;gap:12px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-left:3px solid var(--accent);border-radius:2px;padding:24px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">Main target</span>
+            <h4 style="font-size:19px;line-height:1.25">Post-weaning moms</h4>
+            <p style="font-size:15.5px;line-height:1.65;color:var(--ink-soft)">Mothers in their 30s–40s who recently stopped breastfeeding, seeking a safe, high-quality alternative for their children.</p>
+            <span style="font-family:'Caveat',cursive;font-size:19px;color:var(--ink-soft)">#3040 #parents #babyfood #parenting</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-left:3px solid rgba(27,25,23,.5);border-radius:2px;padding:24px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Sub target</span>
+            <h4 style="font-size:19px;line-height:1.25">Sensitive stomachs</h4>
+            <p style="font-size:15.5px;line-height:1.65;color:var(--ink-soft)">Consumers who aren't lactose intolerant but still experience stomach discomfort from regular milk.</p>
+            <span style="font-family:'Caveat',cursive;font-size:19px;color:var(--ink-soft)">#1949 #women #premium #dairy #cooking</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Core messaging</h5>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,2.4vw,28px)">
+          <div style="background:var(--accent);color:#FCF7EC;border-radius:2px;padding:30px 26px;display:flex;flex-direction:column;gap:14px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.8">For the main target</span>
+            <h2 style="font-size:clamp(22px,2.5vw,31px);line-height:1.15;text-shadow:0.04em 0.04em 0 var(--accent-deep)">"Not Just Milk,<br>A Mother's Choice"</h2>
+            <p style="font-size:15px;line-height:1.6;opacity:.92">Encourage mothers to make the right choice for their children.</p>
+          </div>
+          <div style="background:var(--ink);color:var(--paper-2);border-radius:2px;padding:30px 26px;display:flex;flex-direction:column;gap:14px">
+            <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.7">For the sub target</span>
+            <h2 style="font-size:clamp(22px,2.5vw,31px);line-height:1.15">"It's Not You,<br>It's Milk"</h2>
+            <p style="font-size:15px;line-height:1.6;opacity:.85">Reframe the problem: it isn't your digestive system — it's the milk. A2 is the solution.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h5 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase">Two digital films, two stories</h5>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,2.4vw,28px)">
+          <div style="display:flex;flex-direction:column;gap:0;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-radius:2px;overflow:hidden">
+            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:rgba(27,25,23,.14)">
+                <div style="position:relative;aspect-ratio:16/9;background:#fff;overflow:hidden">
+                  <image-slot id="a2-film-1" shape="rect" src="uploads/그림1.png" fit="cover" placeholder="Drop a film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+                </div>
+                <div style="position:relative;aspect-ratio:16/9;background:#fff;overflow:hidden">
+                  <image-slot id="a2-film-1b" shape="rect" src="uploads/그림2.png" fit="cover" placeholder="Drop a film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+                </div>
+                <div style="position:relative;aspect-ratio:16/9;background:#fff;overflow:hidden">
+                  <image-slot id="a2-film-1c" shape="rect" src="uploads/그림3-a68e9c0b.jpg" fit="cover" placeholder="Drop a film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+                </div>
+            </div>
+            <div style="padding:22px;display:flex;flex-direction:column;gap:12px">
+              <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">Film 01 · Post-weaning moms</span>
+              <ul style="display:flex;flex-direction:column;gap:9px;font-size:15px;line-height:1.55;color:var(--ink-soft)">
+                <li>"We just finished breastfeeding. What should my child drink now?"</li>
+                <li>"Would you give just any milk to your child?"</li>
+                <li style="color:var(--ink)">Yonsei A2 Milk is recommended as the next best choice.</li>
+              </ul>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0;background:var(--paper-2);border:1px solid rgba(27,25,23,.14);border-radius:2px;overflow:hidden">
+            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:rgba(27,25,23,.14)">
+                <div style="position:relative;aspect-ratio:16/9;background:#fff;overflow:hidden">
+                  <image-slot id="a2-film-2" shape="rect" src="uploads/그림6.jpg" fit="cover" placeholder="Drop a film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+                </div>
+                <div style="position:relative;aspect-ratio:16/9;background:#fff;overflow:hidden">
+                  <image-slot id="a2-film-2b" shape="rect" src="uploads/그림7.jpg" fit="cover" placeholder="Drop a film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+                </div>
+                <div style="position:relative;aspect-ratio:16/9;background:#fff;overflow:hidden">
+                  <image-slot id="a2-film-2c" shape="rect" src="uploads/그림8.jpg" fit="cover" placeholder="Drop a film still" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+                </div>
+            </div>
+            <div style="padding:22px;display:flex;flex-direction:column;gap:12px">
+              <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">Film 02 · Sensitive stomachs</span>
+              <ul style="display:flex;flex-direction:column;gap:9px;font-size:15px;line-height:1.55;color:var(--ink-soft)">
+                <li>"Milk always makes my stomach hurt…"</li>
+                <li>"It's not your stomach — it's the milk."</li>
+                <li style="color:var(--ink)">Yonsei A2 Milk is introduced as the solution.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Outcome" style="position:relative;background:var(--paper-2);border-top:1px solid rgba(27,25,23,.14);padding:clamp(44px,4.5vw,72px) 0 clamp(48px,5vw,80px)">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.11;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+
+    <div style="display:grid;grid-template-columns:minmax(180px,.42fr) minmax(0,1.58fr);gap:clamp(28px,4vw,64px);align-items:end">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Archivo Black',sans-serif;font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent)">03</span>
+        <h3 style="font-size:clamp(28px,3.4vw,44px);color:var(--accent);line-height:1">Outcome</h3>
+      </div>
+      <p style="font-size:16.5px;line-height:1.7;color:var(--ink-soft);max-width:56ch">Campaign period Mar–May 2024. Ad performance measured on 15-second video assets, TrueView in-stream; search volume normalised 0–100 on Naver.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.6vw,32px);align-items:start">
+
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:12px;padding-top:20px;border-top:2px solid var(--ink)">
+          <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(40px,4.6vw,66px);line-height:.95;color:var(--accent);letter-spacing:-.02em">50.71%</span>
+          <h4 style="font-size:17px;line-height:1.25">View-through rate</h4>
+          <p style="font-size:15px;line-height:1.65;color:var(--ink-soft)">Outperformed both industry peers (37.40%) and lookalike audiences (43.77%), at an efficient 24 KRW cost per view.</p>
+        </div>
+        <div style="background:var(--paper);border:1px solid rgba(27,25,23,.14);border-radius:2px;padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:16px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Ad performance comparison</span>
+          <div style="display:flex;align-items:flex-end;gap:clamp(10px,1.6vw,20px);height:150px;border-bottom:1px solid rgba(27,25,23,.25)">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;height:100%;justify-content:flex-end">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:13px;color:var(--ink-soft)">37.40%</span>
+              <div style="width:100%;height:73.7%;background:rgba(27,25,23,.22);border:1px solid rgba(27,25,23,.3)"></div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;height:100%;justify-content:flex-end">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:13px;color:var(--ink-soft)">43.77%</span>
+              <div style="width:100%;height:86.3%;background:rgba(27,25,23,.35);border:1px solid rgba(27,25,23,.4)"></div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;height:100%;justify-content:flex-end">
+              <span style="font-family:'Archivo Black',sans-serif;font-size:15px;color:var(--accent)">50.71%</span>
+              <div style="width:100%;height:100%;background:var(--accent);border:1px solid var(--accent-deep)"></div>
+            </div>
+          </div>
+          <div style="display:flex;gap:clamp(10px,1.6vw,20px)">
+            <span style="flex:1;text-align:center;font-size:11.5px;line-height:1.35;color:var(--ink-soft)">Industry peers</span>
+            <span style="flex:1;text-align:center;font-size:11.5px;line-height:1.35;color:var(--ink-soft)">Lookalike audience</span>
+            <span style="flex:1;text-align:center;font-size:11.5px;line-height:1.35;font-family:'Archivo Black',sans-serif;color:var(--accent)">Yonsei</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:12px;padding-top:20px;border-top:2px solid var(--ink)">
+          <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(40px,4.6vw,66px);line-height:.95;color:var(--accent);letter-spacing:-.02em">#1</span>
+          <h4 style="font-size:17px;line-height:1.25">Search volume</h4>
+          <p style="font-size:15px;line-height:1.65;color:var(--ink-soft)">Surpassed competitors one month after campaign launch and maintained a leading position.</p>
+        </div>
+        <div style="background:var(--paper);border:1px solid rgba(27,25,23,.14);border-radius:2px;padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:16px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Search volume trends · Naver</span>
+          <div style="position:relative;height:150px;border-bottom:1px solid rgba(27,25,23,.25);border-left:1px solid rgba(27,25,23,.25)">
+            <svg viewBox="0 0 300 200" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%">
+              <polyline points="0,70 60,66 120,74 180,80 240,86 300,90" fill="none" stroke="rgba(27,25,23,.4)" stroke-width="3" stroke-dasharray="8 6"></polyline>
+              <polyline points="0,168 60,150 120,96 180,52 240,36 300,26" fill="none" stroke="#D62B1F" stroke-width="4"></polyline>
+              <circle cx="120" cy="96" r="6" fill="#D62B1F"></circle>
+            </svg>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-soft)">
+            <span>Dec 2023</span><span>Mar 2024</span><span>Jun 2024</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px">
+            <span style="display:inline-flex;align-items:center;gap:7px;font-family:'Archivo Black',sans-serif;color:var(--accent)"><span style="width:16px;height:3px;background:var(--accent);display:inline-block"></span>Yonsei</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;color:var(--ink-soft)"><span style="width:16px;height:0;border-top:2.5px dashed rgba(27,25,23,.5);display:inline-block"></span>New Origin</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:12px;padding-top:20px;border-top:2px solid var(--ink)">
+          <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(40px,4.6vw,66px);line-height:.95;color:var(--accent);letter-spacing:-.02em">+189%</span>
+          <h4 style="font-size:17px;line-height:1.25">Sales growth</h4>
+          <p style="font-size:15px;line-height:1.65;color:var(--ink-soft)">Sales volume increased by 189% in three months, generating 60% of total 8-month sales.</p>
+        </div>
+        <div style="background:var(--paper);border:1px solid rgba(27,25,23,.14);border-radius:2px;padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:16px">
+          <span style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)">Sales volume · online channels</span>
+          <div style="display:flex;align-items:flex-end;gap:clamp(7px,1.2vw,14px);height:150px;border-bottom:1px solid rgba(27,25,23,.25)">
+            <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%"><div style="width:100%;height:20%;background:rgba(27,25,23,.22)"></div></div>
+            <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%"><div style="width:100%;height:34%;background:rgba(27,25,23,.28)"></div></div>
+            <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%"><div style="width:100%;height:52%;background:var(--accent);opacity:.55"></div></div>
+            <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%"><div style="width:100%;height:74%;background:var(--accent);opacity:.75"></div></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;justify-content:flex-end;height:100%"><span style="font-family:'Archivo Black',sans-serif;font-size:12.5px;color:var(--accent)">2M+</span><div style="width:100%;height:100%;background:var(--accent)"></div></div>
+          </div>
+          <div style="display:flex;gap:clamp(7px,1.2vw,14px)">
+            <span style="flex:1;text-align:center;font-size:11.5px;color:var(--ink-soft)">Jan</span>
+            <span style="flex:1;text-align:center;font-size:11.5px;color:var(--ink-soft)">Feb</span>
+            <span style="flex:1;text-align:center;font-size:11.5px;color:var(--ink-soft)">Mar</span>
+            <span style="flex:1;text-align:center;font-size:11.5px;color:var(--ink-soft)">Apr</span>
+            <span style="flex:1;text-align:center;font-size:11.5px;font-family:'Archivo Black',sans-serif;color:var(--accent)">Jun</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section data-screen-label="Next" style="position:relative;background:var(--accent);padding:clamp(48px,6vw,80px) 0;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:var(--grain);opacity:.2;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 90px rgba(0,0,0,.24);pointer-events:none"></div>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:0 clamp(24px,3.5vw,56px);color:#FCF7EC;display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:11px;letter-spacing:.28em;text-transform:uppercase;opacity:.85">More work</span>
+      <h3 style="font-size:clamp(26px,3.4vw,44px);line-height:1.05;color:#FBF3E2;text-shadow:0.04em 0.04em 0 var(--accent-deep)">Back to the portfolio</h3>
+    </div>
+    <a href="Portfolio2.html" style="font-family:'Archivo Black',sans-serif;font-size:16px;letter-spacing:.04em;color:var(--accent);background:#FCF7EC;padding:16px 28px;border-radius:2px;text-decoration:none" style-hover="background:#fff">View all projects →</a>
+  </div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+
+</script>
+</body>
+</html>

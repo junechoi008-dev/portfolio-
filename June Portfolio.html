@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>June — Portfolio</title>
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/colors.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/typography.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/effects.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/paper.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/assets.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/styles.css">
+<style>
+html,body{margin:0}body{background:var(--color-paper-light);color:var(--color-ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}p{text-wrap:pretty}
+a{color:var(--color-primary)}a:hover{color:var(--color-primary-hover)}
+:focus-visible{outline:2px solid var(--color-ink);outline-offset:3px}
+.jp-wrap{max-width:1200px;margin:0 auto;padding:0 var(--space-5)}
+.jp-profile{display:grid;grid-template-columns:42fr 58fr;gap:var(--space-7);align-items:center}
+.jp-two{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--space-7);align-items:start}
+.jp-tools{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-5)}
+.jp-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-5);margin-top:var(--space-6);align-items:stretch}
+.jp-draw{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6) var(--space-5);margin-top:var(--space-6);align-items:start}
+.jp-contact-row{display:flex;flex-wrap:wrap;gap:var(--space-5);justify-content:center}
+@media (max-width:1024px){.jp-profile,.jp-two{grid-template-columns:1fr}.jp-tools{grid-template-columns:repeat(2,minmax(0,1fr))}.jp-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:768px){.jp-cards,.jp-tools{grid-template-columns:1fr}.jp-draw{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const DS = window.JunePortfolioDesignSystem_6caff1;
+const { Cover, TornSheet, TornEdge, GridPaper, Tape, Doodle, Icon, Tag, PaperCard, Button, TextLink, QrCard } = DS;
+
+const jpH2 = { margin: 0, font: 'italic 400 clamp(40px,5vw,64px)/1.05 var(--font-display)', color: 'var(--color-primary)' };
+const jpH3 = { margin: 0, font: 'italic 400 24px/1.25 var(--font-display)', color: 'var(--color-ink)' };
+const jpLabel = { font: '500 13px/1.3 var(--font-body)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--color-charcoal)' };
+const jpBody = { margin: 0, font: '400 17px/1.5 var(--font-body)', textAlign: 'left', hyphens: 'manual', maxWidth: '64ch', color: 'var(--color-ink)' };
+const edge = { position: 'absolute', left: 0, right: 0, top: '100%', marginBottom: 0 };
+
+function Slot({ id, src, fit = 'cover', placeholder = 'Drop an image' }) {
+  return <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <image-slot id={id} shape="rect" src={src} fit={fit} placeholder={placeholder} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}></image-slot>
+  </div>;
+}
+function Triptych({ items }) {
+  return <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 2, width: '100%', height: '100%', background: 'var(--color-line)' }}>
+    {items.map(([id, src]) => <div key={id} style={{ position: 'relative', overflow: 'hidden', background: 'var(--color-paper-light)' }}><Slot id={id} src={src} /></div>)}
+  </div>;
+}
+
+function Profile() {
+  return <section className="paper" style={{ position: 'relative', zIndex: 6, padding: 'calc(var(--space-8) + 24px) 0 calc(var(--space-7) + 24px)' }}>
+    <div className="jp-wrap jp-profile">
+      <div style={{ position: 'relative', height: 500, maxWidth: 460, width: '100%', justifySelf: 'center' }}>
+        <div style={{ position: 'absolute', left: 8, top: 44, width: '80%', height: 400, background: 'var(--color-primary)', clipPath: 'var(--torn-sheet)', transform: 'rotate(-5deg)' }}></div>
+        <div style={{ position: 'absolute', left: 52, top: 16, width: '76%', height: 420, background: 'var(--color-paper-light)', clipPath: 'var(--torn-sheet)', transform: 'rotate(3deg)', filter: 'drop-shadow(var(--shadow-paper))' }}></div>
+        <div style={{ position: 'absolute', left: 72, top: 56, width: '64%', height: 400, transform: 'rotate(-2.5deg)', outline: '8px solid var(--color-paper-light)', overflow: 'hidden' }}>
+          <Slot id="june-cutout-portrait" src="uploads/링크드인사진.jpg" placeholder="Drop your cut-out portrait" />
+        </div>
+        <Tape color="red" width={112} angle={-7} style={{ position: 'absolute', left: 120, top: 34 }} />
+        <Doodle kind="star" size={48} color="var(--color-ink)" angle={8} style={{ position: 'absolute', right: 0, top: 0 }} />
+        <Doodle kind="crayon-star" size={44} style={{ position: 'absolute', left: 0, bottom: 8 }} />
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+        <h2 style={jpH2}>About me</h2>
+        <span style={jpLabel}>Hello, I'm June</span>
+        <p style={{ margin: 0, font: 'italic 400 clamp(32px,4vw,56px)/1.05 var(--font-display)', color: 'var(--color-ink)' }}>I turn consumer<br />insight into<br /><span style={{ color: 'var(--color-primary)' }}>business growth.</span></p>
+        <p style={jpBody}>Marketing professional from Korea to Ireland. With four years of digital marketing experience, I have a proven record of integrated marketing campaigns. I'm interested in consumer insight and analytics — turning them into meaningful direction, and business growth at the end. Highly adaptable, always positive, endlessly curious. Into drawing and playing instruments, so yes: obviously creative.</p>
+      </div>
+    </div>
+  </section>;
+}
+
+const STRENGTHS = [
+  ['01', 'Strategy & insight', 'I build strategy on data before creative — GA4 funnels, RFM/CLV segmentation for consumer insight work, and weekly A/B reads that fed continuous optimization at Bigband. Budget planning sits inside that process, not after it.', 'magnifier'],
+  ['02', 'Creative & content', 'Content strategy runs through visual storytelling — from directing an Instagram shoot end to end to concepting with AI tools. I write for how audiences actually scroll, then design around that behaviour.', 'light-bulb'],
+  ['03', 'Execution & management', 'Managing 10+ major brand accounts meant sitting between client, agency and creative team — turning a brief into a paid social plan, then defending it in the room. Presented client pitches to 90+ colleagues.', 'checklist'],
+];
+const TIMELINE = [
+  ['2025–2026', 'MSc in Marketing', 'UCD Smurfit Graduate Business School, Dublin', true],
+  ['2020–2024', 'Project Manager', 'Bigband (marketing agency), Seoul'],
+  ['2019–2020', 'Content Planner & Designer', 'CJ OGN, Seoul'],
+  ['2016–2021', 'B.A. Interior Architecture', 'Soongsil University, Seoul'],
+];
+const TOOLS = [['Analysis', ['GA4', 'Colab']], ['Presentation', ['PowerPoint', 'Canva']], ['Design', ['Photoshop', 'Illustrator', 'Procreate']], ['AI', ['ChatGPT', 'Gemini', 'ElevenLabs']]];
+
+function HowIWork() {
+  const angles = [-2, 1.5, -1, 2.5, -3, 1, -1.5, 2, -2.5, 3]; let ai = 0;
+  return <section className="paper paper--warm" style={{ position: 'relative', zIndex: 5, padding: 'calc(var(--space-7) + 24px) 0 calc(var(--space-7) + 24px)' }}>
+    <div className="jp-wrap">
+      <span style={{ ...jpLabel, color: 'var(--color-primary)', display: 'block', marginBottom: 'var(--space-3)' }}>02 — Professional</span>
+      <div style={{ display: 'flex', alignItems: 'flex-end', gap: 'var(--space-6)', flexWrap: 'wrap' }}>
+        <h2 style={jpH2}>How I work</h2>
+        <TornSheet tilt={-1.5} backing={false} padding="18px 28px" style={{ maxWidth: 520, marginBottom: 6 }} decorations={<Tape color="beige" width={88} angle={-6} position="tc" />}>
+          <p style={{ margin: 0, font: 'italic 400 24px/1.25 var(--font-display)', color: 'var(--color-charcoal)' }}>Data-driven marketer, 4+ years turning insight into campaigns that move numbers.</p>
+        </TornSheet>
+      </div>
+      <div className="jp-two" style={{ marginTop: 'var(--space-7)' }}>
+        <div>
+          <div style={{ ...jpLabel, marginBottom: 'var(--space-4)' }}>My strength</div>
+          <TornSheet tilt={-0.8} decorations={<><Tape color="red" width={116} angle={-4} position="tc" /><Doodle kind="crayon-star" size={56} style={{ position: 'absolute', top: -40, right: -36 }} /></>}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-5)' }}>
+              {STRENGTHS.map(([n, t, d, ic]) => <div key={n} style={{ display: 'grid', gridTemplateColumns: '36px minmax(0,1fr) 52px', gap: 'var(--space-3)', alignItems: 'start' }}>
+                <span style={{ font: 'italic 400 24px/1 var(--font-display)', color: 'var(--color-primary)', paddingTop: 2 }}>{n}</span>
+                <div><h3 style={{ ...jpH3, marginBottom: 4 }}>{t}</h3><p style={{ ...jpBody, fontSize: 15 }}>{d}</p></div>
+                <Icon name={ic} size={52} />
+              </div>)}
+            </div>
+          </TornSheet>
+        </div>
+        <div>
+          <div style={{ ...jpLabel, marginBottom: 'var(--space-4)' }}>Experience &amp; education</div>
+          <GridPaper tilt={1} style={{ padding: 'var(--space-6) var(--space-5)' }}>
+            <Tape color="beige" width={110} angle={-3} position="tc" />
+            <div style={{ position: 'relative', paddingLeft: 32 }}>
+              <svg aria-hidden="true" style={{ position: 'absolute', left: 6, top: 6, width: 6, height: 'calc(100% - 12px)', overflow: 'visible' }} preserveAspectRatio="none" viewBox="0 0 6 100"><path d="M3 0 C1 25 5 50 2 75 C1 88 4 95 3 100" fill="none" stroke="var(--color-primary)" strokeWidth="2.5" strokeLinecap="round" vectorEffect="non-scaling-stroke" /></svg>
+              {TIMELINE.map(([y, t, inst, circ], i) => <div key={i} style={{ position: 'relative', marginBottom: i < TIMELINE.length - 1 ? 'var(--space-5)' : 0 }}>
+                <svg aria-hidden="true" viewBox="0 0 20 20" style={{ position: 'absolute', left: -33, top: 2, width: 14, height: 14 }}><path d="M10 2 C15 2 18 6 18 10 C18 15 14 18 10 18 C5 18 2 14 2 10 C2 5 6 2 11 3" fill="var(--color-paper-light)" stroke="var(--color-primary)" strokeWidth="2.2" strokeLinecap="round" /></svg>
+                <div style={{ position: 'relative', display: 'inline-block' }}>
+                  <span style={{ font: '500 15px/1.5 var(--font-body)', color: 'var(--color-primary)' }}>{y}</span>
+                  {circ && <Doodle kind="ellipse" width={120} height={44} style={{ position: 'absolute', left: -18, top: -10 }} />}
+                </div>
+                <h3 style={{ ...jpH3, margin: '2px 0' }}>{t}</h3>
+                <div style={{ font: '400 15px/1.5 var(--font-body)', color: 'var(--color-charcoal)' }}>{inst}</div>
+              </div>)}
+            </div>
+          </GridPaper>
+        </div>
+      </div>
+      <div style={{ marginTop: 'var(--space-7)' }}>
+        <TornSheet paper="red" backing={false} shape="band" tilt={-1} padding="var(--space-6)">
+          <div style={{ ...jpLabel, color: 'var(--color-paper-light)', marginBottom: 'var(--space-4)' }}>Tools</div>
+          <div className="jp-tools">
+            {TOOLS.map(([cat, tools], ci) => <div key={cat}>
+              <div style={{ ...jpLabel, color: 'var(--color-paper-light)', marginBottom: 'var(--space-3)' }}>{cat}</div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+                {tools.map((t, ti) => <span key={t} style={{ position: 'relative' }}>
+                  <Tag variant="torn" angle={angles[(ai++) % angles.length]}>{t}</Tag>
+                  {ti === 0 && ci < 3 && <Tape color={ci % 2 ? 'paper' : 'beige'} width={56} angle={[-10, 8, -5][ci]} style={{ position: 'absolute', top: -10, left: '30%' }} />}
+                </span>)}
+              </div>
+            </div>)}
+          </div>
+        </TornSheet>
+      </div>
+    </div>
+  </section>;
+}
+
+const CORE = [
+  { id: 'core-1', href: 'A2 Milk Campaign.dc.html', label: 'Yonsei Milk', title: 'A2 Protein Milk launching campaign', description: 'Built the launch story for a new A2 protein line, from positioning to content rollout across paid social and retail.', tags: ['Launch strategy', 'Paid social', 'Content rollout'], result: '50.71% VTR · 2M+ units', image: <Slot id="june-core-1" src="uploads/pasted-1788208183406-0.png" /> },
+  { id: 'core-2', href: 'Cheers Video Campaign.dc.html', label: 'Yonsei Milk', title: 'Cheers video Instagram campaign', description: "Led a short-form video series built for Instagram's watch behaviour, taking the brand's toast moment into everyday occasions.", tags: ['Creative direction', 'Video production', 'Storytelling'], result: '224% of impression target', image: <Triptych items={[['june-core-2', 'uploads/그림12-991133ab.png'], ['june-core-2b', 'uploads/그림2-5a1450fe.png'], ['june-core-2c', 'uploads/그림7-249cd97d.png']]} /> },
+  { id: 'core-3', href: 'Always On Social.dc.html', label: 'Hyundai · Dhuman · Goobne', title: 'Always-on social management', description: 'Three owned-channel accounts run end to end — content planning, production direction, and monthly performance reads that fed the next round.', tags: ['SNS strategy', 'Content planning', 'Data analysis'], result: '+24% / +8.3% follower growth', image: <Slot id="june-core-3" src="uploads/pasted-1788208259948-0.png" fit="contain" /> },
+];
+const PERSONAL = [
+  { id: 'p-1', href: 'Tinder Boiler Room.dc.html', number: '01', label: 'Marketing project', title: 'Tinder × Boiler Room', description: 'A partnership strategy to grow monthly active users across EMEA on a live commercial brief. I led creative direction, the presentation narrative, campaign concept and visual mock-ups.', tags: ['Creative direction', 'Storytelling', 'Mock-ups'], image: <Slot id="june-personal-1" src="uploads/pasted-1788208412648-0.png" /> },
+  { id: 'p-2', href: 'D8 Crate.dc.html', number: '02', label: 'Digital retailing', title: 'D8CRATE', description: 'A fictional at-home date-night box: built the site and tracked performance in Google Analytics. I ran social for two months — content planning, posts, and AI-generated product imagery.', tags: ['Google Analytics', 'Social management', 'AI imagery'], image: <Slot id="june-personal-2" src="uploads/top_final2.jpg" /> },
+  { id: 'p-3', href: 'Think Wise.dc.html', number: '03', label: 'Student advert competition · Jan 2026', title: 'think ( ) wise', description: "An institutional brand film for UCD Smurfit built on the concept 'think ( ) wise'. As team lead I directed it end to end — concept, storytelling, filming and edit.", tags: ['Team lead', 'Concept', 'Film direction'], image: <Triptych items={[['june-personal-3c', 'uploads/20260902_151129.png'], ['june-personal-3', 'uploads/20260902_151440_1.jpg'], ['june-personal-3b', 'uploads/20260902_151440_5.jpg']]} /> },
+];
+const TAPES = [[-5, 'beige', 96], [4, 'red', 88], [-3, 'beige', 104]];
+
+function Cards({ items, withResult }) {
+  return <div className="jp-cards">
+    {items.map((p, i) => <PaperCard key={p.id} id={p.id} number={p.number} label={<span style={{ display: 'block', whiteSpace: 'nowrap' }}>{p.label}</span>} title={p.title} description={withResult ? <>{p.description}<span style={{ display: 'block', marginTop: 'var(--space-4)', paddingTop: 'var(--space-3)', borderTop: '1px solid var(--color-line)', ...jpLabel }}>Result</span><span style={{ display: 'block', marginTop: 4, font: 'italic 400 24px/1.2 var(--font-display)', color: 'var(--color-primary)' }}>{p.result}</span></> : p.description} tags={p.tags} image={p.image} imageAlt={p.title} linkText="Read the case →" href={p.href} tape={{ angle: TAPES[i][0], color: TAPES[i][1], width: TAPES[i][2], position: 'tc' }} />)}
+  </div>;
+}
+
+function CoreProjects() {
+  return <section className="paper" style={{ position: 'relative', zIndex: 4, padding: 'calc(var(--space-7) + 24px) 0 calc(var(--space-7) + 24px)' }}>
+    <div className="jp-wrap">
+      <h2 style={jpH2}>Core project</h2>
+      <p style={{ ...jpBody, marginTop: 'var(--space-4)' }}>Four years of client work at a Seoul agency, from FMCG launches to automotive and pharma. Every campaign below started with a consumer insight and ended with a number the client cared about.</p>
+      <Cards items={CORE} withResult />
+      <div style={{ marginTop: 'var(--space-7)', paddingTop: 'var(--space-5)', borderTop: '1px solid var(--color-line)', display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 'var(--space-3) var(--space-5)' }}>
+        <span style={jpLabel}>Clients</span>
+        <span style={{ font: 'italic 400 24px/1.4 var(--font-display)', color: 'var(--color-charcoal)' }}>Goobne Chicken · Hyundai Motor · Goobne Dumun · BOSCH · Dongkook Pharmaceutical · Yonsei Milk · Kwangdong Pharmaceutical</span>
+      </div>
+    </div>
+  </section>;
+}
+
+function PersonalProjects() {
+  return <section className="paper paper--warm" style={{ position: 'relative', zIndex: 3, padding: 'calc(var(--space-7) + 24px) 0 calc(var(--space-7) + 24px)' }}>
+    <div className="jp-wrap">
+      <h2 style={jpH2}>Personal project</h2>
+      <p style={{ ...jpBody, marginTop: 'var(--space-4)' }}>Work from the MSc in Marketing at UCD Smurfit — live commercial briefs, a product built and traded from scratch, and a campaign film for the school itself. Each one let me lead the creative and the numbers behind it.</p>
+      <Cards items={PERSONAL} />
+    </div>
+    <TornEdge tear={2} from="paper" style={edge} />
+  </section>;
+}
+
+const DRAWINGS = ['10.11.07 PM', '10.11.09 PM', '10.11.11 PM (1)', '10.11.11 PM (5)', '10.11.11 PM (6)', '10.11.11 PM'];
+function Drawing() {
+  const pieces = [[-3, -8, 7], [2, 5, null], [-1.5, -11, 9], [3.5, 4, null], [-2.5, 10, -6], [1, -5, null]];
+  return <section className="paper" style={{ position: 'relative', zIndex: 2, display: 'flow-root' }}>
+    <div className="jp-wrap" style={{ paddingTop: 'calc(var(--space-7) + 40px)', paddingBottom: 'calc(var(--space-7) + 24px)' }}>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--space-4)', flexWrap: 'wrap' }}>
+        <h2 style={jpH2}>Drawing</h2>
+        <span style={{ font: 'italic 400 24px/1.2 var(--font-display)', color: 'var(--color-charcoal)' }}>off the clock</span>
+      </div>
+      <p style={{ ...jpBody, marginTop: 'var(--space-4)' }}>Drawing keeps the creative muscle honest. A few pages from the sketchbook.</p>
+      <div className="jp-draw">
+        {pieces.map(([rot, t1, t2], i) => <div key={i} style={{ position: 'relative', transform: 'rotate(' + rot + 'deg)', filter: 'drop-shadow(var(--shadow-paper))' }}>
+          <div style={{ aspectRatio: '3/4', background: 'var(--color-paper)' }}>
+            <Slot id={'june-draw-' + (i + 1)} src={'uploads/WhatsApp Image 2026-09-02 at ' + DRAWINGS[i] + '.jpeg'} placeholder="Drop a drawing" />
+          </div>
+          <Tape color={i % 2 ? 'red' : 'beige'} width={90 + i * 8} angle={t1} position={t2 === null ? 'tc' : 'tl'} />
+          {t2 !== null && <Tape color="beige" width={82} angle={t2} position="tr" />}
+        </div>)}
+      </div>
+    </div>
+    <TornEdge tear={3} from="light" to="red" depth={80} style={edge} />
+  </section>;
+}
+
+function Contact() {
+  return <section className="paper paper--red" style={{ position: 'relative', zIndex: 1, minHeight: 'max(75vh, 560px)', padding: 'calc(var(--space-8) + 24px) var(--space-5) var(--space-6)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 'var(--space-5)', textAlign: 'center', color: 'var(--color-paper-light)' }}>
+    <span style={{ ...jpLabel, color: 'var(--color-paper-light)' }}>Contact</span>
+    <h2 style={{ ...jpH2, fontSize: 'clamp(48px,7vw,96px)', color: 'var(--color-paper-light)' }}>Let's make something<br />that works.</h2>
+    <div className="jp-contact-row">
+      <TextLink onRed href="mailto:hello@junekim.com">hello@junekim.com</TextLink>
+      <TextLink onRed href="#">LinkedIn</TextLink>
+      <TextLink onRed href="#">Instagram</TextLink>
+      <TextLink onRed href="#">CV (PDF)</TextLink>
+    </div>
+    <span style={{ ...jpLabel, color: 'var(--color-paper-light)', marginTop: 'var(--space-6)' }}>Dublin, Ireland · Portfolio 2026</span>
+  </section>;
+}
+
+function App() {
+  return <div style={{ overflowX: 'hidden' }}>
+    <div data-screen-label="Cover"><Cover eyebrow="From insight to impact" title={<span style={{ fontSize: 'clamp(48px,7vw,104px)', lineHeight: 1.05, display: 'block' }}>Data driven &amp; creative marketer</span>} script="Meet June" slant={-5} /></div>
+    <div data-screen-label="Profile"><Profile /></div>
+    <div data-screen-label="How I work"><HowIWork /></div>
+    <div data-screen-label="Core project"><CoreProjects /></div>
+    <div data-screen-label="Personal project"><PersonalProjects /></div>
+    <div data-screen-label="Drawing"><Drawing /></div>
+    <div data-screen-label="Contact"><Contact /></div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
