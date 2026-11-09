@@ -14,7 +14,215 @@
 </head>
 <body>
 <div id="root"></div>
-<script type="text/babel" src="case-kit.jsx"></script>
+<script type="text/babel">
+const CK = window.JunePortfolioDesignSystem_6caff1;
+const ckEdge = { position: 'absolute', left: 0, right: 0, top: '100%', marginBottom: 0 };
+const ckTapes = [[-6, 'beige', 108], [5, 'red', 96], [-3, 'beige', 120], [8, 'red', 88], [-9, 'beige', 100], [3, 'red', 112]];
+const ckHeroShadow = 'drop-shadow(0 7px 4px rgba(26,26,26,.45))';
+const ckLight = { color: 'var(--color-paper-light)' };
+
+function CaseNav({ label }) {
+  return <div className="cs-nav paper paper--red"><div className="cs-wrap">
+    <CK.TextLink onRed href="index.html#core" weight={500} style={{ textDecoration: 'underline', textUnderlineOffset: 4 }}>← Back to portfolio</CK.TextLink>
+    <span className="cs-label" style={ckLight}>{label}</span>
+  </div></div>;
+}
+
+function Slot({ id, src, fit = 'cover', placeholder = 'Drop an image' }) {
+  return <image-slot id={id} shape="rect" src={src} fit={fit} placeholder={placeholder} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}></image-slot>;
+}
+
+function Photo({ id, src, ratio = '4/3', tilt = 0, tape = 0, fit = 'cover', placeholder, onRed, style, crop }) {
+  const t = ckTapes[tape % ckTapes.length];
+  return <div style={{ position: 'relative', filter: 'drop-shadow(var(--shadow-paper))', ...style }}>
+    <div style={{ position: 'relative', aspectRatio: ratio, background: 'var(--color-paper-light)', overflow: 'hidden' }}>{crop ? <div style={{ position: 'absolute', inset: -crop }}><Slot id={id} src={src} fit={fit} placeholder={placeholder} /></div> : <Slot id={id} src={src} fit={fit} placeholder={placeholder} />}</div>
+    {tape !== false && <CK.Tape color={onRed ? (tape % 2 ? 'paper' : 'beige') : t[1]} width={t[2]} angle={t[0]} position="tc" />}
+  </div>;
+}
+
+function VideoSlot({ youtube }) {
+  return <div style={{ position: 'relative', aspectRatio: '9/16', width: '100%', background: 'var(--color-ink)', filter: 'drop-shadow(var(--shadow-paper))' }}>
+    <iframe src={'https://www.youtube.com/embed/' + youtube + '?rel=0&playsinline=1'} title="think ( ) wise — final film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}></iframe>
+  </div>;
+}
+
+function Frames({ items, ratio = '16/9', n = 4, fit = 'cover', flat, tight }) {
+  const tl = [-1.5, 1, -0.5, 1.5, -1, 0.5, 2, -2];
+  if (flat) return <div className={'cs-cols cs-c' + n} style={{ gap: 'var(--space-3)' }}>{items.map(([id, src]) => <div key={id} style={{ position: 'relative', aspectRatio: ratio, overflow: 'hidden', background: 'var(--color-paper-light)' }}><Slot id={id} src={src} fit={fit} /></div>)}</div>;
+  return <div className={'cs-cols cs-c' + n} style={{ gap: tight ? 'var(--space-5) var(--space-2)' : 'var(--space-4)' }}>{items.map(([id, src], i) => <Photo key={id} id={id} src={src} ratio={ratio} fit={fit} tilt={tl[i % tl.length]} tape={false} placeholder="Drop an image" />)}</div>;
+}
+
+function CaseHero({ decor, doodle, eyebrow, title, desc, owned, ownedNote, overview, media, extra, flip, compact, ownedPaper, mediaFr, center, mediaW, space }) {
+  if (flip) return <section className="paper paper--red" style={{ position: 'relative', zIndex: 3, ...ckLight, padding: '56px 0 clamp(48px,5vw,80px)' }} data-screen-label="Hero">
+    {doodle && <img src={doodle} alt="" aria-hidden="true" style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: 'auto', pointerEvents: 'none', zIndex: 4 }} />}
+    <div className="cs-wrap">
+      <div className="cs-hero" style={{ alignItems: 'stretch', gap: 'var(--space-6)' }}>
+        <div className="ck-hs" style={{ alignSelf: 'center', filter: ckHeroShadow }}>{media}</div>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 'var(--space-6)', position: 'relative', paddingRight: 'var(--space-3)' }}>
+          <div>
+            <span className="cs-label" style={ckLight}>{eyebrow}</span>
+            <h1 style={{ margin: 'var(--space-4) 0 0', font: 'italic 400 clamp(48px,6vw,72px)/1.05 var(--font-display)' }}>{title}</h1>
+          </div>
+          <p className="cs-p" style={{ ...ckLight, margin: 0 }}>{desc}</p>
+          {(owned || ownedNote) && <div style={{ position: 'relative', marginTop: 'calc(-1 * var(--space-4))' }}>
+            <CK.GridPaper tilt={-1.2} style={{ padding: 'var(--space-5) var(--space-4) var(--space-4)', color: 'var(--color-ink)', filter: ckHeroShadow }}>
+              <div className="cs-group" style={{ gap: 'var(--space-4)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 'var(--space-4)', flexWrap: 'wrap' }}><span className="cs-label" style={{ color: 'var(--color-primary)' }}>What I owned</span><span style={{ marginRight: 'var(--space-5)' }}>{extra}</span></div>
+                {owned && <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 'var(--space-3) var(--space-5)' }}>{owned.map((t, i) => <li key={t} style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--space-2)', paddingBottom: 'var(--space-2)', borderBottom: '1px solid var(--color-line)' }}><span style={{ font: 'italic 400 24px/1 var(--font-display)', color: 'var(--color-primary)' }}>{String(i + 1).padStart(2, '0')}</span><span style={{ font: '700 16px/1.4 var(--font-body)' }}>{t}</span></li>)}</ol>}
+                {ownedNote && <p className="cs-p" style={{ margin: 0 }}>{ownedNote}</p>}
+              </div>
+            </CK.GridPaper>
+            <CK.Tape color="beige" width={120} angle={-4} position="tc" />
+          </div>}
+          {extra && !(owned || ownedNote) && <div>{extra}</div>}
+          {decor}
+        </div>
+      </div>
+    </div>
+    <CK.TornEdge tear={2} from="red" style={ckEdge} />
+  </section>;
+  return <section className="paper paper--red" style={{ position: 'relative', zIndex: 3, ...ckLight, padding: '56px 0 clamp(48px,5vw,80px)' }} data-screen-label="Hero">
+    {doodle && <img src={doodle} alt="" aria-hidden="true" style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: 'auto', pointerEvents: 'none', zIndex: 4 }} />}
+    <div className="cs-wrap" style={space ? { paddingTop: [].concat(space)[0], paddingBottom: [].concat(space).slice(-1)[0] } : undefined}>
+      <div className={media ? 'cs-hero' : ''} style={center ? { display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 'var(--space-7)' } : compact ? { gridTemplateColumns: 'minmax(0,' + (mediaFr || '.85') + 'fr) minmax(0,1fr)', alignItems: 'stretch' } : undefined}>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: center ? 'center' : compact ? 'space-between' : undefined, ...(center ? { flex: '0 1 720px', minWidth: 0 } : {}) }}>
+          <span className="cs-label" style={ckLight}>{eyebrow}</span>
+          <h1 style={{ margin: (center ? 'var(--space-3)' : 'var(--space-5)') + ' 0 0', font: 'italic 400 clamp(48px,6vw,72px)/1.05 var(--font-display)' }}>{title}</h1>
+          <p className="cs-p" style={{ ...ckLight, maxWidth: center ? 'none' : 640, marginTop: compact ? 'var(--space-5)' : 'calc(var(--space-5) + 100px)', marginBottom: 0 }}>{desc}</p>
+          {extra && <div style={{ marginTop: 'var(--space-5)' }}>{extra}</div>}
+        </div>
+        {media && <div className="ck-hs" style={{ filter: ckHeroShadow, ...(center ? { order: -1, flex: 'none', width: 'clamp(300px, 36vw, 480px)' } : compact ? (mediaW ? { alignSelf: 'center', justifySelf: 'end', width: mediaW, order: -1 } : { alignSelf: 'start', order: -1 }) : {}) }}>{media}</div>}
+      </div>
+      {(overview || owned || ownedPaper) && <div className="cs-herometa" style={ownedPaper ? { gridTemplateColumns: mediaFr ? 'minmax(0,' + mediaFr + 'fr) minmax(0,1fr)' : 'minmax(0,.8fr) minmax(0,1.2fr)' } : undefined}>
+        {overview && <div className="cs-group">
+          <span className="cs-label" style={ckLight}>Project overview</span>
+          <div className="cs-over">{overview.map(([k, v]) => <div key={k}><div className="cs-label" style={ckLight}>{k}</div><div style={{ font: '500 16px/1.5 var(--font-body)', marginTop: 4 }}>{v}</div></div>)}</div>
+        </div>}
+        {ownedPaper && <div style={{ position: 'relative', paddingTop: 'var(--space-2)' }}>
+          <CK.GridPaper tilt={-1.2} style={{ padding: 'var(--space-5) var(--space-4) var(--space-4)', color: 'var(--color-ink)', filter: ckHeroShadow }}>
+            <div className="cs-group" style={{ gap: 'var(--space-3)' }}>
+              <span className="cs-label" style={{ color: 'var(--color-primary)' }}>What I owned</span>
+              <p className="cs-p" style={{ margin: 0, minHeight: 72 }}>{ownedNote}</p>
+            </div>
+          </CK.GridPaper>
+          <CK.Tape color="beige" width={120} angle={-4} position="tc" />
+        </div>}
+        {owned && !ownedPaper && <div className="cs-group">
+          <span className="cs-label" style={ckLight}>What I owned</span>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-2)' }}>{owned.map((t) => <CK.Tag key={t} onRed>{t}</CK.Tag>)}</div>
+          {ownedNote && <p className="cs-p" style={{ ...ckLight, margin: 0 }}>{ownedNote}</p>}
+        </div>}
+      </div>}
+    </div>
+    <CK.TornEdge tear={2} from="red" style={ckEdge} />
+  </section>;
+}
+
+function CaseBody({ children, endFrom = 'light' }) {
+  return <main className="paper" style={{ position: 'relative', zIndex: 1, padding: '88px 0 var(--space-6)' }}>
+    {children}
+    <CK.TornEdge tear={3} from={endFrom} style={ckEdge} />
+  </main>;
+}
+
+function CaseSection({ num, title, label, aside, id, children }) {
+  return <div className="cs-wrap"><section className="cs-sec" id={id} data-screen-label={title}>
+    <div className="cs-head">
+      {num && <div style={{ font: 'italic 400 24px/1 var(--font-display)', color: 'var(--color-primary)' }}>{num}</div>}
+      <h2 style={{ margin: 'var(--space-2) 0 0', font: 'italic 400 40px/1.15 var(--font-display)', color: 'var(--color-primary)' }}>{title}</h2>
+      {label && <div className="cs-label" style={{ marginTop: 'var(--space-3)' }}>{label}</div>}
+      {aside}
+    </div>
+    <div className="cs-col">{children}</div>
+  </section></div>;
+}
+
+function Band({ children, first, to, last }) {
+  return <div className="paper paper--warm cs-band" style={{ position: 'relative', zIndex: 2, padding: '88px 0 48px', marginTop: first ? '-88px' : '-32px', marginBottom: last ? 'calc(-1 * var(--space-6))' : 'calc(var(--space-6) + 40px)' }}>
+    {!first && <CK.TornEdge tear={1} from="light" style={{ position: 'absolute', left: 0, right: 0, top: 0, marginBottom: 0 }} />}
+    {children}
+    {!last && <CK.TornEdge tear={2} from="paper" {...(to ? { to } : {})} style={ckEdge} />}
+  </div>;
+}
+
+function MyRole({ paras }) {
+  return <div className="cs-wrap"><div className="cs-sec" style={{ marginBottom: 0 }}><div></div><div style={{ padding: '8px 0 8px 16px' }}>
+    <CK.TornSheet tilt={-0.8} padding="var(--space-6)" decorations={<><CK.Tape color="red" width={120} angle={-5} position="tc" /><CK.Doodle kind="crayon-star" size={56} style={{ position: 'absolute', right: 40, bottom: -28 }} /></>}>
+      <div className="cs-role">
+        <h2 style={{ margin: 0, font: 'italic 400 40px/1.15 var(--font-display)', color: 'var(--color-primary)' }}>My role</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>{paras.map((p, i) => <p key={i} className="cs-p">{p}</p>)}</div>
+      </div>
+    </CK.TornSheet>
+  </div></div></div>;
+}
+
+const P = ({ children, lead }) => <p className={'cs-p' + (lead ? ' lead' : '')}>{children}</p>;
+const Sm = ({ children }) => <p className="cs-sm">{children}</p>;
+const Label = ({ children, red }) => <div className={'cs-label' + (red ? ' red' : '')}>{children}</div>;
+const Group = ({ label, children }) => <div className="cs-group">{label && <Label>{label}</Label>}{children}</div>;
+const Cols = ({ n = 3, children, style, cls = '' }) => <div className={'cs-cols cs-c' + n + ' ' + cls} style={style}>{children}</div>;
+function Item({ kicker, title, children }) {
+  return <div className="cs-item">{kicker && <Label red>{kicker}</Label>}{title && <h4 className="cs-h4">{title}</h4>}{children}</div>;
+}
+function Stat({ value, title, children, titleSize }) {
+  return <div className="cs-item"><div className="cs-stat">{value}</div>{title && <h4 className="cs-h4" style={titleSize ? { fontSize: titleSize } : undefined}>{title}</h4>}{children && <Sm>{children}</Sm>}</div>;
+}
+function RedSheet({ label, title, children, tilt = -1, pad, shape = 'band' }) {
+  return <CK.TornSheet paper="red" backing={false} shape={shape} tilt={tilt} padding={pad || 'var(--space-6)'}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)', ...ckLight }}>
+      {label && <span className="cs-label" style={ckLight}>{label}</span>}
+      {title && <h3 style={{ margin: 0, font: 'italic 400 clamp(40px,5vw,56px)/1.05 var(--font-display)' }}>{title}</h3>}
+      {children && <div className="cs-p" style={ckLight}>{children}</div>}
+    </div>
+  </CK.TornSheet>;
+}
+function Note({ label, children, tilt = -0.8, tape = 1, star, plain, pad }) {
+  const t = ckTapes[tape % ckTapes.length];
+  return <div style={{ padding: plain ? '4px 0' : '8px 0 8px 16px' }}><CK.TornSheet tilt={tilt} padding={pad || (plain ? 'var(--space-4) var(--space-5)' : 'var(--space-6)')} {...(plain ? { backing: false } : {})} decorations={<>{tape !== false && <CK.Tape color={plain ? 'beige' : t[1]} width={t[2]} angle={t[0]} position="tc" />}{star && <CK.Doodle kind="crayon-star" size={52} style={{ position: 'absolute', right: -20, bottom: -24 }} />}</>}>
+    <div className={plain ? 'cs-note-plain' : undefined} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>{label && <Label red>{label}</Label>}{children}</div>
+  </CK.TornSheet></div>;
+}
+const Chips = ({ items }) => <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-2)' }}>{items.map((t) => <CK.Tag key={t}>{t}</CK.Tag>)}</div>;
+
+function ChartCard({ label, children, tilt = 0 }) {
+  return <div className="cs-chart" style={{ position: 'relative', padding: 'var(--space-4)', height: '100%', display: 'flex', flexDirection: 'column' }}>
+    <div aria-hidden="true" style={{ position: 'absolute', inset: 0, background: 'var(--color-paper)', filter: 'drop-shadow(var(--shadow-paper))', }}></div>
+    <div style={{ position: 'relative', flex: 1, display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}><Label>{label}</Label><div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>{children}</div></div>
+  </div>;
+}
+function Bars({ data, height = 150, barW, base = 0 }) {
+  const max = Math.max(...data.map((d) => d[1]));
+  const r = (v) => Math.max(0.04, (v - base) / (max - base));
+  return <div>
+    <div style={{ display: 'flex', alignItems: 'flex-end', gap: data.length > 6 ? 'var(--space-1)' : 'var(--space-3)', height, borderBottom: '1px solid var(--color-charcoal)' }}>
+      {data.map(([l, v, hi, vl], i) => <div key={i} style={{ flex: 1, minWidth: 0, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', gap: 4 }}>
+        {vl && <span style={{ font: (hi ? '700' : '500') + ' 12px/1 var(--font-body)', color: hi ? 'var(--color-primary)' : 'var(--color-charcoal)' }}>{vl}</span>}
+        <div style={{ width: barW || '100%', height: 'calc((100% - 18px) * ' + r(v) + ')', background: hi ? 'var(--color-primary)' : 'var(--color-line)', border: hi ? 'none' : '1px solid var(--color-charcoal)', borderBottom: 'none' }}></div>
+      </div>)}
+    </div>
+    <div style={{ display: 'flex', gap: data.length > 6 ? 'var(--space-1)' : 'var(--space-3)', marginTop: 'var(--space-2)' }}>{data.map(([l, v, hi], i) => <span key={i} style={{ flex: 1, minWidth: 0, textAlign: 'center', font: (hi ? '700' : '400') + ' 12px/1.3 var(--font-body)', color: hi ? 'var(--color-primary)' : 'var(--color-charcoal)' }}>{l}</span>)}</div>
+  </div>;
+}
+
+function CaseFooter() {
+  return <footer className="paper paper--red" data-screen-label="Next" style={{ ...ckLight, padding: 'calc(var(--space-7) + 40px) var(--space-7) var(--space-8)' }}>
+    <div className="cs-wrap" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-end', gap: 'var(--space-5)' }}>
+      <div className="cs-group">
+        <span className="cs-label" style={ckLight}>More work</span>
+        <h3 style={{ margin: 0, font: 'italic 400 clamp(40px,5vw,56px)/1.05 var(--font-display)' }}>Back to the portfolio</h3>
+      </div>
+      <a href="index.html#core" style={{ display: 'flex', alignItems: 'flex-end', gap: 'var(--space-4)', color: 'var(--color-paper-light)', textDecoration: 'none' }}><span style={{ font: '500 17px/1.5 var(--font-body)', textDecoration: 'underline 1px', textUnderlineOffset: 4, paddingBottom: 'var(--space-2)' }}>View all projects →</span><img src="assets/door-footer.png" alt="" aria-hidden="true" style={{ height: 160, width: 'auto', display: 'block' }} /></a>
+    </div>
+  </footer>;
+}
+
+function CasePage({ nav, hero, children, endFrom }) {
+  return <div style={{ overflowX: 'hidden' }}><CaseNav label={nav} /><CaseHero {...hero} /><CaseBody endFrom={endFrom}>{children}</CaseBody><CaseFooter /></div>;
+}
+
+Object.assign(window, { VideoSlot, Band, MyRole, ChartCard, Bars, Frames, CasePage, CaseSection, Photo, P, Sm, Label, Group, Cols, Item, Stat, RedSheet, Note, Chips });
+
+</script>
 <script type="text/babel">
 const hero = {
   eyebrow: 'UCD Smurfit · Student Advert Competition 2026',

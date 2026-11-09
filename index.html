@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>June — Portfolio</title>
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/colors.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/typography.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/effects.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/paper.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/tokens/assets.css">
+<link rel="stylesheet" href="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/styles.css">
+<style>
+@media (min-width:1025px){.jp-oneline{white-space:nowrap;letter-spacing:-0.01em}.jp-str h3{white-space:nowrap}}
+html,body{margin:0}body{background:var(--color-paper-light);color:var(--color-ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}p{text-wrap:pretty}
+a{color:var(--color-primary)}a:hover{color:var(--color-primary-hover)}
+:focus-visible{outline:2px solid var(--color-ink);outline-offset:3px}
+.jp-wrap{max-width:1520px;margin:0 auto;padding:0 clamp(24px,7vw,140px)}
+.jp-profile{display:grid;grid-template-columns:42fr 58fr;gap:var(--space-7);align-items:center}
+.jp-how div[style*="background: var(--color-paper-light)"]{background-color:var(--color-paper-light)!important;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .24 0 0 0 0 .2 0 0 0 0 .15 0 0 0 .14 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.012' numOctaves='2'/><feColorMatrix values='0 0 0 0 .3 0 0 0 0 .25 0 0 0 0 .18 0 0 0 .05 0'/></filter><rect width='100%' height='100%' filter='url(%23b)'/></svg>")!important}.jp-how .grid-paper{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .24 0 0 0 0 .2 0 0 0 0 .15 0 0 0 .14 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.012' numOctaves='2'/><feColorMatrix values='0 0 0 0 .3 0 0 0 0 .25 0 0 0 0 .18 0 0 0 .05 0'/></filter><rect width='100%' height='100%' filter='url(%23b)'/></svg>"),linear-gradient(var(--color-line) 1px,transparent 1px),linear-gradient(90deg,var(--color-line) 1px,transparent 1px);background-size:240px 240px,600px 600px,20px 20px,20px 20px}
+.jp-str{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6);margin-top:var(--space-6)}.jp-cv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-7);margin-top:var(--space-6);padding-top:var(--space-6);border-top:1px solid var(--color-line)}
+@media (max-width:1024px){.jp-str,.jp-cv{grid-template-columns:1fr;gap:var(--space-6)}}
+.jp-two{display:grid;grid-template-columns:minmax(0,1.24fr) minmax(0,.76fr);gap:var(--space-7);align-items:start}
+.jp-tools{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-5)}
+.jp-cover-shadow .paper--red{filter:drop-shadow(0 6px 8px rgba(26,26,26,.25))}
+.jp-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-5);margin-top:var(--space-6);align-items:stretch}
+.jp-draw{position:relative;container-type:inline-size;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--space-4);margin-top:var(--space-6);align-items:start}
+.jp-cards>a{transition:transform .3s cubic-bezier(.22,.9,.3,1),filter .3s ease}.jp-cards>a:hover{transform:translateY(-8px);filter:drop-shadow(0 18px 30px rgba(26,26,26,.2))!important}
+.jp-nav{position:sticky;top:0;z-index:50;background:var(--color-primary)}.jp-nav .jp-wrap{padding-left:calc(clamp(24px,7vw,140px) + 38px);padding-right:calc(clamp(24px,7vw,140px) + 38px);display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);padding-top:var(--space-6);padding-bottom:var(--space-4)}.jp-nav-links{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-5)}.jp-nav-links a{font:500 13px/1.3 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-paper-light);text-decoration:none}.jp-nav-links a:hover{color:var(--color-paper-light);text-decoration:underline;text-underline-offset:4px}.jp-nav :focus-visible{outline-color:var(--color-paper-light)}
+@media (min-width:1025px){.jp-profile-cut{margin-bottom:-56px}#about>section{display:flow-root}}
+html{scroll-behavior:smooth}
+.jp-contact-row{display:flex;flex-wrap:wrap;gap:var(--space-5);justify-content:center}
+@media (max-width:1024px){.jp-profile>div:first-child{height:700px!important}.jp-profile,.jp-two{grid-template-columns:1fr}.jp-tools{grid-template-columns:repeat(2,minmax(0,1fr))}.jp-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1024px){.jp-draw{grid-template-columns:repeat(3,minmax(0,1fr))}.jp-hand-lg{display:none}}
+@media (max-width:768px){.jp-cards,.jp-tools{grid-template-columns:1fr}.jp-draw{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#BE2E22"/><text x="50" y="64" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="44" fill="#FFFDF8">J</text></svg></template>
+<div id="root"></div>
+<script type="text/babel">
+const DS = window.JunePortfolioDesignSystem_6caff1;
+const { Cover, TornSheet, TornEdge, GridPaper, Tape, Doodle, Icon, Tag, PaperCard, Button, TextLink, QrCard } = DS;
+
+const jpH2 = { margin: 0, font: 'italic 400 clamp(40px,5vw,64px)/1.05 var(--font-display)', color: 'var(--color-primary)' };
+const jpH3 = { margin: 0, font: 'italic 400 24px/1.25 var(--font-display)', color: 'var(--color-ink)' };
+const jpLabel = { font: '500 14px/1.3 var(--font-body)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--color-charcoal)' };
+const jpBody = { margin: 0, font: '400 17px/1.5 var(--font-body)', textAlign: 'left', hyphens: 'manual', maxWidth: '64ch', color: 'var(--color-ink)' };
+const edge = { position: 'absolute', left: 0, right: 0, top: '100%', marginBottom: 0 };
+
+function Slot({ id, src, fit = 'cover', placeholder = 'Drop an image' }) {
+  return <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <image-slot id={id} shape="rect" src={src} fit={fit} placeholder={placeholder} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}></image-slot>
+  </div>;
+}
+function Triptych({ items }) {
+  return <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 2, width: '100%', height: '100%', background: 'var(--color-line)' }}>
+    {items.map(([id, src]) => <div key={id} style={{ position: 'relative', overflow: 'hidden', background: 'var(--color-paper-light)' }}><Slot id={id} src={src} /></div>)}
+  </div>;
+}
+
+const PROFILE_TEAR = "M0 -14 L0 0 L0 17.61 L12 16.28 L24 16.95 L36 16.31 L48 16.69 L60 14.57 L72 13.21 L84 10.49 L96 9.01 L108 8.38 L120 6.6 L132 7.06 L144 9.68 L156 10.8 L168 11.72 L180 12.47 L192 11.74 L204 12.54 L216 11.16 L228 10.35 L240 8.65 L252 8.97 L264 8.54 L276 9.24 L288 8.58 L300 7.67 L312 8.44 L324 9.61 L336 9.78 L348 10.99 L360 10.15 L372 10.91 L384 10.47 L396 9.6 L408 9.97 L420 9.19 L432 8.9 L444 9.58 L456 10.96 L468 10.85 L480 11.62 L492 12.09 L504 12.48 L516 13.08 L528 14.01 L540 14.45 L552 16.02 L564 16.58 L576 16.87 L588 17.86 L600 17.87 L612 19.19 L624 20.4 L636 19.9 L648 19.8 L660 20.43 L672 19.58 L684 17.74 L696 16.82 L708 15.46 L720 12.81 L732 11.09 L744 10.28 L756 10.17 L768 8.45 L780 8.42 L792 8.59 L804 8.61 L816 10.35 L828 10.83 L840 12.31 L852 12.73 L864 12.9 L876 12.73 L888 11.84 L900 12.16 L912 9.76 L924 9.98 L936 9.7 L948 9.38 L960 9.38 L972 9.69 L984 9.81 L996 10.84 L1008 10.84 L1020 11.22 L1032 11.37 L1044 13.68 L1056 15.33 L1068 16.97 L1080 18.48 L1092 20.25 L1104 19.5 L1116 18.9 L1128 18.29 L1140 17.03 L1152 15.16 L1164 12.29 L1176 10.86 L1188 9.25 L1200 8.95 L1212 8.49 L1224 8.17 L1236 8.34 L1248 7.06 L1260 7.16 L1272 7.96 L1284 7.07 L1296 8.34 L1308 9.25 L1320 9.43 L1332 10.78 L1344 12.07 L1356 11.15 L1368 12.14 L1380 10.37 L1392 9.57 L1404 8.53 L1416 8.25 L1428 7.9 L1440 9.51 L1440 0 L1440 -14 Z";
+function useTornClip(ref) {
+  React.useLayoutEffect(() => {
+    const el = ref.current; if (!el) return;
+    const sec = el.closest('section');
+    const svg = 'url("data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="' + PROFILE_TEAR + '"/></svg>') + '")';
+    const fit = () => {
+      const a = el.getBoundingClientRect(), s = sec.getBoundingClientRect(), k = a.width / el.offsetWidth || 1;
+      const x = (s.left - a.left) / k, y = (s.bottom - a.top) / k, w = s.width / k;
+      const m = 'linear-gradient(#000,#000) ' + x + 'px ' + (y - 3997) + 'px / ' + w + 'px 4000px no-repeat, ' + svg + ' ' + x + 'px ' + y + 'px / ' + w + 'px 56px no-repeat';
+      el.style.maskImage = el.style.webkitMaskImage = '';
+      el.style.mask = m; el.style.webkitMask = m; el.style.maskClip = 'no-clip'; el.style.webkitMaskClip = 'no-clip';
+    };
+    fit(); const ro = new ResizeObserver(fit); ro.observe(sec); ro.observe(el);
+    window.addEventListener('resize', fit);
+    return () => { ro.disconnect(); window.removeEventListener('resize', fit); };
+  }, []);
+}
+function Profile() {
+  const clip = React.useRef(null); useTornClip(clip);
+  return <section className="paper" style={{ position: 'relative', zIndex: 7, padding: 'var(--space-2) 0 0' }}>
+    <div className="jp-wrap jp-profile jp-profile-cut" style={{ position: 'relative', top: -38 }}>
+      <div style={{ position: 'relative', height: 528, maxWidth: 600, width: '100%', justifySelf: 'center', left: 114 }}>
+        <Doodle kind="crayon-star" size={57} style={{ position: 'absolute', left: 0, bottom: 70 }} />
+        <div ref={clip} style={{ boxSizing: 'border-box', position: 'absolute', left: -10, top: 87, width: 417, height: 523, zIndex: 3 }}>
+        <img src="assets/drawings/profile-keywords.png" alt="" aria-hidden="true" style={{ position: 'absolute', pointerEvents: 'none', left: 5, top: -31, width: 445, height: 386, zIndex: 2 }} />
+        <img src="assets/drawings/profile-photo.png" alt="Portrait of June" aria-hidden="false" style={{ position: 'absolute', pointerEvents: 'none', left: 66, top: -43, width: 260, height: 486, zIndex: 1 }} />
+        </div>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+        <h2 style={{ ...jpH2, fontSize: 47 }} id="jp-hello">Hello, I'm <span id="jp-hello-name">June</span></h2>
+        <p style={{ margin: '-12px 0 0', font: 'italic 400 clamp(32px,4vw,56px)/1.05 var(--font-display)', fontSize: 47, color: 'var(--color-ink)' }}>A marketer with curiosity</p>
+        <div style={{ ...jpBody, fontSize: 16 }}><p style={{ margin: 0 }}>I moved from Seoul to Dublin, with a sketchbook in my bag the whole way. <b>I recently completed an MSc in Marketing at UCD Smurfit</b>, where I got especially interested in consumer insight and analytics.</p><p style={{ margin: 'var(--space-4) 0 0' }}><b>I’m endlessly curious about people.</b> I love deep conversations, listening to people and learning about their world. I guess that’s why I also love watching people and drawing them. <b>Outside work, I play guitar and piano, and teach Korean to people around the world.</b> Why not connect with me and tell me your story?</p></div>
+        <div><TextLink href="https://www.linkedin.com/in/june52" target="_blank">LinkedIn →</TextLink></div>
+      </div>
+    </div>
+    <TornEdge tear={1} from="light" style={edge} />
+  </section>;
+}
+
+const STRENGTHS = [
+  ["01","Analytical thinking","Every number has a story",<>Numbers have always come naturally to me. <b>I enjoy finding patterns and causes, defining a problem and deriving business insight from analytics.</b> Consumer Insight &amp; Analytics and Big Data strengthened my skills in segmentation, data visualisation &amp; analysis. My professor noted my <b>“habit of checking the reasoning behind a number</b> before presenting it”.</>,"magnifier","Read the letter →"],
+  ["02","Customer-centric mindset","In other words, human-centred",<>I first trained in interior architecture (B.E.), where I <b>designed spaces</b> around each user, from their lifestyle to little habits, <b>down to the last detail.</b> Marketing works the same way for me. I research, analyse and listen to the customer. Then <b>I figure out what they feel, want, need and fear.</b> This shapes my content and tailors my messages. Media strategy and creative all follow from there.</>,"light-bulb","See the styling →"],
+  ["03","Communication","On the deck and in the room",<>I carefully curate each slide around <b>what the audience wants to know.</b> I have sharpened this skill in MSc team projects, where I usually took on the storytelling and design of our presentations. Through four years at an agency, I also gained <b>communication skills across clients, designers and production teams.</b> Along the way, I learned to talk in each team's language.</>,"checklist","View the decks →"],
+];
+const EDUCATION = [
+  ['2025–2026', 'MSc in Marketing', 'UCD Smurfit Graduate Business School, Dublin', true, 'Consumer insight & analytics · Big data · Brand management · Pricing · Digital retailing · New product launch · Consumer behaviour'],
+  ['2016–2021', 'B.E. Interior Architecture', 'Soongsil University, Seoul', false, 'Interior architecture design studio · Space psychology · Creative problem solving · User-focused design'],
+];
+const WORK = [
+  ['2022–2024 (2Y 6M)', 'Senior Account Executive', 'Bigband (marketing agency), Seoul', false, 'Integrated campaign · New product launch strategy · Content strategy · Paid ad & budget planning · SEO & viral content'],
+  ['2020–2022 (1Y 2M)', 'Account Executive', 'Bigband (marketing agency), Seoul', false, 'Social media management · Collaboration · Creative briefs & storyboards · Performance reporting'],
+  ['2020 (4M)', 'Associate Account Executive', 'Bigband (marketing agency), Seoul', false, 'Market & competitor research · Consumer insight · Focus group interviews · Customer relationship'],
+  ['2019–2020 (6M)', 'Content Planner & Designer', 'CJ OGN, Seoul', false, 'Content planning · Design · Engagement tracking · Brand guidelines & event posters'],
+];
+const SOFT = ['Curiosity & continuous learning', 'Resilience & adaptability', 'Presentation & persuasion', 'Client & stakeholder management', 'Cross-functional collaboration', 'Ownership & self-direction', 'Working under pressure & prioritisation', 'Analytical thinking & problem solving'];
+const TOOLS = [['Analytics', 'GA4 · Google Colab · Python'], ['Presentation', 'PowerPoint · Canva'], ['Design', 'Photoshop · Illustrator · Procreate'], ['AI', 'ChatGPT · Claude · ElevenLabs']];
+const LANGS = [['Korean', 'Native'], ['English', 'Proficient'], ['Spanish', 'Beginner']];
+
+const STR_LAYERS = [{ kind: 'holes', back: 2.5, front: -1.2, tape: ['beige', -6, 104] }, { kind: 'torn', back: -2, front: 1, tape: ['red', 5, 96] }, { kind: 'holes', back: 1.8, front: -0.8, tape: ['beige', 3, 112] }];
+const STR_ICONS = [['analytical', 33, '-4px'], ['customer', 28, '-6px'], ['communication', 44, '-6px']];
+function HowIWork() {
+  const colHead = { margin: '0 0 var(--space-5)', font: 'italic 400 38px/1.05 var(--font-display)', color: 'var(--color-primary)' };
+  const subHead = { margin: 'var(--space-6) 0 var(--space-3)', font: 'italic 400 24px/1.2 var(--font-display)', color: 'var(--color-primary)' };
+  const Timeline = ({ items }) => <div style={{ position: 'relative', paddingLeft: 32 }}>
+    <svg aria-hidden="true" style={{ position: 'absolute', left: 6, top: 6, width: 6, height: 'calc(100% - 12px)', overflow: 'visible' }} preserveAspectRatio="none" viewBox="0 0 6 100"><path d="M3 0 C1 25 5 50 2 75 C1 88 4 95 3 100" fill="none" stroke="var(--color-primary)" strokeWidth="2.5" strokeLinecap="round" vectorEffect="non-scaling-stroke" /></svg>
+    {items.map(([y, tt, inst, circ, roles], i) => <div key={i} style={{ position: 'relative', marginBottom: i < items.length - 1 ? 'var(--space-5)' : 0 }}>
+      <svg aria-hidden="true" viewBox="0 0 20 20" style={{ position: 'absolute', left: -33, top: 2, width: 14, height: 14 }}><path d="M10 2 C15 2 18 6 18 10 C18 15 14 18 10 18 C5 18 2 14 2 10 C2 5 6 2 11 3" fill="var(--color-paper-light)" stroke="var(--color-primary)" strokeWidth="2.2" strokeLinecap="round" /></svg>
+      <div style={{ position: 'relative', display: 'inline-block' }}>
+        <span style={{ font: '500 15px/1.5 var(--font-body)', color: 'var(--color-primary)' }}>{y}</span>
+        {circ && <img src="assets/drawings/hand-edu-ellipse.png" alt="" aria-hidden="true" style={{ position: 'absolute', left: -14, top: -10, width: 106, height: 41, pointerEvents: 'none' }} />}
+      </div>
+      <h3 style={{ ...jpH3, fontSize: 20, margin: '2px 0' }}>{tt}</h3>
+      <div style={{ font: '400 13px/1.5 var(--font-body)', color: 'var(--color-charcoal)' }}>{inst}</div>
+      {roles && <div style={{ marginTop: 'var(--space-2)', font: '400 16px/1.5 var(--font-body)', color: 'var(--color-ink)' }}>{roles}</div>}
+    </div>)}
+  </div>;
+  return <>
+  <section className="paper paper--warm jp-how" style={{ position: 'relative', zIndex: 6, padding: 'calc(var(--space-7) + 24px) 0 calc(var(--space-7) + 24px)' }}>
+    <div className="jp-wrap">
+      <h2 style={jpH2}>How I work</h2>
+      <div className="jp-str">
+        {STRENGTHS.map(([n, tt, kp, d, ic, cta], i) => {
+          const L = STR_LAYERS[i % STR_LAYERS.length];
+          const body = <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={{ position: 'relative', display: 'flex', alignItems: 'baseline', gap: 'var(--space-3)', marginBottom: 'var(--space-2)' }}>
+              <h3 style={{ ...jpH3, fontSize: 24, color: 'var(--color-primary)' }}>{tt}<span aria-hidden="true" style={{ position: 'relative', display: 'inline-block', width: STR_ICONS[i][1], height: '1em', marginLeft: 8 }}><img src={'assets/drawings/icon-' + STR_ICONS[i][0] + '.png'} alt="" style={{ position: 'absolute', left: 0, bottom: STR_ICONS[i][2], width: '100%' }} /></span></h3>
+            </div>
+            {kp && <p style={{ ...jpBody, fontSize: 16, fontWeight: 700, marginBottom: 'var(--space-2)' }}>{kp}</p>}
+            <p style={{ ...jpBody, fontSize: 16 }}>{d}</p>
+          </div>;
+          const tape = <Tape color={L.tape[0]} angle={L.tape[1]} width={L.tape[2]} position="tc" />;
+          return <div key={n} style={{ position: 'relative', height: '100%', padding: '8px 0 16px' }}>
+            <GridPaper tilt={L.back} style={{ position: 'absolute', top: 24, right: -16, bottom: 0, left: 16 }} />
+            {L.kind === 'torn'
+              ? <TornSheet tilt={L.front} padding="var(--space-5)" decorations={tape} style={{ height: '100%' }}><div style={{ paddingTop: 0 }}>{body}</div></TornSheet>
+              : <div style={{ position: 'relative', height: '100%' }}>
+                  <div aria-hidden="true" style={{ position: 'absolute', inset: 0, background: 'var(--color-paper-light)', transform: 'rotate(' + L.front + 'deg)', filter: 'drop-shadow(var(--shadow-paper))' }}>
+                    <div style={{ position: 'absolute', left: 12, top: 'var(--space-5)', bottom: 'var(--space-5)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>{Array.from({ length: 9 }, (_, k) => <span key={k} style={{ display: 'block', width: 12, height: 12, borderRadius: '50%', background: 'var(--color-paper-deep)' }}></span>)}</div>
+                  </div>
+                  <div style={{ position: 'relative', padding: 'var(--space-5) var(--space-5) var(--space-5) calc(var(--space-5) + 24px)' }}>{body}</div>
+                  {tape}
+                </div>}
+          </div>;
+        })}
+      </div>
+    </div>
+    <TornEdge tear={3} from="paper" style={edge} />
+  </section>
+  <section className="paper paper--deep" style={{ position: 'relative', zIndex: 5, padding: 'calc(var(--space-7) + 24px) 0 calc(var(--space-7) + 24px)' }}>
+    <div className="jp-wrap">
+      <div className="jp-cv" style={{ marginTop: 0 }}>
+        <div><div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 'var(--space-4)', flexWrap: 'wrap', marginBottom: 'var(--space-5)' }}><h3 style={{ ...colHead, margin: 0 }}>Experience</h3><a href="#agency" style={{ font: '500 13px/1.2 var(--font-body)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--color-primary)', textDecoration: 'underline 1px', textUnderlineOffset: 4, flex: 'none' }}>Projects →</a></div><Timeline items={WORK} /></div>
+        <div><div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 'var(--space-4)', flexWrap: 'wrap', marginBottom: 'var(--space-5)' }}><h3 style={{ ...colHead, margin: 0 }}>Education</h3><a href="#personal" style={{ font: '500 13px/1.2 var(--font-body)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--color-primary)', textDecoration: 'underline 1px', textUnderlineOffset: 4, flex: 'none' }}>Projects →</a></div><Timeline items={EDUCATION} />
+          <h3 style={{ ...colHead, marginBottom: 'var(--space-4)', marginTop: 'calc((var(--space-7) - 38px) / 2)' }}>Soft skills</h3>
+          <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+            {SOFT.map((s) => <li key={s} style={{ display: 'flex', gap: 'var(--space-3)', alignItems: 'flex-start', font: '400 16px/1.5 var(--font-body)', color: 'var(--color-ink)' }}><span aria-hidden="true" style={{ width: 9, height: 9, marginTop: 7, flex: 'none', borderRadius: '50%', background: 'var(--color-primary)' }}></span>{s}</li>)}
+          </ul>
+        </div>
+        <div style={{ position: 'relative' }}>
+          <h3 style={colHead}>Tools</h3>
+          <div style={{ position: 'relative', width: 'fit-content' }}><GridPaper tilt={1} style={{ padding: 'var(--space-5)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>{TOOLS.map(([c, x], ti) => <div key={c}><div style={{ ...jpLabel, fontSize: 13, position: 'relative', width: 'fit-content' }}>{c}<img src={'assets/drawings/hand-tools-line' + (ti + 1) + '.png'} alt="" aria-hidden="true" style={{ position: 'absolute', left: -3, top: 'calc(100% - 5px)', width: [84, 117, 65, 28][ti], pointerEvents: 'none' }} /></div><div style={{ marginTop: 2, font: '700 16px/1.5 var(--font-body)', color: 'var(--color-ink)' }}>{x}</div></div>)}</div>
+          </GridPaper><Tape color="red" width={104} angle={-4} position="tc" /></div>
+          <h3 style={{ ...colHead, marginBottom: 'var(--space-3)', marginTop: 'calc((var(--space-7) - 38px) / 2 - 4px)' }}>Languages</h3>
+          <div style={{ display: 'grid', gridTemplateColumns: '64px 72px auto', columnGap: 'var(--space-4)' }}>{LANGS.map(([l, lv]) => <div key={l}><div style={{ ...jpLabel, fontSize: 13, color: 'var(--color-ink)' }}>{l}</div><div style={{ marginTop: 2, font: '400 16px/1.5 var(--font-body)', color: 'var(--color-charcoal)' }}>{lv}</div></div>)}</div>
+          <h3 style={{ ...colHead, marginBottom: 'var(--space-3)', marginTop: 'calc((var(--space-7) - 38px) / 2)' }}>Off work...<img src="assets/drawings/hand-pencil.png" alt="" aria-hidden="true" style={{ width: 26, marginLeft: 4, verticalAlign: 0 }} /></h3>
+          <div style={{ position: 'relative', width: 342, padding: 'var(--space-4) var(--space-5)', marginLeft: 'calc(-1 * var(--space-5))' }}>
+            <img src="assets/drawings/hobby-paper.png" alt="" aria-hidden="true" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} /><img src="assets/drawings/hobby-boy.png" alt="" aria-hidden="true" style={{ position: 'absolute', left: 172, top: 43, width: 163, height: 151, pointerEvents: 'none' }} /><img src="assets/drawings/hand-hobby-list.png" alt="Plus piano, running and cooking" style={{ position: 'absolute', left: 29, top: 56, width: 109, height: 121, zIndex: 1, pointerEvents: 'none' }} />
+            <div style={{ position: 'relative', display: 'grid', gridTemplateColumns: '64px 72px auto', columnGap: 'var(--space-4)', alignItems: 'start' }}>
+              {[[<>Playing<br />guitar</>, 'music'], [<>teaching<br />Korean</>, 'cook'], ['Drawing', 'draw']].map(([t, f], i) => <div key={f} style={{ ...jpLabel, fontSize: 13, color: 'var(--color-ink)', whiteSpace: 'nowrap' }}>{t}</div>)}
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+    <TornEdge tear={2} from="deep" style={edge} />
+  </section></>;
+}
+
+const CORE = [
+  { id: 'core-1', number: '04', href: 'Case A2 Milk.html', label: 'Yonsei Dairy', title: 'A2 Milk launch campaign', description: 'For Korean consumers unfamiliar with A2 milk, we defined two target segments and tailored messages', tags: ['Target analysis', 'Paid media', 'A/B test', 'Integrated digital campaign'], result: '50.71% VTR · 2M+ units', image: <Slot id="june-core-1" src="uploads/pasted-1788208183406-0.png" /> },
+  { id: 'core-2', number: '05', href: 'Case Jjan-merang.html', label: 'Yonsei Dairy', title: 'Cheers campaign', description: 'To build brand awareness among a young audience, I planned an Instagram participation event', tags: ['Social media', 'Creative brief', 'Instagram', 'Target analysis', 'Consumer-centric'], result: 'Impressions at 224% of KPI', image: <Triptych items={[['june-core-2', 'uploads/그림12-991133ab.png'], ['june-core-2b', 'uploads/그림2-5a1450fe.png'], ['june-core-2c', 'uploads/그림7-249cd97d.png']]} /> },
+  { id: 'core-3', number: '06', href: 'Case Always On Social.html', label: 'Goobne Chicken', title: 'Always-on social content', description: 'To increase mental availability, I ran a Facebook account for young audience end to end for a year', tags: ['Social media', 'Facebook', 'Reporting', 'Content calendar', 'Food styling'], result: '+21% increase in organic reach', image: <div style={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden' }}><img src="uploads/12.21 크리스마스 치PD.png" alt="" style={{ position: 'absolute', width: '115.8%', height: '110.6%', left: '-6.4%', top: '-8.4%', objectFit: 'cover', objectPosition: 'center bottom' }} /></div> },
+];
+const PERSONAL = [
+  { id: 'p-1', href: 'Case Tinder Boiler Room.html', number: '01', label: 'Marketing project', title: 'Tinder × Boiler Room', description: 'A partnership strategy to grow monthly active users across EMEA on a live commercial brief.', tags: ['Communication', 'Creative direction', 'Storytelling', 'Mock-ups', 'Research'], image: <Slot id="june-personal-1" src="uploads/pasted-1788208412648-0.png" /> },
+  { id: 'p-2', href: 'Case D8 Crate.html', number: '02', label: 'Digital retailing', title: 'D8CRATE', description: 'A fictional at-home date-night box: built the site and tracked performance in Google Analytics.', tags: ['New product launch', 'Google Analytics', 'Persona', 'AI imagery', 'Pricing'], image: <Slot id="june-personal-2" src="uploads/top_final2.jpg" /> },
+  { id: 'p-3', href: 'Case Think Wise.html', number: '03', label: 'ADVERT COMPETITION', title: 'Think ( ) wise', description: "An institutional brand film for UCD Smurfit built on the concept 'think otherwise'", tags: ['Team lead', 'Video creation', 'Storytelling', 'On camera', 'Inclusive'], image: <Triptych items={[['june-personal-3c', 'uploads/20260902_151129.png'], ['june-personal-3', 'uploads/20260902_151440_1.jpg'], ['june-personal-3b', 'uploads/20260902_151440_5.jpg']]} /> },
+];
+const TAPES = [[-5, 'beige', 96], [4, 'red', 88], [-3, 'beige', 104]];
+
+function Cards({ items, withResult }) {
+  return <div className="jp-cards">
+    {items.map((p, i) => <PaperCard key={p.id} id={p.id} image={p.image} imageAlt={p.title} imageRatio="16/8" padding="var(--space-4) var(--space-5)" href={p.href} tape={{ angle: TAPES[i][0], color: TAPES[i][1], width: TAPES[i][2], position: 'tc' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--space-3)' }}>
+          {p.number && <span style={{ font: 'italic 400 24px/1 var(--font-display)', color: 'var(--color-primary)' }}>{p.number}</span>}
+          <span style={jpLabel}>{p.label}</span>
+        </div>
+        <h3 style={{ margin: '8px 0 4px', font: 'italic 400 24px/1.2 var(--font-display)', color: 'var(--color-primary)' }}>{p.title}</h3>
+        <p style={{ margin: '0 0 12px', font: '400 15px/1.4 var(--font-body)', color: 'var(--color-charcoal)' }}>{p.description}</p>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>{p.tags.map((t) => <Tag key={t} style={{ padding: '4px 10px' }}>{t}</Tag>)}</div>
+        <div style={{ marginTop: 'auto', paddingTop: 'var(--space-4)' }}>
+          <div style={{ borderTop: '1px solid var(--color-line)', paddingTop: 'var(--space-3)', minHeight: withResult ? 72 : 0 }}>
+            {withResult && <><div style={jpLabel}>Result</div><div style={{ marginTop: 4, font: 'italic 400 24px/1.2 var(--font-display)', color: 'var(--color-primary)' }}>{p.result}</div></>}
+          </div>
+          <div style={{ marginTop: withResult ? 'var(--space-3)' : 0, font: '500 14px/1.3 var(--font-body)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--color-primary)' }}>Read the case →</div>
+        </div>
+      </div>
+    </PaperCard>)}
+  </div>;
+}
+
+function CoreProjects() {
+  const sub = { ...jpLabel, font: '700 20px/1.3 var(--font-body)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--color-primary)', margin: 0 };
+  return <section className="paper" style={{ position: 'relative', zIndex: 4, padding: 'calc(var(--space-7) + 24px) 0 calc(var(--space-7) + 24px)' }}>
+    <div className="jp-wrap">
+      <h2 style={jpH2}>Projects I'm proud of</h2>
+      <h3 id="personal" style={{ ...sub, marginTop: 'var(--space-6)' }}>UCD Michael Smurfit Graduate Business School · Dublin 2025–26</h3>
+      <p style={{ ...jpBody, maxWidth: 'none', marginTop: 'var(--space-3)' }}>Work from my MSc in Marketing, in teams with people from diverse backgrounds. I worked on briefs, consumer analysis, a product built and traded from scratch, and a campaign film for the school itself.</p>
+      <Cards items={PERSONAL} />
+      <h3 id="agency" style={{ ...sub, marginTop: 72 }}>BIGBAND (Marketing agency) · Seoul 2020–2024</h3>
+      <p style={{ ...jpBody, maxWidth: 'none', marginTop: 'var(--space-3)' }}>Four years of experience in a marketing agency. I planned and executed integrated marketing campaigns, specialising in food &amp; beverage. Every campaign started with consumer insight, solid research and listening to customers, and ended with a number the client cared about.</p>
+      <Cards items={CORE} withResult />
+      <div style={{ marginTop: 'var(--space-5)', display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 'var(--space-3) var(--space-5)' }}>
+        <span style={jpLabel}>CLIENTS I WORKED WITH...</span>
+        <span style={{ font: 'italic 400 22px/1.4 var(--font-display)', color: 'var(--color-charcoal)' }}>Yonsei Dairy · Goobne Chicken · Hyundai Motor · Dhuman pet food · Bosch · Dongkook Pharmaceutical · Kwangdong Pharmaceutical</span>
+      </div>
+    </div>
+    <TornEdge tear={1} from="light" style={edge} />
+  </section>;
+}
+
+const DRAWINGS = ['10.11.07 PM', '10.11.09 PM', '10.11.11 PM (1)', '10.11.11 PM (5)', '10.11.11 PM (6)', '10.11.11 PM'];
+const DRAW_LABELS = [['mulligans', 18.04, 95.14, 91.2], ['networking', 4.66, 98.9, 84.25], ['airport', 70.52, -19.18, 63.36], ['luas', 56.67, 96.82, 125.35], null, ['pub', 3.59, -26.04, 105.14]];
+function Drawing() {
+  const pieces = [[-3, -8, 7], [2, 5, null], [-1.5, -11, 9], [3.5, 4, null], [-2.5, 10, -6], [1, -5, null]];
+  return <section className="paper paper--warm" style={{ position: 'relative', zIndex: 2, display: 'flow-root' }}>
+    <div className="jp-wrap" style={{ paddingTop: 'calc(var(--space-7) + 40px)', paddingBottom: 'calc(var(--space-7) + 24px)', position: 'relative' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--space-6)', flexWrap: 'wrap' }}>
+      <div style={{ flex: '1 1 560px', minWidth: 0 }}>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--space-4)', flexWrap: 'wrap' }}>
+        <h2 style={jpH2}>I love drawing strangers</h2>
+        <span style={{ font: 'italic 400 24px/1.2 var(--font-display)', color: 'var(--color-charcoal)' }}>and I'm open to commercial work, from products to posters</span>
+      </div>
+      <p style={{ ...jpBody, maxWidth: 'none', marginTop: 'var(--space-4)' }}><span className="jp-oneline">I draw everywhere. It could be at home, in a café or a pub, or just by the side of a road somewhere I ended up while travelling.</span><br />Most of all, I love giving my drawings to people. It always makes my day.</p>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', flex: 'none' }}>
+        <a href="https://www.instagram.com/drawin_june/" target="_blank" style={{ position: 'relative', top: 24, font: '500 17px/1.4 var(--font-body)', color: 'var(--color-primary)', textDecoration: 'underline', textUnderlineOffset: 4 }}><img src="assets/drawings/hand-ig-bubble.png" alt="See more on my IG" style={{ position: 'absolute', left: -58, top: -52, width: 196, maxWidth: 'none', pointerEvents: 'none' }} />@drawin_june →</a>
+        <img src="_ds/june-portfolio-design-system-6caff167-950c-4725-9fe6-16f1996806b8/assets/social/qr_drawin_june.png" alt="QR code to @drawin_june on Instagram" width="96" height="96" style={{ display: 'block' }} />
+      </div>
+      </div>
+      <div className="jp-draw">
+        {pieces.map(([rot, t1, t2], i) => <div key={i} style={{ position: 'relative', transform: 'rotate(' + rot + 'deg)' }}>
+          <div style={{ aspectRatio: '3/4', background: 'var(--color-paper)', filter: 'drop-shadow(0 12px 10px rgba(26,26,26,.28)) drop-shadow(0 4px 4px rgba(26,26,26,.18))' }}>
+            <Slot id={'june-draw-' + (i + 1)} src={'uploads/WhatsApp Image 2026-09-02 at ' + DRAWINGS[i] + '.jpeg'} placeholder="Drop a drawing" />
+          </div>
+          <Tape color={i % 2 ? 'red' : 'beige'} width={80 + i * 6} angle={t1} position="tc" />
+          {DRAW_LABELS[i] && <img className="jp-hand-lg" src={'assets/drawings/hand-' + DRAW_LABELS[i][0] + '.png'} alt="" aria-hidden="true" style={{ position: 'absolute', left: DRAW_LABELS[i][1] + '%', top: DRAW_LABELS[i][2] + '%', width: DRAW_LABELS[i][3] + '%', maxWidth: 'none', zIndex: 3, pointerEvents: 'none' }} />}
+        </div>)}
+      </div>
+    </div>
+    <div className="paper paper--warm" aria-hidden="true" style={{ position: 'absolute', left: 0, right: 0, top: 'calc(100% - 1px)', height: 65, zIndex: 2, clipPath: 'polygon(0 0,100% 0,100% 100%)', pointerEvents: 'none', filter: 'none', boxShadow: 'none' }}></div>
+    <TornEdge tear={3} from="paper" depth={96} style={{ position: 'absolute', left: '-3%', right: '-3%', top: 'calc(100% - 8px)', marginBottom: 0, transform: 'rotate(1.8deg)', transformOrigin: '0 0', filter: 'drop-shadow(0 6px 8px rgba(26,26,26,.25))' }} />
+  </section>;
+}
+
+function Contact() {
+  return <section className="paper paper--red" style={{ position: 'relative', zIndex: 1, minHeight: 'max(75vh, 560px)', padding: 'calc(var(--space-8) + 24px) var(--space-5) var(--space-6)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 'var(--space-5)', textAlign: 'center', color: 'var(--color-paper-light)' }}>
+    <span style={{ ...jpLabel, color: 'var(--color-paper-light)' }}>Contact</span>
+    <h2 style={{ ...jpH2, fontSize: 'clamp(48px,7vw,96px)', color: 'var(--color-paper-light)', position: 'relative' }}>Let's make something<br />that works.</h2>
+    <div className="jp-contact-row">
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><img src="assets/dc-mail.png" alt="" aria-hidden="true" style={{ height: 47, width: 47 }} /><TextLink onRed href="mailto:june.choi008@gmail.com">june.choi008@gmail.com</TextLink></span>
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><img src="assets/dc-person.png" alt="" aria-hidden="true" style={{ height: 45, width: 56 }} /><TextLink onRed href="https://www.linkedin.com/in/june52" target="_blank">LinkedIn</TextLink></span>
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><img src="assets/dc-bubble.png" alt="" aria-hidden="true" style={{ height: 51, width: 51 }} /><TextLink onRed href="tel:+353834643877">+353 83 464 3877</TextLink></span>
+    </div>
+    <span style={{ ...jpLabel, color: 'var(--color-paper-light)', marginTop: 'var(--space-6)' }}>Dublin, Ireland · Portfolio 2026</span>
+  </section>;
+}
+
+const STAGE_W = 1920, STAGE_H = 747;
+function CoverStage({ children }) {
+  const ref = React.useRef(null);
+  const [s, setS] = React.useState(1);
+  React.useLayoutEffect(() => {
+    const el = ref.current; if (!el) return;
+    const fit = () => setS(el.clientWidth / STAGE_W);
+    fit(); const ro = new ResizeObserver(fit); ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  return <div ref={ref} style={{ position: 'relative', width: '100%', height: Math.floor(STAGE_H * s), overflow: 'hidden' }}>
+    <div style={{ position: 'absolute', left: 0, top: 0, width: STAGE_W, transform: 'scale(' + s + ')', transformOrigin: '0 0' }}>{children}</div>
+  </div>;
+}
+
+function DoorArrow() {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    const place = () => {
+      const el = ref.current, bd = document.getElementById('jp-building'), nm = document.getElementById('jp-hello-name');
+      if (!el || !bd || !nm || !el.offsetParent) return;
+      if (window.innerWidth <= 1024) { el.style.opacity = 0; return; }
+      const root = el.offsetParent.getBoundingClientRect(), B = bd.getBoundingClientRect(), N = nm.getBoundingClientRect();
+      const fx = B.left + B.width * 0.6423 - root.left, fy = B.top + B.height * 0.454 - root.top;
+      const tx = N.left + N.width * 0.45 - root.left, ty = N.top - 2 - root.top;
+      const iw = 286, ih = 244, ax = iw * 0.923, ay = ih * 0.094, bx = iw * 0.031, by = ih * 0.955;
+      const s = Math.hypot(tx - fx, ty - fy) / Math.hypot(bx - ax, by - ay);
+      if (s > 1.4 || s < 0.3) { el.style.opacity = 0; return; }
+      const r = Math.atan2(ty - fy, tx - fx) - Math.atan2(by - ay, bx - ax);
+      el.style.transform = 'translate(' + fx + 'px,' + fy + 'px) rotate(' + r + 'rad) scale(' + s + ') translate(' + (-ax) + 'px,' + (-ay) + 'px)';
+      el.style.opacity = 1;
+    };
+    place();
+    const ro = new ResizeObserver(place); ro.observe(document.body);
+    window.addEventListener('resize', place); document.fonts && document.fonts.ready.then(place);
+    const bd = document.getElementById('jp-building'); bd && bd.addEventListener('load', place);
+    const t = setTimeout(place, 600);
+    return () => { ro.disconnect(); window.removeEventListener('resize', place); clearTimeout(t); };
+  }, []);
+  return <img ref={ref} src="assets/drawings/profile-arrow.png" alt="" aria-hidden="true" style={{ position: 'absolute', left: 0, top: 0, width: 286, height: 244, transformOrigin: '0 0', zIndex: 8, pointerEvents: 'none', opacity: 0 }} />;
+}
+
+function App() {
+  return <div style={{ overflowX: 'hidden', position: 'relative' }}>
+    <DoorArrow />
+    <nav className="jp-nav"><div className="jp-wrap">
+      <a href="#top" style={{ font: 'italic 400 24px/1 var(--font-display)', color: 'var(--color-paper-light)', textDecoration: 'none' }}>Portfolio</a>
+      <div className="jp-nav-links"><a href="#about">About</a><a href="#how">How I work</a><a href="#core">Projects</a><a href="#drawing">Off work</a><a href="#contact">Contact</a></div>
+    </div></nav>
+    <div id="top" className="jp-cover-shadow" data-screen-label="Cover" style={{ position: 'relative' }}><CoverStage><Cover height="747px" minHeight="0px" eyebrow={<span style={{ position: 'relative', top: -24, fontSize: 17 }}>Marketing portfolio 2026</span>} title={<span style={{ fontSize: 150, lineHeight: 1, display: 'block', position: 'relative', top: -48, textShadow: '0 1px 2px rgba(26,26,26,.35), 0 2px 2px rgba(26,26,26,.35), 0 3px 2px rgba(26,26,26,.35), 0 4px 2px rgba(26,26,26,.35), 0 5px 2px rgba(26,26,26,.35), 0 6px 2px rgba(26,26,26,.35), 0 7px 2px rgba(26,26,26,.35), 0 8px 2px rgba(26,26,26,.35)' }}>MEET JUNE<img src="assets/drawings/cover-come-in.png" alt="Come in" style={{ position: 'absolute', left: 'calc(50% + 0.362em)', top: '0.74em', width: '1.857em', height: '0.962em', zIndex: 2, pointerEvents: 'none', filter: 'drop-shadow(0 4px 8px rgba(26,26,26,.28)) drop-shadow(0 -3px 6px rgba(26,26,26,.2))' }} /></span>} script={<span style={{ fontSize: 'clamp(64px,6.5vw,96px)', display: 'block', marginLeft: -160, marginTop: 'calc(-1 * clamp(28px,3vw,44px))', position: 'relative' }}><span style={{ position: 'relative', display: 'inline-block', padding: '0 0.35em', color: 'var(--color-ink)' }}><span style={{ position: 'relative', zIndex: 1 }}></span></span></span>} slant={-5}>
+      <img id="jp-building" src="assets/drawings/cover-building-v2.png" alt="" aria-hidden="true" style={{ position: 'absolute', pointerEvents: 'none', left: -256, top: -134, width: 2609, height: 1496, zIndex: -1 }} />
+    </Cover></CoverStage></div>
+    <div id="about" data-screen-label="Profile" style={{ marginTop: -2 }}><Profile /></div>
+    <div id="how" data-screen-label="How I work"><HowIWork /></div>
+    <div id="core" data-screen-label="Projects"><CoreProjects /></div>
+    <div id="drawing" data-screen-label="Drawing"><Drawing /></div>
+    <div id="contact" data-screen-label="Contact"><Contact /></div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+const jpJump = (hash, smooth) => { const el = document.querySelector(hash); if (!el) return; const t = hash === '#top' ? el : (/^H[1-3]$/.test(el.tagName) ? el : el.querySelector('h2') || el); const y = hash === '#top' ? 0 : t.getBoundingClientRect().top + window.scrollY - Math.round(window.innerHeight * 0.08); window.scrollTo({ top: Math.max(0, y), behavior: smooth ? 'smooth' : 'auto' }); };
+document.addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); if (!a || a.getAttribute('href').length < 2) return; e.preventDefault(); history.replaceState(null, '', a.getAttribute('href')); jpJump(a.getAttribute('href'), true); });
+if (location.hash) { setTimeout(() => jpJump(location.hash), 300); setTimeout(() => jpJump(location.hash), 1200); }
+</script>
+</body>
+</html>
